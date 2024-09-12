@@ -1,0 +1,512 @@
+{
+	"name": "@babel/plugin-transform-private-methods",
+	"dist-tags": { "latest": "7.25.4", "next": "8.0.0-alpha.12" },
+	"versions": {
+		"7.22.0": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "7.22.0",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.21.5",
+				"@babel/helper-create-class-features-plugin": "^7.22.0"
+			},
+			"devDependencies": { "@babel/core": "^7.22.0", "@babel/helper-plugin-test-runner": "^7.18.6" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "9263e7cd1c56cbda6a74777af734e1611f664108",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-7.22.0.tgz",
+				"fileCount": 6,
+				"integrity": "sha512-3ao+Yt2kGQEXC894aBRCPo+zzW6YbM/iba+znKsZgEmDkc8RU/ODBfRpWP11qerQ0/mDzqjLpIG7HhpiKx0/cg==",
+				"signatures": [
+					{
+						"sig": "MEQCIDjIk5/2i77uaZvFsiVJwDM9TnMAxmSKwEs95QxRNrdBAiByAsIraOy8bUSg4jqa/9r8T5CQKK3gwNKbZwui2Fxp3g==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4696
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"7.22.3": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "7.22.3",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.21.5",
+				"@babel/helper-create-class-features-plugin": "^7.22.1"
+			},
+			"devDependencies": { "@babel/core": "^7.22.1", "@babel/helper-plugin-test-runner": "^7.18.6" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "adac38020bab5047482d3297107c1f58e9c574f6",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-7.22.3.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-fC7jtjBPFqhqpPAE+O4LKwnLq7gGkD3ZmC2E3i4qWH34mH3gOg2Xrq5YMHUq6DM30xhqM1DNftiRaSqVjEG+ug==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCwMnaG3yXH+3PAYX1eS7IslrrI/YbOhhDtIq8kIKXQhQIhAKHpsOsRKdKl8LJdxIKGdr0Sj86ll7pbsPnw5uTdmSyY",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4676
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"7.22.5": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "7.22.5",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-create-class-features-plugin": "^7.22.5"
+			},
+			"devDependencies": { "@babel/core": "^7.22.5", "@babel/helper-plugin-test-runner": "^7.22.5" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "21c8af791f76674420a147ae62e9935d790f8722",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-7.22.5.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-PPjh4gyrQnGe97JTalgRGMuU4icsZFnWkzicB/fUtzlKUqvsWBKEpPPfr5a2JiyirZkHxnAqkQMO5Z5B2kK3fA==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDv44Kwtho7n63v1R9XDGNS7wNhPbhvpzAp3pLsFajkAAIgZdkxMutAB8TIk+STgZQBY3fcpiNQ1kNY/VkOdi4WuiE=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4676
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.0": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.0",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.0",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.0"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.0", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.0" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.0" },
+			"dist": {
+				"shasum": "75901cd717659da7471e2918d7de5cc2c8b1f9b9",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.0.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-EYVCgXo03xNpn7ZEv6zssPOBuJAgtgH8Bo3y7yjFjQq+nbJg++czVHKw56FIOGoXl8TZh6rz6mOzWHYHJd4iww==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDT6bO17xkEJPxcopZF+8mOfWI/E5j7Qs6NmBc69gxh+wIhAMXZrgGwrHUd2Dk6TWVLPwAjpy1RTof3EfzObthjGctd",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4470
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.1": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.1",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.1",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.1"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.1", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.1" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.1" },
+			"dist": {
+				"shasum": "7ce903daba2cc1918f95bbc47e40eb1cc0bb0200",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.1.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-BEmhXIxIhqssp2O/+VGW+VJmgdpjau/2unltC9zJtji74ndABrxhtFuo7mUf5rFtWLvclfQG4GWNSFW+vmLZZg==",
+				"signatures": [
+					{
+						"sig": "MEQCIB8BeigEwgVmLqzhDdABSGbkSclvhl8kMGJQnoe1Ugy2AiBhG9hf2h7ycg5t5BngIOV1bYHDT/ht8m9aZmkP/G0mOw==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4470
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.2": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.2",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.2",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.2"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.2", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.2" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.2" },
+			"dist": {
+				"shasum": "0e55a5dc39266f8fa940b05cf65d62122e9ac810",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.2.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-08cZaRq6sjjBSxYO6dF2TH8UZqGgPuJbvGgfCNNLYs31wuI7BSLmt6T6sFyHj2P4iqHlN5WTivbgLx0Cv//GFQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCkymBtMoHXxzNO2c/sJPj+YgHKE/ZEzT5n3UwO6bQOiwIhAK9H+3VoyGmeaDIjHd7NSddSZRzYtXgi4u2Ch3TNb147",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4470
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.3": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.3",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.3",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.3"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.3", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.3" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.3" },
+			"dist": {
+				"shasum": "86c98ae0cb9edbf7ddb9c93ea90448743f83f0fd",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.3.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-N1JKKOfbutbI7DbzxnZSdC1nZN8xkxZSkfwqgF5fsvE9GquiSnLX9qLMZ+pgcx7JOv47k4MihxLm2LEHCXp3Tg==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCicSUQbrJzrXH3NENEQeGutOvpvu+rNx8Wh5QPJK55BgIhAKD/vgTeIVzskIxgFAL14imVx/fxkJqIA9iQiIX+cl2L",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4470
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.4": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.4",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.4",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.4"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.4", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.4" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.4" },
+			"dist": {
+				"shasum": "bf08a4d0f36daf3d1bb7c7c41f4ca2b3d7bab6e0",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.4.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-u7w+O0HeqV2LN5TrOH2/VPlgpL6U8EVhC6+FMAYDGOpXqb+Mkm+ubYqz1v0mteTm6xEnPhRVjByEyDcaErftdw==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDwfmnUeV5EiK4NqaXoHjTqMXdHgvIaFCJk/120dDsv3wIhALc1VJv1x5HUTEdQkLEF9XXpuUlQPMclREgRDU+g3WAc",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4470
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.23.3": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "7.23.3",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/helper-create-class-features-plugin": "^7.22.15"
+			},
+			"devDependencies": { "@babel/core": "^7.23.3", "@babel/helper-plugin-test-runner": "^7.22.5" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "b2d7a3c97e278bfe59137a978d53b2c2e038c0e4",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-7.23.3.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-UzqRcRtWsDMTLrRWFvUBDwmw06tCQH9Rl1uAjfh6ijMSmGYQ+fpdB+cnqRC8EMh5tuuxSv0/TejGL+7vyj+50g==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDpgByCZOoe/Vnv12SanO0iuuPw1APTnxTBpWyClDs7pAIgX4lzz6LQphbRpbV33kgwqxu4MEhMHUfYQrtmH54NCxk=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4756
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.5": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.5",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.5",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.5"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.5", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.5" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.5" },
+			"dist": {
+				"shasum": "5b80c40805ec63cab486c2ce3e7352c5845fcb13",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.5.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-B12fftn3k4Z9jKTu2TVZv4LiRNdGV9Xcq1rQkDiueYSyb/ECUyK/19JCuVk8kH1HZWSDCnLJlcgrTOsSx1RmNw==",
+				"signatures": [
+					{
+						"sig": "MEUCIBbK8Zn/Xd/DvG/uky/yPtXW69ZztSoRFkQvKx9szhV8AiEAqHEOgx3o8YEZQjFFag79b54Vu0sbDq5227qoFMAqArU=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4583
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.6": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.6",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.6",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.6"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.6", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.6" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.6" },
+			"dist": {
+				"shasum": "632a49429cc273e52c1674666ff6ac2752dbb8af",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.6.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-qiPTONg3m5ASgLyGs4O9YV6Mh5HKBdGDj0fWPJy9DQ02uU4uUiqesZyitgFNVmWE+CO72Z2czHcRzj6FkSAwyw==",
+				"signatures": [
+					{
+						"sig": "MEUCIE4lbCP+1ZgWY6NHCDgQvW8w5ncIxMr0WkSHBmi+4gmVAiEAjXXtTZVAsU/fb2/+X4cUAYboAgYSd5S8VW5nm7IraZg=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4583
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.7": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.7",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.7",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.7"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.7", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.7" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.7" },
+			"dist": {
+				"shasum": "ddb1332c56a240a2cb21f03158cf03cbd8d6205a",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.7.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-FQxrICeOTPadki7DBsYkjtLGjoAUjkLD5Ry5WhnWCCfeCsuxSKoPAvC5dDt/ZHeCg7OggTavD+oT38uZjt1y0A==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDs/vjXS3l1erTP/RbWtYtLinN8yoNjRf9Xb1nAOBNIwgIgKPkeWfdpoXqsaoBBFUXVyLvb//K1tu1Wqjql8alyIiE=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4583
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.24.1": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "7.24.1",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.24.0",
+				"@babel/helper-create-class-features-plugin": "^7.24.1"
+			},
+			"devDependencies": { "@babel/core": "^7.24.1", "@babel/helper-plugin-test-runner": "^7.24.1" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "a0faa1ae87eff077e1e47a5ec81c3aef383dc15a",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-7.24.1.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-tGvisebwBO5em4PaYNqt4fkw56K2VALsAbAakY0FjTYqJp7gfdrgr7YX76Or8/cpik0W6+tj3rZ0uHU9Oil4tw==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCj6TP8G9fXSzes4zoE337XOafCKi6jDRJcusxn18rj7AIgCVlr7Brbo8pbP3vZIPcXBAP9KaiwGHVIK+Vf6B+fvio=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4686
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.8": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.8",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.8",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.8"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.8", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.8" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.8" },
+			"dist": {
+				"shasum": "85f13be88c6ec8f1ad2dade7fc9698a36895dbea",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.8.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-UP0kx2nh2t1hxB+jhjqRiZXfXODgr9jpWAQlmlS8usPZI/X/KwUyWzqJ2rY4hD9jdyvW3N86XtRJWw9fHwhVRg==",
+				"signatures": [
+					{
+						"sig": "MEUCIAhB8azEsrrihc4uk4cnEcjqDMwJWQ1J1u6/RS0vw8rEAiEA23Id8Pa7DJY2n4bDqepWW1czQZXkStHDv2csOLFaV/Q=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 4497
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.24.6": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "7.24.6",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.24.6",
+				"@babel/helper-create-class-features-plugin": "^7.24.6"
+			},
+			"devDependencies": { "@babel/core": "^7.24.6", "@babel/helper-plugin-test-runner": "^7.24.6" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "258e1f859a52ff7b30ad556598224c192defcda7",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-7.24.6.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-T9LtDI0BgwXOzyXrvgLTT8DFjCC/XgWLjflczTLXyvxbnSR/gpv0hbmzlHE/kmh9nOvlygbamLKRo6Op4yB6aw==",
+				"signatures": [
+					{
+						"sig": "MEUCIQD93DpiA4C7T5OFMP0YYV6Gui24iBQHDaBQZDZasJcsKwIgc9GmxoEGv+EA10NOlL9ax6lF15zUZrzQLPKqaXR4898=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71599
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.9": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.9",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.9",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.9"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.9", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.9" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.9" },
+			"dist": {
+				"shasum": "0d9f112f5597ed1ab35a6a8784f002201b0edc57",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.9.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-w6Naj4XFhZBiXCojBa2vGtms3QtO+V9+qKd/M8r3fiIJsKsxnThSPM4RjAmSTgfnL+Q5+MBRnDxpbW35RDMFDQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIAI3i06s2ZhMxxWKjEuFlOcbGYIm0v4KaMDbhqjd58iAAiEArQrYt3/xPYOubd+K1XYA13viNFHcfT32L5qIynBSOd0=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71713
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"8.0.0-alpha.10": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.10",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.10",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.10"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.10", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.10" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.10" },
+			"dist": {
+				"shasum": "ccc96e6df86e3871434e6e9296a227a240ae39a8",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.10.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-EoHV3kGB/9hH/szUtHXENO5vkpIWeLDP6Bbl/GBkD14Hz2zEPsl9rqVrT+333t2VZhY1s0fJfCQStumvo5ESwQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDR/bLFMoiHLMhPCkkox9NtYq7nEVIw241A8IrQknslIQIgff8H6jTfR/NnbSsc1awF6iN/Jz2P3aTc8PO3dQIsmpw=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71721
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"7.24.7": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "7.24.7",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.24.7",
+				"@babel/helper-create-class-features-plugin": "^7.24.7"
+			},
+			"devDependencies": { "@babel/core": "^7.24.7", "@babel/helper-plugin-test-runner": "^7.24.7" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "e6318746b2ae70a59d023d5cc1344a2ba7a75f5e",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-7.24.7.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-COTCOkG2hn4JKGEKBADkA8WNb35TGkkRbI5iT845dB+NyqgO8Hn+ajPbSnIQznneJTa3d30scb6iz/DhH8GsJQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDeNFEjlg78x8KaJe23nB/2fDfSNzuAzpxWNkvkd2FH+AIgbRzJAPBJ0+5vNtlcn/XDxBmizGXgwrwK0teoAoeUalc=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71595
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.11": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.11",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.11",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.11"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.11", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.11" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.11" },
+			"dist": {
+				"shasum": "02c6f2b97c759e58e42f3ad77d9203c2920279d8",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.11.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-G1rH09ejv1F3y0wMuIHzgt9/4h5lmHpAxh1xvkvI3d5pTJikumAyBnsTo+VucM9cYFQ3L/Ot2V6Mg6OTwL4lRg==",
+				"signatures": [
+					{
+						"sig": "MEQCIC7E1u5uz62JsNYKjbcdVx850+a1L2ljmPyF4hN7IiQQAiA/CS8X2XpVT7Md0ASX8UccGTwwUKYRlDYWOY2eVg2kyQ==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71610
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"8.0.0-alpha.12": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "8.0.0-alpha.12",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.12",
+				"@babel/helper-create-class-features-plugin": "^8.0.0-alpha.12"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.12", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.12" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.12" },
+			"dist": {
+				"shasum": "69e3c848241b102a63bc2c904bc1946763d71aa2",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-8.0.0-alpha.12.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-8vAb7XYwHpMvVe8I06Ouqdr4s3wUPWT3RfoGqsd+6fdNozRlQJtO+u3dYV7BnzveQn72DE158E3vihlYa8dH9A==",
+				"signatures": [
+					{
+						"sig": "MEUCIHSjetIXwAUV7qyQAA2rlLuiwzkhn6elDAnwgeBpPRolAiEAnAHQHxVzkY5+fi0agf1yjGWjxmtjNzfj9Dfr7+8Eenw=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 68337
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"7.25.4": {
+			"name": "@babel/plugin-transform-private-methods",
+			"version": "7.25.4",
+			"dependencies": {
+				"@babel/helper-create-class-features-plugin": "^7.25.4",
+				"@babel/helper-plugin-utils": "^7.24.8"
+			},
+			"devDependencies": { "@babel/core": "^7.25.2", "@babel/helper-plugin-test-runner": "^7.24.7" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "9bbefbe3649f470d681997e0b64a4b254d877242",
+				"integrity": "sha512-ao8BG7E2b/URaUQGqN3Tlsg+M3KlHY6rJ1O1gXAEUnZoyNQnvKyH87Kfg+FoxSeyWUB8ISZZsC91C44ZuBFytw==",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-private-methods/-/plugin-transform-private-methods-7.25.4.tgz",
+				"fileCount": 7,
+				"unpackedSize": 68420,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDQkjRvYwweNMEEsoyIX4QnV2oL2mfjdchXvdo8s5EZygIhALncqQ00cNN1AfBVWA7KoptsPUai14begNy94LIUczaP"
+					}
+				]
+			},
+			"engines": { "node": ">=6.9.0" }
+		}
+	},
+	"modified": "2024-08-22T09:34:37.917Z",
+	"cachedAt": 1726177888124
+}

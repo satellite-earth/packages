@@ -1,0 +1,41 @@
+{
+	"name": "possible-typed-array-names",
+	"dist-tags": { "latest": "1.0.0" },
+	"versions": {
+		"1.0.0": {
+			"name": "possible-typed-array-names",
+			"version": "1.0.0",
+			"devDependencies": {
+				"@ljharb/eslint-config": "^21.1.0",
+				"@types/tape": "^5.6.4",
+				"aud": "^2.0.4",
+				"auto-changelog": "^2.4.0",
+				"eclint": "^2.8.1",
+				"eslint": "=8.8.0",
+				"evalmd": "^0.0.19",
+				"in-publish": "^2.0.1",
+				"npmignore": "^0.3.1",
+				"nyc": "^10.3.2",
+				"safe-publish-latest": "^2.0.0",
+				"tape": "^5.7.5",
+				"typescript": "next"
+			},
+			"dist": {
+				"integrity": "sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==",
+				"shasum": "89bb63c6fada2c3e90adc4a647beeeb39cc7bf8f",
+				"tarball": "https://registry.npmjs.org/possible-typed-array-names/-/possible-typed-array-names-1.0.0.tgz",
+				"fileCount": 10,
+				"unpackedSize": 10903,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQD88Ag2ucoSjcS8WyJLfxsBkEb7Q6ihwqjltB0WPUjmVwIgCrMqAPYBun1o6Pe7UT/+0wHtRHbRKLEvR4I5zfOVieY="
+					}
+				]
+			},
+			"engines": { "node": ">= 0.4" }
+		}
+	},
+	"modified": "2024-02-19T22:32:52.281Z",
+	"cachedAt": 1726177888406
+}

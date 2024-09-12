@@ -1,0 +1,136 @@
+{
+	"name": "nostr-wasm",
+	"dist-tags": { "latest": "0.1.0" },
+	"versions": {
+		"0.0.1": {
+			"name": "nostr-wasm",
+			"version": "0.0.1",
+			"devDependencies": {
+				"@blake.regalia/tsconfig": "^0.1.2",
+				"@rollup/plugin-typescript": "^11.1.5",
+				"@rollup/plugin-wasm": "^6.2.2",
+				"@rollup/pluginutils": "^5.0.5",
+				"@types/node": "^20.8.10",
+				"@types/web": "^0.0.119",
+				"@typescript-eslint/eslint-plugin": "^6.13.2",
+				"@typescript-eslint/parser": "^6.13.2",
+				"acorn": "^8.11.2",
+				"eslint": "^8.52.0",
+				"eslint-plugin-unused-imports": "^3.0.0",
+				"rollup": "^4.2.0",
+				"typescript": "^5.2.2"
+			},
+			"dist": {
+				"integrity": "sha512-dbOoU3OnGix6yajx+/lvJ8NQTzED8yFZ6qX91SbLe/VJzadRsUlRFW7NkmgfRYLy4ziNH4/EREaSbE4LNS34KQ==",
+				"shasum": "6dc9bcdca86a3d402e4073030a4899418711b758",
+				"tarball": "https://registry.npmjs.org/nostr-wasm/-/nostr-wasm-0.0.1.tgz",
+				"fileCount": 17,
+				"unpackedSize": 466279,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIF+Yd12fyOkHAYboLZD6y7uLUzRiRXz4+eH3d1FJkzaMAiBSXiAEuiyH5KnDQGoLEHNY+OXcmGalLtoiyF6pRt8Fkg=="
+					}
+				]
+			}
+		},
+		"0.0.2": {
+			"name": "nostr-wasm",
+			"version": "0.0.2",
+			"devDependencies": {
+				"@blake.regalia/tsconfig": "^0.1.2",
+				"@rollup/plugin-typescript": "^11.1.5",
+				"@rollup/plugin-wasm": "^6.2.2",
+				"@rollup/pluginutils": "^5.0.5",
+				"@types/node": "^20.8.10",
+				"@types/web": "^0.0.119",
+				"@typescript-eslint/eslint-plugin": "^6.13.2",
+				"@typescript-eslint/parser": "^6.13.2",
+				"acorn": "^8.11.2",
+				"eslint": "^8.52.0",
+				"eslint-plugin-unused-imports": "^3.0.0",
+				"rollup": "^4.2.0",
+				"typescript": "^5.2.2"
+			},
+			"dist": {
+				"integrity": "sha512-To9KRPXGE9bWNy6WNrMfLRKD35YzOpbBju7Aw2bid6xCS5DM9cDt0BJaI2l0UJUtt4ZFF/7pz417/Lx1aikP3g==",
+				"shasum": "04903e16ca5a5879c2cb96b150add9d019f0b592",
+				"tarball": "https://registry.npmjs.org/nostr-wasm/-/nostr-wasm-0.0.2.tgz",
+				"fileCount": 19,
+				"unpackedSize": 688024,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIF+ni65sAEpigiQqe/bBNuAhdBvai//44lScLIT7UuKPAiBVzl6zXByMD76DZg/EOFJO02rFjISWIg6S9ZseF0gFGw=="
+					}
+				]
+			}
+		},
+		"0.0.3": {
+			"name": "nostr-wasm",
+			"version": "0.0.3",
+			"devDependencies": {
+				"@blake.regalia/tsconfig": "^0.1.2",
+				"@rollup/plugin-typescript": "^11.1.5",
+				"@rollup/plugin-wasm": "^6.2.2",
+				"@rollup/pluginutils": "^5.0.5",
+				"@types/node": "^20.8.10",
+				"@types/web": "^0.0.119",
+				"@typescript-eslint/eslint-plugin": "^6.13.2",
+				"@typescript-eslint/parser": "^6.13.2",
+				"acorn": "^8.11.2",
+				"eslint": "^8.52.0",
+				"eslint-plugin-unused-imports": "^3.0.0",
+				"rollup": "^4.2.0",
+				"typescript": "^5.2.2"
+			},
+			"dist": {
+				"integrity": "sha512-zz5INXiuya10s+zsNmW2k4xH47j+Ikgxn5SL8xt/quGBNWn/A6+blVqT3J6yjkZim/gyVC/9GXd0jH4w3w1HZA==",
+				"shasum": "79e2aed39d440fc54232e27fb37e92d560e76639",
+				"tarball": "https://registry.npmjs.org/nostr-wasm/-/nostr-wasm-0.0.3.tgz",
+				"fileCount": 19,
+				"unpackedSize": 688100,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDcejkaSq8JNbYo6fLR9aTcy0VRgSNm4FfihOs5n0RU+wIhAMBsrTfV4iRpHAAZiZo8GoYY4f7neU329w6b0gPnQKj9"
+					}
+				]
+			}
+		},
+		"0.1.0": {
+			"name": "nostr-wasm",
+			"version": "0.1.0",
+			"devDependencies": {
+				"@blake.regalia/tsconfig": "^0.1.2",
+				"@rollup/plugin-typescript": "^11.1.5",
+				"@rollup/plugin-wasm": "^6.2.2",
+				"@rollup/pluginutils": "^5.0.5",
+				"@types/node": "^20.8.10",
+				"@types/web": "^0.0.119",
+				"@typescript-eslint/eslint-plugin": "^6.13.2",
+				"@typescript-eslint/parser": "^6.13.2",
+				"acorn": "^8.11.2",
+				"eslint": "^8.52.0",
+				"eslint-plugin-unused-imports": "^3.0.0",
+				"rollup": "^4.2.0",
+				"typescript": "^5.2.2"
+			},
+			"dist": {
+				"integrity": "sha512-78BTryCLcLYv96ONU8Ws3Q1JzjlAt+43pWQhIl86xZmWeegYCNLPml7yQ+gG3vR6V5h4XGj+TxO+SS5dsThQIA==",
+				"shasum": "17af486745feb2b7dd29503fdd81613a24058d94",
+				"tarball": "https://registry.npmjs.org/nostr-wasm/-/nostr-wasm-0.1.0.tgz",
+				"fileCount": 20,
+				"unpackedSize": 688309,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCWPlMF2J/q2evsgKW5rS5nsp/7T83+zjL3P/F5bRLqQwIgCkEZmTAFBSLXKYJFcMRgTNsEKUaivVA/HF8lvxIG15E="
+					}
+				]
+			}
+		}
+	},
+	"modified": "2023-12-22T13:51:35.368Z",
+	"cachedAt": 1726177886949
+}

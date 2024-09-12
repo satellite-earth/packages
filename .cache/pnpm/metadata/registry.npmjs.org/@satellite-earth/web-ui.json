@@ -1,0 +1,93 @@
+{
+	"name": "@satellite-earth/web-ui",
+	"dist-tags": { "latest": "0.3.0" },
+	"versions": {
+		"0.3.0": {
+			"name": "@satellite-earth/web-ui",
+			"version": "0.3.0",
+			"dependencies": {
+				"@capacitor-community/http": "^1.4.1",
+				"@capacitor-mlkit/barcode-scanning": "^6.1.0",
+				"@capacitor/android": "^6.1.1",
+				"@capacitor/app": "^6.0.0",
+				"@capacitor/core": "^6.1.1",
+				"@capacitor/ios": "^6.1.1",
+				"@chakra-ui/breakpoint-utils": "^2.0.8",
+				"@chakra-ui/icons": "^2.1.1",
+				"@chakra-ui/react": "^2.8.2",
+				"@chakra-ui/shared-utils": "^2.0.4",
+				"@emotion/react": "^11.13.0",
+				"@emotion/styled": "^11.13.0",
+				"@noble/hashes": "^1.4.0",
+				"@satellite-earth/core": "^0.3.0",
+				"@scure/base": "^1.1.7",
+				"@webscopeio/react-textarea-autocomplete": "^4.9.2",
+				"ansi-to-html": "^0.7.2",
+				"chroma-js": "^2.4.2",
+				"dayjs": "^1.11.12",
+				"debug": "^4.3.6",
+				"eventemitter3": "^5.0.1",
+				"framer-motion": "^11.0.5",
+				"idb": "^8.0.0",
+				"json-stringify-deterministic": "^1.0.12",
+				"light-bolt11-decoder": "^3.1.1",
+				"lodash.throttle": "^4.1.1",
+				"nanoid": "^5.0.5",
+				"nostr-idb": "^2.1.4",
+				"nostr-tools": "^2.7.0",
+				"react": "^18.3.1",
+				"react-dom": "^18.3.1",
+				"react-error-boundary": "^4.0.13",
+				"react-hook-form": "^7.52.1",
+				"react-qr-barcode-scanner": "^1.0.6",
+				"react-router-dom": "^6.25.1",
+				"react-use": "^17.5.1",
+				"react-virtualized-auto-sizer": "^1.0.24",
+				"react-window": "^1.8.10",
+				"webln": "^0.3.2",
+				"yet-another-react-lightbox": "^3.21.1",
+				"zen-observable": "^0.10.0"
+			},
+			"devDependencies": {
+				"@capacitor/assets": "^3.0.5",
+				"@capacitor/cli": "^6.1.1",
+				"@types/chroma-js": "^2.4.4",
+				"@types/debug": "^4.1.12",
+				"@types/lodash.throttle": "^4.1.9",
+				"@types/react": "^18.3.3",
+				"@types/react-dom": "^18.3.0",
+				"@types/react-window": "^1.8.8",
+				"@types/webscopeio__react-textarea-autocomplete": "^4.7.5",
+				"@types/zen-observable": "^0.8.7",
+				"@vitejs/plugin-react": "^4.3.1",
+				"autoprefixer": "^10.4.19",
+				"camelcase": "^8.0.0",
+				"cheerio": "^1.0.0-rc.12",
+				"nostr-wasm": "^0.1.0",
+				"postcss": "^8.4.40",
+				"prettier": "^3.3.3",
+				"typescript": "^5.4.5",
+				"vite": "^5.3.5",
+				"vite-plugin-pwa": "^0.20.1",
+				"workbox-precaching": "^7.1.0",
+				"workbox-routing": "^7.1.0",
+				"workbox-window": "^7.1.0"
+			},
+			"dist": {
+				"integrity": "sha512-/g8Yw+wPUKMhEY4DzvFZR5nvLv1Kl9t1bucNGTyZRjwVGcfdcu5e1yOrSWtrgEo8LzU7R/rAghA7vdMsXYpvEg==",
+				"shasum": "69c1210f5c3cda1fc54162c429171587ebabcc35",
+				"tarball": "https://registry.npmjs.org/@satellite-earth/web-ui/-/web-ui-0.3.0.tgz",
+				"fileCount": 29,
+				"unpackedSize": 8790132,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQCER1ELpFO3foSsENl1dOmrSVhMkK6YKQbKzvULoZ2OLwIgLXvvfAQAvBYCFIRZs/4KwifzYranIISvTayWQENdk8k="
+					}
+				]
+			}
+		}
+	},
+	"modified": "2024-08-20T15:05:19.979Z",
+	"cachedAt": 1726177886462
+}

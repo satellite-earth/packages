@@ -1,0 +1,54 @@
+{
+	"name": "@satellite-earth/core",
+	"dist-tags": { "latest": "0.3.0" },
+	"versions": {
+		"0.3.0": {
+			"name": "@satellite-earth/core",
+			"version": "0.3.0",
+			"dependencies": {
+				"better-sqlite3": "^11.1.2",
+				"blossom-client-sdk": "^0.9.0",
+				"blossom-server-sdk": "^0.4.0",
+				"cors": "^2.8.5",
+				"debug": "^4.3.6",
+				"express": "^4.19.2",
+				"express-async-handler": "^1.2.0",
+				"follow-redirects": "^1.15.6",
+				"http-error": "^0.0.6",
+				"http-errors": "^2.0.0",
+				"lowdb": "^7.0.1",
+				"mime": "^4.0.1",
+				"nostr-tools": "^2.5.2",
+				"ws": "^8.16.0"
+			},
+			"devDependencies": {
+				"@types/better-sqlite3": "^7.6.11",
+				"@types/debug": "^4.1.12",
+				"@types/express": "^4.17.21",
+				"@types/follow-redirects": "^1.14.4",
+				"@types/http-errors": "^2.0.4",
+				"@types/morgan": "^1.9.9",
+				"@types/node": "^20.11.30",
+				"@types/ws": "^8.5.10",
+				"morgan": "^1.10.0",
+				"prettier": "^3.2.5",
+				"typescript": "^5.4.3"
+			},
+			"dist": {
+				"integrity": "sha512-u13qVcRqGTokRQjFaI2TLS3jaJGUDLeu5CUYco+MXeHFjG/afdX2sDa9zVa5qNYsbZ2xlw9gjzhhe1evSywBsw==",
+				"shasum": "d353e5210cb04bf7e7fe58758224df332aefe891",
+				"tarball": "https://registry.npmjs.org/@satellite-earth/core/-/core-0.3.0.tgz",
+				"fileCount": 138,
+				"unpackedSize": 145280,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIA6LCdQjwlztXGcOwJ9bM5s4C32J/f5oQpoLtHpc8nAfAiAcA/4Z1d+8cIbrgwbb5HVyv8d1sOTYh4UgMRXXV6RUJA=="
+					}
+				]
+			}
+		}
+	},
+	"modified": "2024-08-20T15:03:49.911Z",
+	"cachedAt": 1726177886447
+}
