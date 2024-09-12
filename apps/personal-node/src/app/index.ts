@@ -45,7 +45,7 @@ import ContactBook from '../modules/contact-book.js';
 import CautiousPool from '../modules/cautious-pool.js';
 import RemoteAuthActions from '../modules/control/remote-auth-actions.js';
 import ReportActions from '../modules/control/report-actions.js';
-import LogStore from '../modules/logs/log-store.js';
+import LogStore from '../modules/log-store/log-store.js';
 import DecryptionCache from '../modules/decryption-cache/decryption-cache.js';
 import DecryptionCacheActions from '../modules/control/decryption-cache.js';
 import Scrapper from '../modules/scrapper/index.js';
