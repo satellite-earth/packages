@@ -1,6 +1,6 @@
 {
 	"name": "@satellite-earth/personal-node",
-	"version": "0.3.1",
+	"version": "0.4.0",
 	"description": "node is a project that runs as a node application anywhere, i.e. it's just a nodejs app that can run on your laptop or on a VPS in a datacenter, it doesn't matter",
 	"license": "MIT",
 	"author": {
@@ -42,8 +42,8 @@
 	"dependencies": {
 		"@diva.exchange/i2p-sam": "^5.4.1",
 		"@noble/hashes": "^1.4.0",
-		"@satellite-earth/core": "^0.3.0",
-		"@satellite-earth/web-ui": "^0.3.0",
+		"@satellite-earth/core": "^0.4.0",
+		"@satellite-earth/web-ui": "^0.4.0",
 		"better-sqlite3": "^11.3.0",
 		"blossom-client-sdk": "^0.9.0",
 		"blossom-server-sdk": "^0.4.0",
