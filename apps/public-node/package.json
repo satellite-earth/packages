@@ -25,7 +25,7 @@
 		"@noble/hashes": "^1.4.0",
 		"@satellite-earth/core": "^0.3.0",
 		"@satellite-earth/web-ui": "^0.3.0",
-		"better-sqlite3": "^11.1.2",
+		"better-sqlite3": "^11.3.0",
 		"body-parser": "^1.20.2",
 		"dayjs": "^1.11.10",
 		"debug": "^4.3.4",

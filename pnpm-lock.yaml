@@ -6,7 +6,11 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    dependencies:
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
 
   apps/personal-node:
     dependencies:
@@ -18,12 +22,12 @@ importers:
         version: 1.5.0
       '@satellite-earth/core':
         specifier: ^0.3.0
-        version: 0.3.0(typescript@5.6.2)
+        version: link:../../packages/core
       '@satellite-earth/web-ui':
         specifier: ^0.3.0
-        version: 0.3.0(@chakra-ui/system@2.6.2(@emotion/react@11.13.3(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(react@18.3.1))(react@18.3.1))(react@18.3.1))(@emotion/is-prop-valid@1.3.0)(prop-types@15.8.1)(typescript@5.6.2)
+        version: link:../web-ui
       better-sqlite3:
-        specifier: ^11.1.2
+        specifier: ^11.3.0
         version: 11.3.0
       blossom-client-sdk:
         specifier: ^0.9.0
@@ -151,12 +155,12 @@ importers:
         version: 1.5.0
       '@satellite-earth/core':
         specifier: ^0.3.0
-        version: 0.3.0(typescript@5.6.2)
+        version: link:../../packages/core
       '@satellite-earth/web-ui':
         specifier: ^0.3.0
-        version: 0.3.0(@chakra-ui/system@2.6.2(@emotion/react@11.13.3(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(react@18.3.1))(react@18.3.1))(react@18.3.1))(@emotion/is-prop-valid@1.3.0)(prop-types@15.8.1)(typescript@5.6.2)
+        version: link:../web-ui
       better-sqlite3:
-        specifier: ^11.1.2
+        specifier: ^11.3.0
         version: 11.3.0
       body-parser:
         specifier: ^1.20.2
@@ -278,7 +282,7 @@ importers:
         version: 1.5.0
       '@satellite-earth/core':
         specifier: ^0.3.0
-        version: 0.3.0(typescript@5.6.2)
+        version: link:../../packages/core
       '@scure/base':
         specifier: ^1.1.7
         version: 1.1.8
@@ -437,7 +441,7 @@ importers:
   packages/core:
     dependencies:
       better-sqlite3:
-        specifier: ^11.1.2
+        specifier: ^11.3.0
         version: 11.3.0
       blossom-client-sdk:
         specifier: ^0.9.0
@@ -2195,12 +2199,6 @@ packages:
     resolution: {integrity: sha512-fOvu7PCQjAj4eWDEuD8Xz5gpzFqXzGlxHZozHP4b9Jxv9APtdxL6STqztDzMLuRXEc4UpXGGhx029Xgm91QBeA==}
     cpu: [x64]
     os: [win32]
-
-  '@satellite-earth/core@0.3.0':
-    resolution: {integrity: sha512-u13qVcRqGTokRQjFaI2TLS3jaJGUDLeu5CUYco+MXeHFjG/afdX2sDa9zVa5qNYsbZ2xlw9gjzhhe1evSywBsw==}
-
-  '@satellite-earth/web-ui@0.3.0':
-    resolution: {integrity: sha512-/g8Yw+wPUKMhEY4DzvFZR5nvLv1Kl9t1bucNGTyZRjwVGcfdcu5e1yOrSWtrgEo8LzU7R/rAghA7vdMsXYpvEg==}
 
   '@scure/base@1.1.1':
     resolution: {integrity: sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==}
@@ -8264,83 +8262,6 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.21.3':
     optional: true
-
-  '@satellite-earth/core@0.3.0(typescript@5.6.2)':
-    dependencies:
-      better-sqlite3: 11.3.0
-      blossom-client-sdk: 0.9.1
-      blossom-server-sdk: 0.4.0
-      cors: 2.8.5
-      debug: 4.3.7(supports-color@5.5.0)
-      express: 4.21.0
-      express-async-handler: 1.2.0
-      follow-redirects: 1.15.9(debug@4.3.7)
-      http-error: 0.0.6
-      http-errors: 2.0.0
-      lowdb: 7.0.1
-      mime: 4.0.4
-      nostr-tools: 2.7.2(typescript@5.6.2)
-      ws: 8.18.0
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - supports-color
-      - typescript
-      - utf-8-validate
-
-  '@satellite-earth/web-ui@0.3.0(@chakra-ui/system@2.6.2(@emotion/react@11.13.3(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(react@18.3.1))(react@18.3.1))(react@18.3.1))(@emotion/is-prop-valid@1.3.0)(prop-types@15.8.1)(typescript@5.6.2)':
-    dependencies:
-      '@capacitor-community/http': 1.4.1
-      '@capacitor-mlkit/barcode-scanning': 6.1.0(@capacitor/core@6.1.2)
-      '@capacitor/android': 6.1.2(@capacitor/core@6.1.2)
-      '@capacitor/app': 6.0.1(@capacitor/core@6.1.2)
-      '@capacitor/core': 6.1.2
-      '@capacitor/ios': 6.1.2(@capacitor/core@6.1.2)
-      '@chakra-ui/breakpoint-utils': 2.0.8
-      '@chakra-ui/icons': 2.1.1(@chakra-ui/system@2.6.2(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(react@18.3.1))(react@18.3.1))(react@18.3.1)
-      '@chakra-ui/react': 2.8.2(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(framer-motion@11.5.4(@emotion/is-prop-valid@1.3.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@chakra-ui/shared-utils': 2.0.4
-      '@emotion/react': 11.13.3(@types/react@18.3.5)(react@18.3.1)
-      '@emotion/styled': 11.13.0(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(react@18.3.1)
-      '@noble/hashes': 1.5.0
-      '@satellite-earth/core': 0.3.0(typescript@5.6.2)
-      '@scure/base': 1.1.8
-      '@webscopeio/react-textarea-autocomplete': 4.9.2(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      ansi-to-html: 0.7.2
-      chroma-js: 2.6.0
-      dayjs: 1.11.13
-      debug: 4.3.7(supports-color@5.5.0)
-      eventemitter3: 5.0.1
-      framer-motion: 11.5.4(@emotion/is-prop-valid@1.3.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      idb: 8.0.0
-      json-stringify-deterministic: 1.0.12
-      light-bolt11-decoder: 3.1.1
-      lodash.throttle: 4.1.1
-      nanoid: 5.0.7
-      nostr-idb: 2.1.6(typescript@5.6.2)
-      nostr-tools: 2.7.2(typescript@5.6.2)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-error-boundary: 4.0.13(react@18.3.1)
-      react-hook-form: 7.53.0(react@18.3.1)
-      react-qr-barcode-scanner: 1.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-router-dom: 6.26.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-use: 17.5.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-virtualized-auto-sizer: 1.0.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-window: 1.8.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      webln: 0.3.2
-      yet-another-react-lightbox: 3.21.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      zen-observable: 0.10.0
-    transitivePeerDependencies:
-      - '@chakra-ui/system'
-      - '@emotion/is-prop-valid'
-      - '@types/react'
-      - bufferutil
-      - encoding
-      - prop-types
-      - supports-color
-      - typescript
-      - utf-8-validate
 
   '@scure/base@1.1.1': {}
 

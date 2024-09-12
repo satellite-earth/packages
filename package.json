@@ -1,4 +1,10 @@
 {
 	"name": "Satellite",
-	"private": true
+	"private": true,
+	"scripts": {
+		"format": "prettier -w ."
+	},
+	"dependencies": {
+		"prettier": "^3.3.3"
+	}
 }

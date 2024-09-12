@@ -56,7 +56,7 @@
 		"format": "prettier -w ."
 	},
 	"dependencies": {
-		"better-sqlite3": "^11.1.2",
+		"better-sqlite3": "^11.3.0",
 		"blossom-client-sdk": "^0.9.0",
 		"blossom-server-sdk": "^0.4.0",
 		"cors": "^2.8.5",

@@ -29,7 +29,7 @@ export class DeletionManager extends EventEmitter<EventMap> {
 		const ids = RelayActions.handleDeleteEvent(
 			this.eventStore,
 			deleteEvent,
-			deleteEvent.pubkey === communityPubkey ? () => true : undefined
+			deleteEvent.pubkey === communityPubkey ? () => true : undefined,
 		);
 
 		this.log(`Deleted`, ids.length, 'events');

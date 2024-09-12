@@ -3,6 +3,7 @@ import { parsePaymentRequest } from '../bolt11';
 
 export function isLNURL(lnurl: string) {
 	try {
+		//@ts-expect-error
 		const decoded = bech32.decode(lnurl);
 		return decoded.prefix.toLowerCase() === 'lnurl';
 	} catch (e) {

@@ -36,7 +36,7 @@ export default function MessageBubble({
 		<>
 			{/* <NoteZapButton event={message} />
       <AddReactionButton event={message} portal /> */}
-			{showThreadButton && <IconThreadButton event={message} label="Open Thread" />}
+			{showThreadButton && <IconThreadButton event={message} />}
 		</>
 	);
 

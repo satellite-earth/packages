@@ -1,0 +1,40 @@
+**/node_modules/**
+
+# ignore build dirs
+apps/*/dist/**
+packages/*/dist/**
+
+# ignore data dirs
+apps/*/data/**
+packages/*/data/**
+
+# Android copied from ./android/.gitignore
+# Gradle files
+apps/web-ui/android/.gradle/
+apps/web-ui/android/build/
+apps/web-ui/android/app/build/
+# Cordova plugins for Capacitor
+apps/web-ui/android/capacitor-cordova-android-plugins
+
+# Copied web assets
+apps/web-ui/android/app/src/main/assets/public
+
+# Generated Config files
+apps/web-ui/android/app/src/main/assets/capacitor.config.json
+apps/web-ui/android/app/src/main/assets/capacitor.plugins.json
+apps/web-ui/android/app/src/main/res/xml/config.xml
+
+# IOS
+apps/web-ui/ios/App/build
+apps/web-ui/ios/App/Pods
+apps/web-ui/ios/App/output
+apps/web-ui/ios/App/App/public
+apps/web-ui/ios/DerivedData
+apps/web-ui/ios/xcuserdata
+
+# Cordova plugins for Capacitor
+apps/web-ui/ios/capacitor-cordova-ios-plugins
+
+# Generated Config files
+apps/web-ui/ios/App/App/capacitor.config.json
+apps/web-ui/ios/App/App/config.xml
