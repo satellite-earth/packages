@@ -1,0 +1,88 @@
+{
+	"name": "@satellite-earth/core",
+	"version": "0.3.0",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/satellite-earth/core.git"
+	},
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./sqlite": {
+			"import": "./dist/sqlite/index.js",
+			"types": "./dist/sqlite/index.d.ts"
+		},
+		"./sqlite-event-store": {
+			"import": "./dist/sqlite-event-store/index.js",
+			"types": "./dist/sqlite-event-store/index.d.ts"
+		},
+		"./helpers/*": {
+			"import": "./dist/helpers/*",
+			"types": "./dist/helpers/*"
+		},
+		"./helpers/nostr": {
+			"import": "./dist/helpers/nostr/index.js",
+			"types": "./dist/helpers/nostr/index.d.ts"
+		},
+		"./helpers/nostr/*": {
+			"import": "./dist/helpers/nostr/*",
+			"types": "./dist/helpers/nostr/*"
+		},
+		"./types/*": {
+			"import": "./dist/types/*",
+			"types": "./dist/types/*"
+		},
+		"./types/control-api/*": {
+			"import": "./dist/types/control-api/*",
+			"types": "./dist/types/control-api/*"
+		}
+	},
+	"packageManager": "pnpm@9.6.0",
+	"scripts": {
+		"prepack": "pnpm build",
+		"test": "echo no tests",
+		"build": "tsc",
+		"dev": "tsc -w",
+		"reset": "rm -rf data/*",
+		"format": "prettier -w ."
+	},
+	"dependencies": {
+		"better-sqlite3": "^11.1.2",
+		"blossom-client-sdk": "^0.9.0",
+		"blossom-server-sdk": "^0.4.0",
+		"cors": "^2.8.5",
+		"debug": "^4.3.6",
+		"express": "^4.19.2",
+		"express-async-handler": "^1.2.0",
+		"follow-redirects": "^1.15.6",
+		"http-error": "^0.0.6",
+		"http-errors": "^2.0.0",
+		"lowdb": "^7.0.1",
+		"mime": "^4.0.1",
+		"nostr-tools": "^2.7.2",
+		"ws": "^8.16.0"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.27.8",
+		"@types/better-sqlite3": "^7.6.11",
+		"@types/debug": "^4.1.12",
+		"@types/express": "^4.17.21",
+		"@types/follow-redirects": "^1.14.4",
+		"@types/http-errors": "^2.0.4",
+		"@types/morgan": "^1.9.9",
+		"@types/node": "^20.11.30",
+		"@types/ws": "^8.5.10",
+		"morgan": "^1.10.0",
+		"prettier": "^3.2.5",
+		"typescript": "^5.4.3"
+	}
+}

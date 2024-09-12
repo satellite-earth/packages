@@ -1,0 +1,318 @@
+{
+	"__inputs": [
+		{
+			"name": "DS_EVENTS",
+			"label": "events",
+			"description": "",
+			"type": "datasource",
+			"pluginId": "frser-sqlite-datasource",
+			"pluginName": "SQLite"
+		}
+	],
+	"__elements": {},
+	"__requires": [
+		{
+			"type": "datasource",
+			"id": "frser-sqlite-datasource",
+			"name": "SQLite",
+			"version": "3.5.0"
+		},
+		{
+			"type": "grafana",
+			"id": "grafana",
+			"name": "Grafana",
+			"version": "11.2.0"
+		},
+		{
+			"type": "panel",
+			"id": "stat",
+			"name": "Stat",
+			"version": ""
+		},
+		{
+			"type": "panel",
+			"id": "table",
+			"name": "Table",
+			"version": ""
+		}
+	],
+	"annotations": {
+		"list": [
+			{
+				"builtIn": 1,
+				"datasource": {
+					"type": "grafana",
+					"uid": "-- Grafana --"
+				},
+				"enable": true,
+				"hide": true,
+				"iconColor": "rgba(0, 211, 255, 1)",
+				"name": "Annotations & Alerts",
+				"type": "dashboard"
+			}
+		]
+	},
+	"editable": true,
+	"fiscalYearStartMonth": 0,
+	"graphTooltip": 0,
+	"id": null,
+	"links": [],
+	"panels": [
+		{
+			"collapsed": false,
+			"gridPos": {
+				"h": 1,
+				"w": 24,
+				"x": 0,
+				"y": 0
+			},
+			"id": 2,
+			"panels": [],
+			"title": "Events",
+			"type": "row"
+		},
+		{
+			"datasource": {
+				"type": "frser-sqlite-datasource",
+				"uid": "${DS_EVENTS}"
+			},
+			"description": "",
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "thresholds"
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [
+							{
+								"color": "green",
+								"value": null
+							}
+						]
+					}
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 2,
+				"w": 7,
+				"x": 0,
+				"y": 1
+			},
+			"id": 3,
+			"options": {
+				"colorMode": "value",
+				"graphMode": "area",
+				"justifyMode": "auto",
+				"orientation": "auto",
+				"percentChangeColorMode": "standard",
+				"reduceOptions": {
+					"calcs": ["lastNotNull"],
+					"fields": "",
+					"values": false
+				},
+				"showPercentChange": false,
+				"textMode": "auto",
+				"wideLayout": true
+			},
+			"pluginVersion": "11.2.0",
+			"targets": [
+				{
+					"datasource": {
+						"type": "frser-sqlite-datasource",
+						"uid": "${DS_EVENTS}"
+					},
+					"queryText": "SELECT count(id) as total\nFROM events\nWHERE created_at >= $__from / 1000 and created_at < $__to / 1000 and pubkey = '${pubkey}'",
+					"queryType": "table",
+					"rawQueryText": "SELECT count(id) as total\nFROM events\nWHERE created_at >= $__from / 1000 and created_at < $__to / 1000 and pubkey = '${pubkey}'",
+					"refId": "A",
+					"timeColumns": ["time", "ts"]
+				}
+			],
+			"type": "stat"
+		},
+		{
+			"datasource": {
+				"type": "frser-sqlite-datasource",
+				"uid": "${DS_EVENTS}"
+			},
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "thresholds"
+					},
+					"custom": {
+						"align": "auto",
+						"cellOptions": {
+							"type": "auto"
+						},
+						"inspect": false
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [
+							{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					}
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 20,
+				"w": 17,
+				"x": 7,
+				"y": 1
+			},
+			"id": 4,
+			"options": {
+				"cellHeight": "sm",
+				"footer": {
+					"countRows": false,
+					"fields": "",
+					"reducer": ["sum"],
+					"show": false
+				},
+				"showHeader": true,
+				"sortBy": [
+					{
+						"desc": false,
+						"displayName": "created_at"
+					}
+				]
+			},
+			"pluginVersion": "11.2.0",
+			"targets": [
+				{
+					"datasource": {
+						"type": "frser-sqlite-datasource",
+						"uid": "${DS_EVENTS}"
+					},
+					"queryText": "SELECT decryption_cache.content, events.created_at, events.pubkey as sender, tags.v as recipient\nFROM decryption_cache\nINNER JOIN events ON events.kind = 4 AND events.id = decryption_cache.event\nINNER JOIN tags ON tags.e = decryption_cache.event AND tags.t = 'p'\nWHERE (events.pubkey = '${pubkey}' OR tags.v = '${pubkey}') AND events.created_at >= $__from / 1000 AND events.created_at < $__to / 1000",
+					"queryType": "table",
+					"rawQueryText": "SELECT decryption_cache.content, events.created_at, events.pubkey as sender, tags.v as recipient\nFROM decryption_cache\nINNER JOIN events ON events.kind = 4 AND events.id = decryption_cache.event\nINNER JOIN tags ON tags.e = decryption_cache.event AND tags.t = 'p'\nWHERE (events.pubkey = '${pubkey}' OR tags.v = '${pubkey}') AND events.created_at >= $__from / 1000 AND events.created_at < $__to / 1000",
+					"refId": "A",
+					"timeColumns": ["created_at"]
+				}
+			],
+			"title": "Decryption cache",
+			"type": "table"
+		},
+		{
+			"datasource": {
+				"type": "frser-sqlite-datasource",
+				"uid": "${DS_EVENTS}"
+			},
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "thresholds"
+					},
+					"custom": {
+						"align": "auto",
+						"cellOptions": {
+							"type": "auto"
+						},
+						"inspect": false
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [
+							{
+								"color": "green",
+								"value": null
+							}
+						]
+					}
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 18,
+				"w": 7,
+				"x": 0,
+				"y": 3
+			},
+			"id": 1,
+			"options": {
+				"cellHeight": "sm",
+				"footer": {
+					"countRows": false,
+					"fields": "",
+					"reducer": ["sum"],
+					"show": false
+				},
+				"showHeader": true,
+				"sortBy": [
+					{
+						"desc": true,
+						"displayName": "total"
+					}
+				]
+			},
+			"pluginVersion": "11.2.0",
+			"targets": [
+				{
+					"datasource": {
+						"type": "frser-sqlite-datasource",
+						"uid": "${DS_EVENTS}"
+					},
+					"queryText": "SELECT kind, count(id) as total\nFROM events \nWHERE \n  created_at >= $__from / 1000 AND \n  created_at < $__to / 1000 AND \n  pubkey = '${pubkey}'\nGROUP BY kind\nORDER BY total DESC",
+					"queryType": "table",
+					"rawQueryText": "SELECT kind, count(id) as total\nFROM events \nWHERE \n  created_at >= $__from / 1000 AND \n  created_at < $__to / 1000 AND \n  pubkey = '${pubkey}'\nGROUP BY kind\nORDER BY total DESC",
+					"refId": "A",
+					"timeColumns": ["time", "ts"]
+				}
+			],
+			"title": "Event Kinds",
+			"type": "table"
+		}
+	],
+	"schemaVersion": 39,
+	"tags": [],
+	"templating": {
+		"list": [
+			{
+				"current": {},
+				"datasource": {
+					"type": "frser-sqlite-datasource",
+					"uid": "${DS_EVENTS}"
+				},
+				"definition": "SELECT IIF(json_valid(content), content->>'$.name', substr(pubkey, 1, 8)) AS __text, pubkey as __value FROM events WHERE kind=0",
+				"description": "The pubkey of the user to view",
+				"hide": 0,
+				"includeAll": false,
+				"label": "pubkey",
+				"multi": false,
+				"name": "pubkey",
+				"options": [],
+				"query": "SELECT IIF(json_valid(content), content->>'$.name', substr(pubkey, 1, 8)) AS __text, pubkey as __value FROM events WHERE kind=0",
+				"refresh": 1,
+				"regex": "",
+				"skipUrlSync": false,
+				"sort": 2,
+				"type": "query"
+			}
+		]
+	},
+	"time": {
+		"from": "now-24h",
+		"to": "now"
+	},
+	"timepicker": {},
+	"timezone": "browser",
+	"title": "Pubkey Overview",
+	"uid": "adw684q65vvuoc",
+	"version": 2,
+	"weekStart": ""
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Satellite</string>
+    <string name="title_activity_main">Satellite</string>
+    <string name="package_name">earth.satellite</string>
+    <string name="custom_url_scheme">earth.satellite</string>
+</resources>

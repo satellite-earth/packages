@@ -1,0 +1,2 @@
+export const COMMUNITY_CHANNEL_KIND = 39000;
+export const COMMUNITY_CHAT_MESSAGE = 9;

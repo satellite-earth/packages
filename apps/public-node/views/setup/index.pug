@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+  head
+    title Setup
+  body
+    h1 Setup community
+    form(action="/" method="post")
+      label(for="owner") Owner Pubkey
+      br
+      input#owner(name="owner", placeholder="hex or npub" size="64" required)
+      button#nip-07-button(type="button") from extension
+      br
+      br
+
+      label(for="name") Name
+      br
+      input#name(name="name" placeholder="Community Name" size="64" required autocomplete="off")
+      br
+      br
+
+      label(for="about") About
+      br
+      textarea#about(name="about" cols="80" rows="6" placeholder="Short summary of the community" required autocomplete="off")
+      br
+      br
+
+      //- details
+      //-   summary Advanced Options
+      //-   br
+      //-   label(for="nsec") Community nsec
+      //-   br
+      //-   input#about(name="nsec" size="64" placeholder="hex or nsec")
+      //-   br
+      //-   | Don't set this unless you know what your doing
+
+      br
+      br
+      input(type="submit", value="Create Community")
+
+    script(type='text/javascript').
+      const nip07Button = document.getElementById('nip-07-button')
+      if(window.nostr){
+        nip07Button.addEventListener('click', async () => {
+          const pubkey = await window.nostr.getPublicKey()
+          document.getElementById('owner').value = pubkey
+        })
+      }
+      else nip07Button.remove()
+
