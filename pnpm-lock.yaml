@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@changesets/cli':
+        specifier: ^2.27.8
+        version: 2.27.8
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -105,9 +108,6 @@ importers:
         specifier: ^8.16.0
         version: 8.18.0
     devDependencies:
-      '@changesets/cli':
-        specifier: ^2.27.8
-        version: 2.27.8
       '@swc-node/register':
         specifier: ^1.8.0
         version: 1.8.0(@swc/core@1.7.26)(@swc/types@0.1.12)(typescript@5.6.2)
@@ -196,9 +196,6 @@ importers:
         specifier: ^8.16.0
         version: 8.18.0
     devDependencies:
-      '@changesets/cli':
-        specifier: ^2.27.1
-        version: 2.27.8
       '@swc-node/register':
         specifier: 1.8.0
         version: 1.8.0(@swc/core@1.7.26)(@swc/types@0.1.12)(typescript@5.6.2)
@@ -371,9 +368,6 @@ importers:
       '@capacitor/cli':
         specifier: ^6.1.1
         version: 6.1.2
-      '@changesets/cli':
-        specifier: ^2.27.8
-        version: 2.27.8
       '@types/chroma-js':
         specifier: ^2.4.4
         version: 2.4.4
@@ -483,9 +477,6 @@ importers:
         specifier: ^8.16.0
         version: 8.18.0
     devDependencies:
-      '@changesets/cli':
-        specifier: ^2.27.8
-        version: 2.27.8
       '@types/better-sqlite3':
         specifier: ^7.6.11
         version: 7.6.11
