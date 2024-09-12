@@ -6,7 +6,8 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/satellite-earth/public-node.git"
+		"url": "git+https://github.com/satellite-earth/packages.git",
+		"directory": "apps/public-node"
 	},
 	"files": [
 		"dist",

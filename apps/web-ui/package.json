@@ -9,7 +9,8 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/satellite-earth/web-ui.git"
+		"url": "git+https://github.com/satellite-earth/packages.git",
+		"directory": "apps/web-ui"
 	},
 	"packageManager": "pnpm@9.6.0",
 	"scripts": {
