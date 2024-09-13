@@ -109,7 +109,7 @@ export default class App extends EventEmitter<EventMap> {
 
 		// set owner pubkey from env variable
 		if (!this.config.data.owner && OWNER_PUBKEY && isHex(OWNER_PUBKEY)) {
-			this.config.data.owner = OWNER_PUBKEY;
+			this.config.setField('owner', OWNER_PUBKEY);
 		}
 
 		// create http and ws server interface
