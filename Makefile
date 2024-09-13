@@ -16,8 +16,8 @@ nuke:
 	rm -rf ./apps/*/node_modules
 	rm -rf ./packages/*/node_modules
 
-start: install build
-	cd apps/personal-node && pnpm dev
+start:
+	cd apps/personal-node && pnpm start
 
 dev:
 	cd packages/core && pnpm build --watch > /dev/null &\
