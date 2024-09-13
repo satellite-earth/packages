@@ -1,0 +1,283 @@
+{
+	"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+	"dist-tags": { "latest": "7.25.3", "next": "8.0.0-alpha.12" },
+	"versions": {
+		"7.24.4": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "7.24.4",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.24.0", "@babel/helper-environment-visitor": "^7.22.20" },
+			"devDependencies": {
+				"@babel/core": "^7.24.4",
+				"@babel/traverse": "^7.24.1",
+				"@babel/helper-plugin-test-runner": "^7.24.1"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0" },
+			"dist": {
+				"shasum": "6125f0158543fb4edf1c22f322f3db67f21cb3e1",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-7.24.4.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-qpl6vOOEEzTLLcsuqYYo8yDtrTocmu2xkGvgNebvPjT9DTtfFYGmgDqY+rBYXNlqL4s9qLDn6xkrJv4RxAPiTA==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCX/fexXx/2lTSgH9Mjk1oNy92xKa/q71lvxLWl/4vdFwIhAND4tklyomqAcFg7bzUycFBAzXXAkV/PPPTstIl24d3O",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 12037
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.8": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "8.0.0-alpha.8",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.8",
+				"@babel/helper-environment-visitor": "^8.0.0-alpha.8"
+			},
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.8",
+				"@babel/traverse": "^8.0.0-alpha.8",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.8"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.8" },
+			"dist": {
+				"shasum": "fbbab3cf738a67959853ea03311a44353c76d1d4",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-8.0.0-alpha.8.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-4/dQSSG/b/hid6Pq59zkCBFK04VhS1QX49kJwWsmFQKzoeTwTw+unhYkHTHvQ9LPPZb/a7S6pzP6FlW5DfNfPw==",
+				"signatures": [
+					{
+						"sig": "MEQCICOWXkuWjd/1IW+5wPY1aWcgNP5Xrqqkhv5uKarQLmIuAiAvPT78mEEX1eLo6buR6p2ep6Pe66uduAZwEYTvNnkMXQ==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 12040
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.24.5": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "7.24.5",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.24.5", "@babel/helper-environment-visitor": "^7.22.20" },
+			"devDependencies": {
+				"@babel/core": "^7.24.5",
+				"@babel/traverse": "^7.24.5",
+				"@babel/helper-plugin-test-runner": "^7.24.1"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0" },
+			"dist": {
+				"shasum": "4c3685eb9cd790bcad2843900fe0250c91ccf895",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-7.24.5.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-LdXRi1wEMTrHVR4Zc9F8OewC3vdm5h4QB6L71zy6StmYeqGi1b3ttIO8UC+BfZKcH9jdr4aI249rBkm+3+YvHw==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCw8T/6LTettgGaDI3wNFHGdTnxwYTBd+Id+7xkbSa58QIgalJi3ZkWhWC3pCpcJBwUPNe7aD3TjwRtjkwi0S/Vo5I=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 78141
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"7.24.6": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "7.24.6",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.24.6", "@babel/helper-environment-visitor": "^7.24.6" },
+			"devDependencies": {
+				"@babel/core": "^7.24.6",
+				"@babel/traverse": "^7.24.6",
+				"@babel/helper-plugin-test-runner": "^7.24.6"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0" },
+			"dist": {
+				"shasum": "283a74ef365b1e954cda6b2724c678a978215e88",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-7.24.6.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-bYndrJ6Ph6Ar+GaB5VAc0JPoP80bQCm4qon6JEzXfRl5QZyQ8Ur1K6k7htxWmPA5z+k7JQvaMUrtXlqclWYzKw==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCTDKRf0KJy/NVrtoMhw+RnB+rCpc9CuuDLJ0FKqq2VTQIgfXX1ruwL3KaPtRSYgAB9jtKAHgp4rh1tODASc6IwRr4=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 78367
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.9": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "8.0.0-alpha.9",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.9",
+				"@babel/helper-environment-visitor": "^8.0.0-alpha.9"
+			},
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.9",
+				"@babel/traverse": "^8.0.0-alpha.9",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.9"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.9" },
+			"dist": {
+				"shasum": "a2bf0d25c42dede598ca156ea0cfccc4253cd63d",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-8.0.0-alpha.9.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-np6bxPHebNqd7FhZjhlObpuU+t1IfYCw5z+ScBKHE5PrK9NdQgiyJo7rtEf6gAnSDGAnZSFrR5NDxhgshACqGA==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCScA45hP7NHwd+lWzS7uLWDMI72rG+qf6gGjtse8bAMgIgN+A3MUfYCbIdTBGmX4vsSsvygx0BKO/8cjzew894icE=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 78575
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"8.0.0-alpha.10": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "8.0.0-alpha.10",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.10",
+				"@babel/helper-environment-visitor": "^8.0.0-alpha.10"
+			},
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.10",
+				"@babel/traverse": "^8.0.0-alpha.10",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.10"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.10" },
+			"dist": {
+				"shasum": "83c92cb4c72f03bf311fb4108c55b4579a658597",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-8.0.0-alpha.10.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-M6yr5gN4pttPhT0lkYOraKNGvoGHzqFS7eHrn6vb4vbsF5Au0M23gxDybqCymlpM1QT9hc1iNdNIKgQFnDuSlQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIEcmogQgzpZNCPjbU0X3LUrpZLjOCw6VtiQ8JZb1nLmRAiEAta4CBjwkwut9mIlXGxFG1WyfXcFyx8EZsi4hgX2cPNY=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 78583
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"7.24.7": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "7.24.7",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.24.7", "@babel/helper-environment-visitor": "^7.24.7" },
+			"devDependencies": {
+				"@babel/core": "^7.24.7",
+				"@babel/traverse": "^7.24.7",
+				"@babel/helper-plugin-test-runner": "^7.24.7"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0" },
+			"dist": {
+				"shasum": "fd059fd27b184ea2b4c7e646868a9a381bbc3055",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-7.24.7.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-TiT1ss81W80eQsN+722OaeQMY/G4yTb4G9JrqeiDADs3N8lbPMGldWi9x8tyqCW5NLx1Jh2AvkE6r6QvEltMMQ==",
+				"signatures": [
+					{
+						"sig": "MEUCICyCURz+3jR2Y674zRO5Cf5nMM4Pe4+PDRW/FLjKvS5/AiEAzHdPwzsEAoNIsjxqcxSsdFT7jpC5XKmBb/WpXldtWdc=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 78317
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.11": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "8.0.0-alpha.11",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.11",
+				"@babel/helper-environment-visitor": "^8.0.0-alpha.11"
+			},
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.11",
+				"@babel/traverse": "^8.0.0-alpha.11",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.11"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.11" },
+			"dist": {
+				"shasum": "10157a2e52d10ffc368e54d119d70df7cce9a3cb",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-8.0.0-alpha.11.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-cPQJvcQQDGZp9rZj/k/8fu4Ic1eXD/+MmGB2+fXsEDDCGOKUZLHkPpJ3KZw893AfnALfybq6DOHbD69tidfgew==",
+				"signatures": [
+					{
+						"sig": "MEYCIQDA63CVHo7Ffz3tNB4lH8Sxu6/cVDCBCyFkEzGYoNsDBQIhAL+2NVe5llL734b8Yti+PrJMctl3o73NwfVIsn4A+56k",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 78472
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"7.25.0": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "7.25.0",
+			"dependencies": { "@babel/traverse": "^7.25.0", "@babel/helper-plugin-utils": "^7.24.8" },
+			"devDependencies": { "@babel/core": "^7.24.9", "@babel/helper-plugin-test-runner": "^7.24.7" },
+			"peerDependencies": { "@babel/core": "^7.0.0" },
+			"dist": {
+				"shasum": "328275f22d809b962978d998c6eba22a233ac8aa",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-7.25.0.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-dG0aApncVQwAUJa8tP1VHTnmU67BeIQvKafd3raEx315H54FfkZSz3B/TT+33ZQAjatGJA79gZqTtqL5QZUKXw==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDHkFLiIub8lGavXgUngywr8lde2eRwUhmvnLjMR1YjywIgRYrZ5l1R3zqTCXhcguvxCE5KbR0BovxYoNzUSHnJJ0U=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 75100
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.12": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "8.0.0-alpha.12",
+			"dependencies": { "@babel/traverse": "^8.0.0-alpha.12", "@babel/helper-plugin-utils": "^8.0.0-alpha.12" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.12", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.12" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.12" },
+			"dist": {
+				"shasum": "925f740ba7fc78767ec721df0fc5682ae5288edd",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-8.0.0-alpha.12.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-f6Gxxn46DgJ79p1hadxz6K+A3zs/u+rrg8NiGNmYaYK5clEt5HFNm0sTK78bk+OdoqQyLnHj7t3ZAHHMXVpF/A==",
+				"signatures": [
+					{
+						"sig": "MEUCIA+go5T75H9enZNCOLQ30G3tF4CSci3A1sOM77fjjd8mAiEAmTOtJnxPikghGw86ybQs4ojR1uq4sPbD1g2rYiEmMwU=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 75215
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"7.25.3": {
+			"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+			"version": "7.25.3",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.24.8", "@babel/traverse": "^7.25.3" },
+			"devDependencies": { "@babel/core": "^7.25.2", "@babel/helper-plugin-test-runner": "^7.24.7" },
+			"peerDependencies": { "@babel/core": "^7.0.0" },
+			"dist": {
+				"shasum": "dca427b45a6c0f5c095a1c639dfe2476a3daba7f",
+				"integrity": "sha512-wUrcsxZg6rqBXG05HG1FPYgsP6EvwF4WpBbxIpWIIYnH8wG0gzx3yZY3dtEHas4sTAOGkbTsc9EGPxwff8lRoA==",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-firefox-class-in-computed-class-key/-/plugin-bugfix-firefox-class-in-computed-class-key-7.25.3.tgz",
+				"fileCount": 7,
+				"unpackedSize": 74542,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEYCIQDcnUoWFmyJztHTXaL2vgVZfqNeawowuq+5gqN16sD8OQIhAN4XTkFHRTb8fkiEunmzLdCQasOXlaXyCyw8LKjxuGer"
+					}
+				]
+			},
+			"engines": { "node": ">=6.9.0" }
+		}
+	},
+	"modified": "2024-07-31T12:25:46.456Z",
+	"cachedAt": 1726246010071
+}

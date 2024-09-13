@@ -1,0 +1,586 @@
+{
+	"name": "@babel/plugin-transform-numeric-separator",
+	"dist-tags": { "latest": "7.24.7", "next": "8.0.0-alpha.12" },
+	"versions": {
+		"7.22.0": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "7.22.0",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.21.5", "@babel/plugin-syntax-numeric-separator": "^7.10.4" },
+			"devDependencies": {
+				"@babel/core": "^7.22.0",
+				"@babel/types": "^7.22.0",
+				"@babel/traverse": "^7.22.0",
+				"@babel/helper-plugin-test-runner": "^7.18.6"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "94de4190617b02b73c6bd48249eacd8726af3a3c",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-7.22.0.tgz",
+				"fileCount": 6,
+				"integrity": "sha512-dfbXAKlbPlDKXsY7fa/gRBWgI4n537TR4b5AnVCZ3RwQ1aVPxs52Xs3XHFxQMn3j4LmUhn8IL2nAYmNh6z2/Ew==",
+				"signatures": [
+					{
+						"sig": "MEQCIH3Gs8T3N2BqRIO+EEMWKIdYsodxtxAioIYGm0Mwkw+jAiAk4UP1TkEY5Hb7sAIFbT9BvthiGWTY+6K5poWj9M6ihw==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5399
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"7.22.3": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "7.22.3",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.21.5", "@babel/plugin-syntax-numeric-separator": "^7.10.4" },
+			"devDependencies": {
+				"@babel/core": "^7.22.1",
+				"@babel/types": "^7.22.3",
+				"@babel/traverse": "^7.22.1",
+				"@babel/helper-plugin-test-runner": "^7.18.6"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "02493070ca6685884b0eee705363ee4da2132ab0",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-7.22.3.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-+AF88fPDJrnseMh5vD9+SH6wq4ZMvpiTMHh58uLs+giMEyASFVhcT3NkoyO+NebFCNnpHJEq5AXO2txV4AGPDQ==",
+				"signatures": [
+					{
+						"sig": "MEQCIExGVNKrHrS482bM+SijDqLnV2Ljl70H43tfXj9K+g0sAiBG01Tl89L2I5VkEdsQb2V3ia6Jm9LUjEMs63nsdSh8wg==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5379
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"7.22.5": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "7.22.5",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.22.5", "@babel/plugin-syntax-numeric-separator": "^7.10.4" },
+			"devDependencies": {
+				"@babel/core": "^7.22.5",
+				"@babel/types": "^7.22.5",
+				"@babel/traverse": "^7.22.5",
+				"@babel/helper-plugin-test-runner": "^7.22.5"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "57226a2ed9e512b9b446517ab6fa2d17abb83f58",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-7.22.5.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-NbslED1/6M+sXiwwtcAB/nieypGw02Ejf4KtDeMkCEpP6gWFMX1wI9WKYua+4oBneCCEmulOkRpwywypVZzs/g==",
+				"signatures": [
+					{
+						"sig": "MEQCIHKa0IaC6Y4iB0ektqN7RYU4ejcM/zEyWMxa+Uv8P1A1AiBmyhuVLVf0QBWKgSYY3tyEtdQiMnfF+5DmU3ZLBt/T1Q==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5379
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.0": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.0",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.0",
+				"@babel/plugin-syntax-numeric-separator": "^7.10.4"
+			},
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.0",
+				"@babel/types": "^8.0.0-alpha.0",
+				"@babel/traverse": "^8.0.0-alpha.0",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.0"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.0" },
+			"dist": {
+				"shasum": "f1cd7c2baba16bc2057b964b7523c210e8f6e195",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.0.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-bNJqKQHCBaYF89w3HUreICPqtfLx3Cezvz8GgJ0/Hd7G5eYMS/M5P+vnpNUMmsKVMh6huGKvoHDDpryDIPm+Gg==",
+				"signatures": [
+					{
+						"sig": "MEQCIAnmGTnTddL98Df6+PRxh4oy/UojqamTXifPL4ob3pY8AiAJkvcnOy8jpDU9FZ8pt+mKQ3kshQ4d0aXgkxrPQLlP/Q==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5164
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.1": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.1",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.1",
+				"@babel/plugin-syntax-numeric-separator": "^7.10.4"
+			},
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.1",
+				"@babel/types": "^8.0.0-alpha.1",
+				"@babel/traverse": "^8.0.0-alpha.1",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.1"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.1" },
+			"dist": {
+				"shasum": "b57cae09fc4aa73c7258bc867de47173b6cd03c6",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.1.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-MTbpATfqbWHXOnoVPppLq9sZdvH9cuZS93ococ/JfzJMxAE+OfY1XD/B6t394QhE1uuzWoX4wbB4Ol5R2D4R3Q==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCNTkUB2G24A+jOTRHsJzm6uZ4BrqTLnAO0TZxYuCDaigIgVZ/Reji9qXSQXtfu0Y80BImlvqQPUf0KCIoUzm75ZIQ=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5164
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.2": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.2",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.2" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.2",
+				"@babel/types": "^8.0.0-alpha.2",
+				"@babel/traverse": "^8.0.0-alpha.2",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.2"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.2" },
+			"dist": {
+				"shasum": "7903965cd6ed2d926667ba70670362adc107c7ce",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.2.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-3OStAZLA6TgM3u1vBZYBrrzpEjsamjAH6wRmYUW0o3dGsENzyKfYPddMmHj4x7lkWKqQBJPL6YMu6HXH5clWIQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIEIzCMAHzeLsygHVrGh2Gg5dSnYDfzLbdbfQDZzLNzvYAiEAo8dCn8Y0yRrq/Gph/nyA1h+7YPnsgr8pxOMvjp6XOQg=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5023
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.22.11": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "7.22.11",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.22.5", "@babel/plugin-syntax-numeric-separator": "^7.10.4" },
+			"devDependencies": {
+				"@babel/core": "^7.22.11",
+				"@babel/types": "^7.22.11",
+				"@babel/traverse": "^7.22.11",
+				"@babel/helper-plugin-test-runner": "^7.22.5"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "498d77dc45a6c6db74bb829c02a01c1d719cbfbd",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-7.22.11.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-3dzU4QGPsILdJbASKhF/V2TVP+gJya1PsueQCxIPCEcerqF21oEcrob4mzjsp2Py/1nLfF5m+xYNMDpmA8vffg==",
+				"signatures": [
+					{
+						"sig": "MEQCIBmtxBrC5v7Nx6iAXcdaGU21Dqj9BYHqOHDhAwUzg6XOAiA4rj/Nk/dUJ/WwMw4ZA/kKplB7jxT8eYkqdyGglGHIeA==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5328
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.3": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.3",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.3" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.3",
+				"@babel/types": "^8.0.0-alpha.3",
+				"@babel/traverse": "^8.0.0-alpha.3",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.3"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.3" },
+			"dist": {
+				"shasum": "f161d259eaba1ac0686fbbed25e74dcc8896696d",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.3.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-1WrVD4w4yx3MWDZ96eD10j+0div6xl/GGu78XEAZ60T+8XfVRbQb+3vTSCLL4hqU3oqzWkZzumxx6fngsXdMmg==",
+				"signatures": [
+					{
+						"sig": "MEQCIH/ml90PmyWn4eQffCWFw8k2nr3dIuI6ceKSe8YwACmDAiAxp4nnNygKsbGaDNwEx73WboXc9Pq1SXOQZcxDWkjqTA==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5065
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.4": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.4",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.4" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.4",
+				"@babel/types": "^8.0.0-alpha.4",
+				"@babel/traverse": "^8.0.0-alpha.4",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.4"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.4" },
+			"dist": {
+				"shasum": "87e043750a9e821ed020a011e332f92244242733",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.4.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-iX0GXdESErjorEK5oF+JTsEl2n79WROwiDA34TQo7gqv9xTc7kQCYWoCvG2F0H4u8sse44mAOHkrpU7p3htvRw==",
+				"signatures": [
+					{
+						"sig": "MEUCIFhtPG6wSX/cjPLj/woCLnG9hHpDK0uXx/AGZVFFEgmyAiEA9nxVlzYtUiioWsnpVA6Cin3cC4lDk4MhT5QNpu2S/jY=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5065
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.23.3": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "7.23.3",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.22.5", "@babel/plugin-syntax-numeric-separator": "^7.10.4" },
+			"devDependencies": {
+				"@babel/core": "^7.23.3",
+				"@babel/types": "^7.23.3",
+				"@babel/traverse": "^7.23.3",
+				"@babel/helper-plugin-test-runner": "^7.22.5"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "2f8da42b75ba89e5cfcd677afd0856d52c0c2e68",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-7.23.3.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-s9GO7fIBi/BLsZ0v3Rftr6Oe4t0ctJ8h4CCXfPoEJwmvAPMyNrfkOOJzm6b9PX9YXcCJWWQd/sBF/N26eBiMVw==",
+				"signatures": [
+					{
+						"sig": "MEUCICQLuzu7lN6L83D++4R2dAb/cjF5PMXirbNDNCP2hpTlAiEAtuwsSoVoaqY9rs/BzF71lnH4Mlq8TtG5+TiRJHf3yRY=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5407
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"7.23.4": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "7.23.4",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.22.5", "@babel/plugin-syntax-numeric-separator": "^7.10.4" },
+			"devDependencies": {
+				"@babel/core": "^7.23.3",
+				"@babel/types": "^7.23.4",
+				"@babel/traverse": "^7.23.4",
+				"@babel/helper-plugin-test-runner": "^7.22.5"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "03d08e3691e405804ecdd19dd278a40cca531f29",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-7.23.4.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-mps6auzgwjRrwKEZA05cOwuDc9FAzoyFS4ZsG/8F43bTLf/TgkJg7QXOrPO1JO599iA3qgK9MXdMGOEC8O1h6Q==",
+				"signatures": [
+					{
+						"sig": "MEUCIAwL0NDEnOgmLtmSHV9Mz/n5oji2npSWe0g5fZONWl07AiEAviD8Za3l6y/z5z/IC0mygKumVWQNqmqvWy5iYvbmXGE=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5413
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.5": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.5",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.5" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.5",
+				"@babel/types": "^8.0.0-alpha.5",
+				"@babel/traverse": "^8.0.0-alpha.5",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.5"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.5" },
+			"dist": {
+				"shasum": "a512989e3d733d67912b370a80367108762e3978",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.5.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-y6lQRszHN6h2Lc+J/wQZ2ZjOPwGT04bPGPY1j+IUWso/1mPhkxVId35DAKJDFXa+ZlF93l1egAQy71HSv5RIyQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDh8g6QhFGj0kGG+qfqXnUf1sofcr5vPlQr+28IoTcY7gIgSuEJo3FCRTj8bNNLlSkpsQ4H8OGzDZ5+Zh+G9Wn4xX4=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5184
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.6": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.6",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.6" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.6",
+				"@babel/types": "^8.0.0-alpha.6",
+				"@babel/traverse": "^8.0.0-alpha.6",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.6"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.6" },
+			"dist": {
+				"shasum": "6dd273d704dfcf6733cc0f60bfe90b4c4b7495ea",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.6.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-HEMknHELb3NQK+6yETQsCQj1Mo9Tiuk6Qwm+vckFMVrNeSNX40ndm1rQkWKBxOtBcj4xAwl3ipf3iamCwbeZpw==",
+				"signatures": [
+					{
+						"sig": "MEQCIDTTsU15OMbyBzh3kWq8bE+kwsSfHQkwBAI3nnSGf3rjAiAkXd+Dne/nG7x9PaFAAITrz7gBBs61dYKhmztrntWBXw==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5184
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.7": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.7",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.7" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.7",
+				"@babel/types": "^8.0.0-alpha.7",
+				"@babel/traverse": "^8.0.0-alpha.7",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.7"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.7" },
+			"dist": {
+				"shasum": "3afdf2e5a9aa6fcc5238ed1026e6671b04d65752",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.7.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-neO+uHaUzEtC/vDPt2mVbYAgwuD7iH/gW36SbNY6coyhQ1ef+J1mZ54D1jGKZYYcusyDGvWxQgr1tKADW1oN1g==",
+				"signatures": [
+					{
+						"sig": "MEUCIEM/9PQndYtZhtksKPK+9EBURqTHICcK3vVXaCyHFFiyAiEAvC4b0BPOw0ifI8eA98bk2BFEmuG34lZ0KUyfLkUwa8M=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5184
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.24.1": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "7.24.1",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.24.0", "@babel/plugin-syntax-numeric-separator": "^7.10.4" },
+			"devDependencies": {
+				"@babel/core": "^7.24.1",
+				"@babel/types": "^7.24.0",
+				"@babel/traverse": "^7.24.1",
+				"@babel/helper-plugin-test-runner": "^7.24.1"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "5bc019ce5b3435c1cadf37215e55e433d674d4e8",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-7.24.1.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-7GAsGlK4cNL2OExJH1DzmDeKnRv/LXq0eLUSvudrehVA5Rgg4bIrqEUW29FbKMBRT0ztSqisv7kjP+XIC4ZMNw==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDlucgFFn3ImNwudleYyFq7kKDZJg6LBeqDJNyAf5wniQIgaGkzV9qczY9neEC/dBDhBQ0YFPYh8ruvgr78vmyxsZs=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5474
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.8": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.8",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.8" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.8",
+				"@babel/types": "^8.0.0-alpha.8",
+				"@babel/traverse": "^8.0.0-alpha.8",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.8"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.8" },
+			"dist": {
+				"shasum": "47e07da802c0e4d708336208df7012683cac70bf",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.8.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-XJBFZiwXHAFe8DTW7uxtxNk3DJG/jiIrSQknOzdlWAh2IENMA1zEso7Kr5HklCg7rIvpwYw4p+4OFpPPqE6XSA==",
+				"signatures": [
+					{
+						"sig": "MEUCIFDI6eK0u+jf7dEebrVdbjmVHITmSh1xmPnU9EiPITPlAiEAtGY9NdyG6NXnKyizf7zNf5rgH7Kfd5IJANPLKvWvcAA=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 5108
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.24.6": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "7.24.6",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.24.6", "@babel/plugin-syntax-numeric-separator": "^7.10.4" },
+			"devDependencies": {
+				"@babel/core": "^7.24.6",
+				"@babel/types": "^7.24.6",
+				"@babel/traverse": "^7.24.6",
+				"@babel/helper-plugin-test-runner": "^7.24.6"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "d9115669cc85aa91fbfb15f88f2226332cf4946a",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-7.24.6.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-6voawq8T25Jvvnc4/rXcWZQKKxUNZcKMS8ZNrjxQqoRFernJJKjE3s18Qo6VFaatG5aiX5JV1oPD7DbJhn0a4Q==",
+				"signatures": [
+					{
+						"sig": "MEUCIDRRvhtT2HgZHyEo0UDNFHoUkdxQIlK6q0Xg0zpFDhL8AiEAvncbc/D+9gETtwUzahOG63+gld8B696ivdJ4bddlrZc=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71442
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.9": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.9",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.9" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.9",
+				"@babel/types": "^8.0.0-alpha.9",
+				"@babel/traverse": "^8.0.0-alpha.9",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.9"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.9" },
+			"dist": {
+				"shasum": "6c8c698841699da0217408ab6d3a6cf5787675e8",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.9.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-giG/CwBskecf3T5AF7qCk6qq++i3imwMsh4BmP+FHXShBjpUkxziFFnKqMf87ohsLrpqYAWmEAZvNQELHpLJzQ==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCwnFZg5R1PP8IXVauqL3OJcijWmdFF9f9HQbfzycyqYQIhAL5O72PShXKPzdV574IrG+FzCocudbt1HuvJ1/pwrqmW",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71314
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"8.0.0-alpha.10": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.10",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.10" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.10",
+				"@babel/types": "^8.0.0-alpha.10",
+				"@babel/traverse": "^8.0.0-alpha.10",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.10"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.10" },
+			"dist": {
+				"shasum": "7abad815f86b90f24a9ea2a7bcad984633767e3a",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.10.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-HhaTKqlmo1P6VraSVKeDbpjhvP1gXyforBULXryGT29204eizkorwFYqVt+eLLXoP+wvGBsvKcMEDULNfR/2Ew==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCwse+kPKE4TgSSZJgmeoDfw6ktuEIhNlDrtcaZsYzrnAIgQwwvzQelKEpAHMHTbawlub36kzKiRSgm5hfF1oTyDuc=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71323
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"7.24.7": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "7.24.7",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.24.7", "@babel/plugin-syntax-numeric-separator": "^7.10.4" },
+			"devDependencies": {
+				"@babel/core": "^7.24.7",
+				"@babel/types": "^7.24.7",
+				"@babel/traverse": "^7.24.7",
+				"@babel/helper-plugin-test-runner": "^7.24.7"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "bea62b538c80605d8a0fac9b40f48e97efa7de63",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-7.24.7.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-e6q1TiVUzvH9KRvicuxdBTUj4AdKSRwzIyFFnfnezpCfP2/7Qmbb8qbU2j7GODbl4JMkblitCQjKYUaX/qkkwA==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCXbHPrcmrQOTxwPEHDt5pp6/Pa+vb8lv0uqrR46ad9qgIgHLvTvDDwF2sAzQYpiwyW7LHF8gf4/FUSj8UYSFId8IQ=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71399
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.11": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.11",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.11" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.11",
+				"@babel/types": "^8.0.0-alpha.11",
+				"@babel/traverse": "^8.0.0-alpha.11",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.11"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.11" },
+			"dist": {
+				"shasum": "60e63f93a42e1659470a3a02f070711934a7b743",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.11.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-bpsN4FS2W3wIK4VeMvVQ08lN/s4Hf4zuvRfgpAfCGMqLgCxgVby+/94wK7UhNwy/DsDhlgt98cZNs4KpD68ZoA==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCTxXylBQkZ+icDb0uGbltZGw/Q9GqZm8Uh2dgzEBo4mgIhAIBi5LAG034LRyR0ldawbaUgHt5K13WOnN58PIW+Cayd",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 71212
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"8.0.0-alpha.12": {
+			"name": "@babel/plugin-transform-numeric-separator",
+			"version": "8.0.0-alpha.12",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.12" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.12",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.12",
+				"@babel/traverse": "^8.0.0-alpha.12",
+				"@babel/types": "^8.0.0-alpha.12"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.12" },
+			"dist": {
+				"shasum": "ba768467c42c31cfc2d1afc633efab6244bd6205",
+				"integrity": "sha512-HpXABUXVpBJFR6PyTryKjQtVn2AjTjhOO1l7POeXtVX3Wlgw/9mOkTONJ9w8hy9In/0x5rjq3cgDQCCAXF6CIw==",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-numeric-separator/-/plugin-transform-numeric-separator-8.0.0-alpha.12.tgz",
+				"fileCount": 8,
+				"unpackedSize": 68008,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEUCIQDJMqYO/rpkILwkOVo1V3yF4INqyP5OZwTjKZkwoQaHwAIgIeYUIu08K2lDhRVdL8YlMnMVZrdwVmiV3Bw0ss/AL/Y="
+					}
+				]
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		}
+	},
+	"modified": "2024-07-26T17:33:26.939Z",
+	"cachedAt": 1726246010227
+}

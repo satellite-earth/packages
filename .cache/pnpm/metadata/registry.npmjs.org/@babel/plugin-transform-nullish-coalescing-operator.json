@@ -1,0 +1,503 @@
+{
+	"name": "@babel/plugin-transform-nullish-coalescing-operator",
+	"dist-tags": { "latest": "7.24.7", "next": "8.0.0-alpha.12" },
+	"versions": {
+		"7.22.0": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "7.22.0",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.21.5",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^7.22.0", "@babel/helper-plugin-test-runner": "^7.18.6" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "c24d022ca5dbdf9062c95a64cbe07a1258992f98",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.22.0.tgz",
+				"fileCount": 6,
+				"integrity": "sha512-KU2Or7uQqYKcL6rVLh8jThUBAKy1H+mxPx4E1omUqdSL+hVM9NriMjGFnnv+9xSn3jUMV5FQHsLQxgGLr/MWTw==",
+				"signatures": [
+					{
+						"sig": "MEUCIGTlRV6EBr250VY2t8W2TbKqOw82DfWerj2j/JCANJxrAiEAgpXlH9Ev6N3kc7cmYTzqR8jEiApgw07+M0rUde+29nI=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 9110
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"7.22.3": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "7.22.3",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.21.5",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^7.22.1", "@babel/helper-plugin-test-runner": "^7.18.6" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "8c519f8bf5af94a9ca6f65cf422a9d3396e542b9",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.22.3.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-CpaoNp16nX7ROtLONNuCyenYdY/l7ZsR6aoVa7rW7nMWisoNoQNIH5Iay/4LDyRjKMuElMqXiBoOQCDLTMGZiw==",
+				"signatures": [
+					{
+						"sig": "MEQCIDicd9nWivA6kBP3Fmopsl102k39pLRtLvtCp+UUmEJmAiBKrsk4b7YI2jUiV/y9gI9xNILmG+GbCviNgmJzg9b66A==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 9110
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"7.22.5": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "7.22.5",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^7.22.5", "@babel/helper-plugin-test-runner": "^7.22.5" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "f8872c65776e0b552e0849d7596cddd416c3e381",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.22.5.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-6CF8g6z1dNYZ/VXok5uYkkBBICHZPiGEl7oDnAx2Mt1hlHVHOSIKWJaXHjQJA5VB43KZnXZDIexMchY4y2PGdA==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDpVAM2xnAF5z6m0cpDxT3hv+W9gAdDMIsqxCK+wm7oMQIgeZyQATKMGVBANyOIOmCI6KG91jJJhZB6jPUf9us2IkI=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 9110
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.0": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.0",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.0",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.0", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.0" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.0" },
+			"dist": {
+				"shasum": "7c4689e97019a17903a4e502f84214362294d62b",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.0.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-GsUJzGNlJ36KvnvFyMNNrsS69AqU73nKulSpxBb9Tc5yghIhwVoqWkeJHA+xe/QUIB/fD54LFyqTHXq8KbGYag==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDDh0R0MwN0GK5WkmDZAd5avaD9EKFLhkQy0kHA0ZW7XgIgTtFrbokA+cWe5CSIqA6hZEFHxj9umKKqdYMo+L1Rgjc=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 8856
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.1": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.1",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^8.0.0-alpha.1",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.1", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.1" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.1" },
+			"dist": {
+				"shasum": "6bf886adf2359530888bc923a04c4e775a50b8dc",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.1.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-7vGZTJOH/Ptr4H0m1ar47UipQT9ITY0pm43AMe/vqS8t7mixQxhBDGJoBU78CziUh2zI8N7o14ocFI7coGERYw==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCsvLFpsqfGKen8/0CfGiCFGrx9ds/lpA04NMaWjtqGTwIgUEw+HFCx0gc3hUzxYrpTBjyG1WAxkQyPQtmaGtn3Xl4=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 8856
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.2": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.2",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.2" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.2", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.2" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.2" },
+			"dist": {
+				"shasum": "9b972974137e5a232addc8cec01d89aff3a78815",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.2.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-k2h2H0s9HjYYe+mENFzEEnUc4sqaTXnvvk3X6uotiQolhAsvv/MEro8cN1DFmhj1B2J7lxzBsrJFIKo4M7LtgQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDEIRk2dV4ubwm3DVHUQn1Z8kq948t6KPpjB/7ymiSZbwIgf35eylCVWj3XkLOpGxwqTP3fAOlAfYxPVoPiI2NE2ug=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 8650
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.22.11": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "7.22.11",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^7.22.11", "@babel/helper-plugin-test-runner": "^7.22.5" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "debef6c8ba795f5ac67cd861a81b744c5d38d9fc",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.22.11.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-YZWOw4HxXrotb5xsjMJUDlLgcDXSfO9eCmdl1bgW4+/lAGdkjaEvOnQ4p5WKKdUgSzO39dgPl0pTnfxm0OAXcg==",
+				"signatures": [
+					{
+						"sig": "MEQCIERbYvde/sDqV8nxWW/n6HnHIyZbQllkja7/oxYg3NPhAiBawOAZPUX4wcHXTmj/FwaiIfM7/6gozIKwYFaAFayuFQ==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 9003
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.3": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.3",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.3" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.3", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.3" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.3" },
+			"dist": {
+				"shasum": "e58480654f526fff1c3f605133cc5f6d184ad47d",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.3.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-rygjon0ZNgtWXrsDQgjclTBpI4/+uxrEdwpq1/jInm2CcKXFLzu/6zlsHDGWAJxieehPqaMVh4pgUuHG28dvNA==",
+				"signatures": [
+					{
+						"sig": "MEQCIHwZNof8SnnvH1C+2mnU0eN5tpIy0QzCSCZ+ibYp+4WUAiAX/Ril5B9MXG5AevKqxvS1TvLS3G5+5+q7duxHpwRO3g==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 8692
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.4": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.4",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.4" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.4", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.4" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.4" },
+			"dist": {
+				"shasum": "b5ddfca779f5f732a38d12b677aa9532d55ff31b",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.4.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-tpngcA2LG2adYRKPhiAjoVAqwRLJ+5cC+KpOvT4MW5QWwlwaTHVmwYyTYSG6VnFnOHicSyZ+LQzVvE32EQpK+A==",
+				"signatures": [
+					{
+						"sig": "MEUCIQC3olBCpIBJi7rg3IWSG/zvRXGP06o/tZNzBZq7tUWohQIgZsigaa2J0Witb7VPOqxlCpPTS0iG+RBShDpRIzZ6heA=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 8692
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.23.3": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "7.23.3",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^7.23.3", "@babel/helper-plugin-test-runner": "^7.22.5" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "8a613d514b521b640344ed7c56afeff52f9413f8",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.23.3.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-xzg24Lnld4DYIdysyf07zJ1P+iIfJpxtVFOzX4g+bsJ3Ng5Le7rXx9KwqKzuyaUeRnt+I1EICwQITqc0E2PmpA==",
+				"signatures": [
+					{
+						"sig": "MEUCIQD6rYxgROHpx+2K5kSM+Pyf5YC8frpEtroJqlXdl7/TZAIgNKRUAbb8HCz8pZ45Yu5deCA47j4RDzelPl675KIucqM=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 9083
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"7.23.4": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "7.23.4",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.22.5",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^7.23.3", "@babel/helper-plugin-test-runner": "^7.22.5" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "45556aad123fc6e52189ea749e33ce090637346e",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.23.4.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-jHE9EVVqHKAQx+VePv5LLGHjmHSJR76vawFPTdlxR/LVJPfOEGxREQwQfjuZEOPTwG92X3LINSh3M40Rv4zpVA==",
+				"signatures": [
+					{
+						"sig": "MEUCIEpu+oYXj9TMaMiUiq4vSe9tcrsnFRVDhcW8zPc4TDujAiEAvkdw8csxGWltYV/6na4Ko7r0X3HgiXbAgj8efQsjhwo=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 9089
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.5": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.5",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.5" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.5", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.5" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.5" },
+			"dist": {
+				"shasum": "0106102988476599619410a4589f7d6b8d46dcff",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.5.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-r2RN82vqGfs7AtByqW+xknMrva3Bzd7t8jelnpIUhZ7jTwtVlBC+SbWmQSZHzg2eO8wrZJoLqq1WGrrgtoEnhg==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDjYF3FSyECMlR1vSjyYRnuPI7DQIHFCG+yRABksY3FeAIgSJ88kE9WMz7YtAX8soBlS78+F3WDeRT++LmZ6RrNf5o=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 8811
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.6": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.6",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.6" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.6", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.6" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.6" },
+			"dist": {
+				"shasum": "fa3e8a5b2148ef27a87fec38c1c23e152b445b6b",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.6.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-/S/v+6PyS5WcO6NMEk+PsJfl6Y2ObLlC793DzHXAAMmCZioYKCs0Ge+Zn5Kpj6XK5FiYTL1XkaksDg2XaU9Nzw==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCBj3bPa3bLzJE6hQimtZP1RuYrvqcRgCwHvWMhbfWOIgIhALusMZs9T7wK97vl5co9Tt3j+HN67bVPhHyWk1nm2CP/",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 8811
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"8.0.0-alpha.7": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.7",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.7" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.7", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.7" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.7" },
+			"dist": {
+				"shasum": "64deb1a9a8d0fe233d41b4962e77c5974cf5e760",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.7.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-NAQmQ0T8eaKPEETU9PF7h5IW9EcaMQSsTRxbUmMXKE6RAt5HBDddkQPeAnsw6+wV9VB8/iSxrBSCCtSuWXoNOw==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCDLBdBNaEjkvnKiZhRNJX/Hcx04oSkecX3d1wrn6nOtAIhAKS4M6CtClSUu4PCcZwWyqIZAMVL8+9vmtnBkmBHkVdt",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 8811
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.24.1": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "7.24.1",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.24.0",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^7.24.1", "@babel/helper-plugin-test-runner": "^7.24.1" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "0cd494bb97cb07d428bd651632cb9d4140513988",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.24.1.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-iQ+caew8wRrhCikO5DrUYx0mrmdhkaELgFa+7baMcVuhxIkN7oxt06CZ51D65ugIb1UWRQ8oQe+HXAVM6qHFjw==",
+				"signatures": [
+					{
+						"sig": "MEYCIQCDigYXccx3ZN5t+TkkX9sa82LvdO94iIya306Q6QEQpAIhAPbh+RQMNBAsKaS9UF0Pn1ks3HL2aeB3wALKhv72kxxV",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 9150
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.8": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.8",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.8" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.8", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.8" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.8" },
+			"dist": {
+				"shasum": "5e2d2a0ed3739d34cd0c58b00ee2ef71ac8370ad",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.8.tgz",
+				"fileCount": 5,
+				"integrity": "sha512-gf7uB8dEo9f252GXK33DqED6pW8obTj/bmf2nl04EBA47pUNfgegaJtnzTBeQYaT/dGvKyUOD/TInugXMko78w==",
+				"signatures": [
+					{
+						"sig": "MEQCIGlhEDQa/Y9a3mOE4YXUZ/qw/nGrh07gVfev/V9EgmJyAiB2lAlzpQqR4WHQtd6WJ+v3yVVR4OWbxpGAGEcC0zhn1A==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 8735
+			},
+			"engines": { "node": "^16.20.0 || ^18.16.0 || >=20.0.0" }
+		},
+		"7.24.6": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "7.24.6",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.24.6",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^7.24.6", "@babel/helper-plugin-test-runner": "^7.24.6" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "12b83b3cdfd1cd2066350e36e4fb912ab194545e",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.24.6.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-+QlAiZBMsBK5NqrBWFXCYeXyiU1y7BQ/OYaiPAcQJMomn5Tyg+r5WuVtyEuvTbpV7L25ZSLfE+2E9ywj4FD48A==",
+				"signatures": [
+					{
+						"sig": "MEUCIQDf3/8rqCBhA8K8znQODOmaTVu+WtJR7xBMz+LIj27CfgIgFB4XMQ6JyEbrduTjo8VSa6b1NIInpNbSzHmgWKy/ktY=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 75134
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.9": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.9",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.9" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.9", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.9" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.9" },
+			"dist": {
+				"shasum": "0727a1cee482014e93e913381a06be2ee9577d89",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.9.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-uBJ4gOTI5RpwFIgAycPkqvp1CWeBQeHx3ogpOdCdpROGRBuqzqMAYepFJ83L35U0W4fD3mZ5H1BO40OnVV/UCA==",
+				"signatures": [
+					{
+						"sig": "MEQCIFGPzRvW6XnjMAXSIMk9uwj2m+0GsjVA/d0oTt+VaznbAiA3Z/zenFGsXdzZUQ+rcgzM13Xe1PGbJ+NAOWU7/hSgEg==",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 75022
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"8.0.0-alpha.10": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.10",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.10" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.10", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.10" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.10" },
+			"dist": {
+				"shasum": "9b639f8808b2e9989f95e12a03daa6a6cbbbd16b",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.10.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-R+SPK/HbT27AriHdcsJoKxZ93w1SnxzhAAEmzx+kggyD/4YOIniP7CpuR0IVPcefgn/4ZLjKSWSakMRoVYcvfQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIQC+YDUQRmeCLbssbtbmd4GlGNvOW8jOmiIXFaaRxuxRngIgN70lfjssuBMc+dNkemEf6Xstvo3ypEqLK26Qma8qZr0=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 75029
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"7.24.7": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "7.24.7",
+			"dependencies": {
+				"@babel/helper-plugin-utils": "^7.24.7",
+				"@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3"
+			},
+			"devDependencies": { "@babel/core": "^7.24.7", "@babel/helper-plugin-test-runner": "^7.24.7" },
+			"peerDependencies": { "@babel/core": "^7.0.0-0" },
+			"dist": {
+				"shasum": "1de4534c590af9596f53d67f52a92f12db984120",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.24.7.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-Ts7xQVk1OEocqzm8rHMXHlxvsfZ0cEF2yomUqpKENHWMF4zKk175Y4q8H5knJes6PgYad50uuRmt3UJuhBw8pQ==",
+				"signatures": [
+					{
+						"sig": "MEUCIEk9kx4fqfAZgL2TO+V6WHi1wYgOof0ee6co+k7UgpBLAiEApbweSQyoCc4NesaLNCGP9wbZl3kYX7cEmqs99sq6uK8=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 75130
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.11": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.11",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.11" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.11", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.11" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.11" },
+			"dist": {
+				"shasum": "2344b7e6fd3b47a7f960a7370b6a2b734f039b31",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.11.tgz",
+				"fileCount": 8,
+				"integrity": "sha512-v01v9yhdevsyFv6+w9f3dlCQy/uRiYkl+z+c333qgi+3PEvqW8ZmCTeqYiE/M06b/Azn2FcJUIhlKrl38ztFTA==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCbf+z09l3raXd8Kdegsuzx3kKLJBwPMAZuecv6l/sriwIgb6VxIuyZMkeSJinRKdua86mKqWsNJ2AYWl1MpwPiVNs=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 74918
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		},
+		"8.0.0-alpha.12": {
+			"name": "@babel/plugin-transform-nullish-coalescing-operator",
+			"version": "8.0.0-alpha.12",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.12" },
+			"devDependencies": { "@babel/core": "^8.0.0-alpha.12", "@babel/helper-plugin-test-runner": "^8.0.0-alpha.12" },
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.12" },
+			"dist": {
+				"shasum": "49f17f44d77098be2eac20c2d5f546cb3127b0ab",
+				"integrity": "sha512-vPwPkbWZZdPcHhfBuoxJnQJbYALvHt01NKwIf1ITQV/g5y0EV1VyByL6X9h6nSkgU3OJ2OpQUYvIAnwFBPl+zg==",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-8.0.0-alpha.12.tgz",
+				"fileCount": 8,
+				"unpackedSize": 71710,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIHpvLjhX94rErdmRHhBs5BTIi5E4H5RfphBZDXli/49MAiAyzu5xn6Z9isADBNgggNeHoAr11weCptRAfL3EcIOp7A=="
+					}
+				]
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		}
+	},
+	"modified": "2024-07-26T17:33:26.835Z",
+	"cachedAt": 1726246010214
+}

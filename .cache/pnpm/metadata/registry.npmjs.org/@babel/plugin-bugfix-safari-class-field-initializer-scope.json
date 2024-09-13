@@ -1,0 +1,58 @@
+{
+	"name": "@babel/plugin-bugfix-safari-class-field-initializer-scope",
+	"dist-tags": { "latest": "7.25.0", "next": "8.0.0-alpha.12" },
+	"versions": {
+		"7.25.0": {
+			"name": "@babel/plugin-bugfix-safari-class-field-initializer-scope",
+			"version": "7.25.0",
+			"dependencies": { "@babel/helper-plugin-utils": "^7.24.8" },
+			"devDependencies": {
+				"@babel/core": "^7.24.9",
+				"@babel/traverse": "^7.25.0",
+				"@babel/helper-plugin-test-runner": "^7.24.7"
+			},
+			"peerDependencies": { "@babel/core": "^7.0.0" },
+			"dist": {
+				"shasum": "cd0c583e01369ef51676bdb3d7b603e17d2b3f73",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-safari-class-field-initializer-scope/-/plugin-bugfix-safari-class-field-initializer-scope-7.25.0.tgz",
+				"fileCount": 7,
+				"integrity": "sha512-Bm4bH2qsX880b/3ziJ8KD711LT7z4u8CFudmjqle65AZj/HNUFhEf90dqYv6O86buWvSBmeQDjv0Tn2aF/bIBA==",
+				"signatures": [
+					{
+						"sig": "MEUCIQCuyXsuRR7w/q6yrnLlry32FqDnYB5BLyEjefG+1ia0vgIgMpkisBfy1OGYaTWv0q/2H2ejZTv8YALjHj8+rLoQpsg=",
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+					}
+				],
+				"unpackedSize": 73477
+			},
+			"engines": { "node": ">=6.9.0" }
+		},
+		"8.0.0-alpha.12": {
+			"name": "@babel/plugin-bugfix-safari-class-field-initializer-scope",
+			"version": "8.0.0-alpha.12",
+			"dependencies": { "@babel/helper-plugin-utils": "^8.0.0-alpha.12" },
+			"devDependencies": {
+				"@babel/core": "^8.0.0-alpha.12",
+				"@babel/helper-plugin-test-runner": "^8.0.0-alpha.12",
+				"@babel/traverse": "^8.0.0-alpha.12"
+			},
+			"peerDependencies": { "@babel/core": "^8.0.0-alpha.12" },
+			"dist": {
+				"shasum": "932f4a36e7f11a04be8a36ebc80ee883c0c5689f",
+				"integrity": "sha512-uqpenb868vgy3sORCtPowemBjIJ33TrOf0wfXbi50J2zu5pL5c/Yk0G2VtVzvJ17CHqB394VACeLfr4AO99JXg==",
+				"tarball": "https://registry.npmjs.org/@babel/plugin-bugfix-safari-class-field-initializer-scope/-/plugin-bugfix-safari-class-field-initializer-scope-8.0.0-alpha.12.tgz",
+				"fileCount": 8,
+				"unpackedSize": 73609,
+				"signatures": [
+					{
+						"keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+						"sig": "MEQCIFmOA0tm8bt7x8t8utl/3farRKI+ubwpRJlIWnNYrEQWAiAEwRW/rDC2HqITgO3+HcX0x+7Dp+8FYNs0h3eVZZp1tg=="
+					}
+				]
+			},
+			"engines": { "node": "^18.20.0 || ^20.10.0 || >=21.0.0" }
+		}
+	},
+	"modified": "2024-07-26T17:33:10.883Z",
+	"cachedAt": 1726246010070
+}
