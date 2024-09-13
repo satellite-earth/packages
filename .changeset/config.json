@@ -4,7 +4,7 @@
 	"commit": false,
 	"fixed": [["@satellite-earth/web-ui", "@satellite-earth/personal-node", "@satellite-earth/public-node"]],
 	"linked": [],
-	"access": "restricted",
+	"access": "public",
 	"baseBranch": "master",
 	"updateInternalDependencies": "patch",
 	"ignore": []
