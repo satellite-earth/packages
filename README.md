@@ -23,7 +23,9 @@ make start
 # or to run the dev version (live refresh)
 make dev
 ```
- ## Avaliable make ommands
+
+## Avaliable make ommands
+
 - `make install` Install all dependencies
 - `make update` Pull, install, and build all packages and apps
 - `make nuke` Remove all installed dependencies

@@ -25,6 +25,9 @@ dev:
 	cd apps/personal-node && REDIRECT_APP_URL=http://localhost:5173 pnpm dev > /dev/null &\
 	wait
 
+format:
+	pnpm format
+
 cap-sync:
 	cd apps/web-ui && pnpm cap sync
 
