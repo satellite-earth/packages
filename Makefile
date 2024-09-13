@@ -24,3 +24,12 @@ dev:
 	cd apps/web-ui && pnpm dev > /dev/null &\
 	cd apps/personal-node && REDIRECT_APP_URL=http://localhost:5173 pnpm dev > /dev/null &\
 	wait
+
+cap-sync:
+	cd apps/web-ui && pnpm cap sync
+
+android: cap-sync
+	cd apps/web-ui && pnpm cap run android
+
+ios: cap-sync
+	cd apps/web-ui && pnpm cap run ios
