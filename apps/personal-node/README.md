@@ -3,7 +3,7 @@
 >
 > BUILD IN PUBLIC
 
-# Satellite Private Node
+# Satellite Personal Node
 
 A nostr relay with an integrated [blossom](https://github.com/hzrd149/blossom) media proxy.
 
@@ -18,64 +18,19 @@ Satellite private node:
 
 (Much more info forthcoming)
 
-## Installing @satellite-earth/core dependency
+## Running using npx
 
-There are two ways to install `@satellite-earth/core` dependency
-
-### npm link
-
-The simplest way to setup the `@satellite-earth/core` dependency is to clone the repo into another directory and use `npm link` to link the packages
+This package is available on [npm](https://www.npmjs.com/package/@satellite-earth/personal-node) and can be run locally if node is installed
 
 ```sh
-git clone https://github.com/satellite-earth/core.git
-cd core
-npm install
-npm run build
-npm link
-
-# navigate back to public-node
-cd ../public-node
-npm link "@satellite-earth/core"
-npm run build
+npx @satellite-earth/personal-node
 ```
 
-### github access token
-
-Follow the instructions [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages) to create a access token and login to the github registry
+## Running from source
 
 ```sh
-$ npm login --scope=@satellite-earth --auth-type=legacy --registry=https://npm.pkg.github.com
-
-> Username: USERNAME
-> Password: TOKEN
+git clone https://github.com/satellite-earth/packages.git
+cd packages
+make install
+make start
 ```
-
-Once you have logged into `npm.pkg.github.com` you can run `npm install` normally
-
-## Run it
-
-Clone into the repo and
-
-`npm i`
-
-`npm run build` (to build typescript)
-
-Next you'll need to add a `.env` file that looks something like
-
-```
-DATA_PATH=/path/to/app/data/directory
-AUTH=6a75dea45f61280ef8a54233c37e4b1679a702c0
-PORT=2012
-```
-
-where
-
-`DATA_PATH` is the parent folder to store your events database, your blobs, and some config stuff
-`AUTH` is an arbitrary shared secret between the node and the dashboard UI, and
-`PORT` is the port you want your local nostr relay to be accessible on
-
-Once your env is set up
-
-`npm run dev`
-
-If successful you should see a message like `satellite server running on PORT`

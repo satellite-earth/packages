@@ -6,13 +6,3 @@
 # Satellite Core
 
 This repo contains modularized common logic and interfaces used by one or more applications in the Satellite stack
-
-- `blob-downloader`
-
-- `desktop-blob-server`
-
-- `helpers`
-
-- `nostr-relay`
-
-- `sqlite-event-store`
