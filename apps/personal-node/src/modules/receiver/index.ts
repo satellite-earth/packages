@@ -241,7 +241,7 @@ export default class Receiver extends EventEmitter<EventMap> {
 
 	/** stop receiving events and disconnect from all relays */
 	stop() {
-		if (this.status !== 'stopped') return;
+		if (this.status === 'stopped') return;
 
 		this.status = 'stopped';
 
