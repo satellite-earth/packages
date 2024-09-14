@@ -1,33 +1,61 @@
 import { PropsWithChildren, useState } from 'react';
 import { Flex, Box, VStack, Text, FormControl, FormLabel, Input, FormErrorMessage, Button } from '@chakra-ui/react';
+import { generateSeedWords, privateKeyFromSeedWords } from 'nostr-tools/nip06';
+import { npubEncode } from 'nostr-tools/nip19';
+import { getPublicKey } from 'nostr-tools/pure';
+import { hexToBytes } from '@noble/hashes/utils';
 import useSubject from '../../hooks/use-subject';
 import { controlApi } from '../../services/personal-node';
 
-// TODO call the function window.satellite.setOwner(seckey) to set the owner
-// this function should update the owner's pubkey in the config file and the
-// owner's seckey in the keychain
+// TODO add intro/onboarding information
 
-// This view is the place for intro/onboarding information
-
-function DesktopSetup() {
+function DesktopSetup({ onComplete }: { onComplete: () => void }) {
+	const [seedWords, setSeedWords] = useState<string[]>([]);
+	const [generatedNpub, setGeneratedNpub] = useState('');
 	const [secretKey, setSecretKey] = useState('');
 	const [error, setError] = useState('');
 
 	const handleAddIdentity = async (e: React.FormEvent) => {
 		e.preventDefault();
 		try {
-			await window.satellite?.addIdentity(secretKey);
+			let input = secretKey.trim();
+			let sk = input;
+
+			// If the input contains spaces, treat it as seed words
+			// and try to convert it to a hex secret key
+			if (input.includes(' ')) {
+				sk = privateKeyFromSeedWords(input);
+			}
+
+			await window.satellite?.addIdentity(sk);
+			onComplete();
 			setError('');
 		} catch (err) {
 			console.error(err);
-			setError('Invalid secret key');
+			setError('Invalid secret key or seed words');
 		}
 	};
 
-	const handleCreateNewIdentity = async () => {
+	const handleCreateNewIdentity = () => {
 		try {
-			await window.satellite?.newIdentity();
+			const words = generateSeedWords();
+			setSeedWords(words.split(' '));
+			const seckey = privateKeyFromSeedWords(words);
+			const pubkey = getPublicKey(hexToBytes(seckey));
+			const npub = npubEncode(pubkey);
+			setGeneratedNpub(npub);
 			setError('');
+		} catch (err) {
+			console.error(err);
+			setError('Failed to create new identity');
+		}
+	};
+
+	const handleAcceptSeedWords = async () => {
+		try {
+			const sk = privateKeyFromSeedWords(seedWords.join(' '));
+			await window.satellite?.addIdentity(sk);
+			onComplete();
 		} catch (err) {
 			console.error(err);
 			setError('Failed to create new identity');
@@ -38,24 +66,49 @@ function DesktopSetup() {
 		<Flex w="full" h="full" alignItems="center" justifyContent="center" direction="column">
 			<Box maxWidth="400px" width="100%">
 				<VStack spacing={4}>
-					<FormControl isInvalid={!!error}>
-						<Input
-							id="secretKey"
-							type="password"
-							value={secretKey}
-							onChange={(e) => setSecretKey(e.target.value)}
-							onFocus={() => setError('')}
-							placeholder="nsec1..."
-						/>
-						<FormErrorMessage>{error}</FormErrorMessage>
-					</FormControl>
-					<Button onClick={handleAddIdentity} type="submit" colorScheme="blue" width="100%">
-						Add Identity
-					</Button>
-					<Text>or</Text>
-					<Button onClick={handleCreateNewIdentity} colorScheme="green" width="100%">
-						Create New Identity
-					</Button>
+					{seedWords.length === 0 ? (
+						<>
+							<FormControl isInvalid={!!error}>
+								<Input
+									id="secretKey"
+									type="password"
+									value={secretKey}
+									onChange={(e) => setSecretKey(e.target.value)}
+									onFocus={() => setError('')}
+									placeholder="nsec or seed words..."
+								/>
+								<FormErrorMessage>{error}</FormErrorMessage>
+							</FormControl>
+							<Button onClick={handleAddIdentity} type="submit" colorScheme="blue" width="100%">
+								Add Identity
+							</Button>
+							<Text>or</Text>
+							<Button onClick={handleCreateNewIdentity} colorScheme="green" width="100%">
+								Create New Identity
+							</Button>
+						</>
+					) : (
+						<>
+							<Text>Your generated seed words:</Text>
+							<Box p={4} borderWidth={1} borderRadius="md" position="relative">
+								<Text as="pre" userSelect="all" fontFamily="monospace" whiteSpace="pre-wrap" wordBreak="break-word">
+									{seedWords.join(' ')}
+								</Text>
+							</Box>
+							<Text>Your generated npub:</Text>
+							<Box p={4} borderWidth={1} borderRadius="md" position="relative">
+								<Text as="pre" userSelect="all" fontFamily="monospace" whiteSpace="pre-wrap" wordBreak="break-word">
+									{generatedNpub}
+								</Text>
+							</Box>
+							<Button onClick={handleAcceptSeedWords} colorScheme="green" width="100%">
+								Accept
+							</Button>
+							<Button onClick={handleCreateNewIdentity} colorScheme="blue" width="100%">
+								Regenerate
+							</Button>
+						</>
+					)}
 				</VStack>
 			</Box>
 		</Flex>
@@ -63,11 +116,12 @@ function DesktopSetup() {
 }
 
 export default function RequireDesktopSetup({ children }: PropsWithChildren) {
+	const [completedSetup, setCompletedSetup] = useState(false);
 	const isDesktop = window.satellite != null;
 	const config = useSubject(controlApi?.config);
 
-	if (isDesktop && !config?.owner) {
-		return <DesktopSetup />;
+	if (!completedSetup && isDesktop && !config?.owner) {
+		return <DesktopSetup onComplete={() => setCompletedSetup(true)} />;
 	}
 
 	return <>{children}</>;
