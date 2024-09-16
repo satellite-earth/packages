@@ -27,7 +27,7 @@ importers:
         specifier: ^0.4.0
         version: link:../../packages/core
       '@satellite-earth/web-ui':
-        specifier: ^0.4.0
+        specifier: ^0.4.1
         version: link:../web-ui
       better-sqlite3:
         specifier: ^11.3.0
@@ -157,7 +157,7 @@ importers:
         specifier: ^0.4.0
         version: link:../../packages/core
       '@satellite-earth/web-ui':
-        specifier: ^0.4.0
+        specifier: ^0.4.1
         version: link:../web-ui
       better-sqlite3:
         specifier: ^11.3.0

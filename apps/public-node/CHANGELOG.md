@@ -1,5 +1,13 @@
 # @satellite-earth/public-node
 
+## 0.4.1
+
+### Patch Changes
+
+- Updated dependencies [7433f21]
+- Updated dependencies [ff1f5f5]
+  - @satellite-earth/web-ui@0.4.1
+
 ## 0.4.0
 
 ### Patch Changes
