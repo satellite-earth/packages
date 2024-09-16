@@ -231,7 +231,7 @@ importers:
         version: 5.6.2
 
   apps/web-ui:
-    dependencies:
+    devDependencies:
       '@capacitor-community/http':
         specifier: ^1.4.1
         version: 1.4.1
@@ -244,6 +244,12 @@ importers:
       '@capacitor/app':
         specifier: ^6.0.0
         version: 6.0.1(@capacitor/core@6.1.2)
+      '@capacitor/assets':
+        specifier: ^3.0.5
+        version: 3.0.5(@swc/core@1.7.26)(@types/node@20.16.5)(typescript@5.6.2)
+      '@capacitor/cli':
+        specifier: ^6.1.1
+        version: 6.1.2
       '@capacitor/core':
         specifier: ^6.1.1
         version: 6.1.2
@@ -283,12 +289,48 @@ importers:
       '@scure/base':
         specifier: ^1.1.7
         version: 1.1.8
+      '@types/chroma-js':
+        specifier: ^2.4.4
+        version: 2.4.4
+      '@types/debug':
+        specifier: ^4.1.12
+        version: 4.1.12
+      '@types/lodash.throttle':
+        specifier: ^4.1.9
+        version: 4.1.9
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.5
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@types/react-window':
+        specifier: ^1.8.8
+        version: 1.8.8
+      '@types/webscopeio__react-textarea-autocomplete':
+        specifier: ^4.7.5
+        version: 4.7.5
+      '@types/zen-observable':
+        specifier: ^0.8.7
+        version: 0.8.7
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.4(@types/node@20.16.5)(terser@5.32.0))
       '@webscopeio/react-textarea-autocomplete':
         specifier: ^4.9.2
         version: 4.9.2(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       ansi-to-html:
         specifier: ^0.7.2
         version: 0.7.2
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.20(postcss@8.4.45)
+      camelcase:
+        specifier: ^8.0.0
+        version: 8.0.0
+      cheerio:
+        specifier: ^1.0.0-rc.12
+        version: 1.0.0
       chroma-js:
         specifier: ^2.4.2
         version: 2.6.0
@@ -325,6 +367,15 @@ importers:
       nostr-tools:
         specifier: ^2.7.2
         version: 2.7.2(typescript@5.6.2)
+      nostr-wasm:
+        specifier: ^0.1.0
+        version: 0.1.0
+      postcss:
+        specifier: ^8.4.40
+        version: 8.4.45
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -352,67 +403,6 @@ importers:
       react-window:
         specifier: ^1.8.10
         version: 1.8.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      webln:
-        specifier: ^0.3.2
-        version: 0.3.2
-      yet-another-react-lightbox:
-        specifier: ^3.21.1
-        version: 3.21.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      zen-observable:
-        specifier: ^0.10.0
-        version: 0.10.0
-    devDependencies:
-      '@capacitor/assets':
-        specifier: ^3.0.5
-        version: 3.0.5(@swc/core@1.7.26)(@types/node@20.16.5)(typescript@5.6.2)
-      '@capacitor/cli':
-        specifier: ^6.1.1
-        version: 6.1.2
-      '@types/chroma-js':
-        specifier: ^2.4.4
-        version: 2.4.4
-      '@types/debug':
-        specifier: ^4.1.12
-        version: 4.1.12
-      '@types/lodash.throttle':
-        specifier: ^4.1.9
-        version: 4.1.9
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.5
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.0
-      '@types/react-window':
-        specifier: ^1.8.8
-        version: 1.8.8
-      '@types/webscopeio__react-textarea-autocomplete':
-        specifier: ^4.7.5
-        version: 4.7.5
-      '@types/zen-observable':
-        specifier: ^0.8.7
-        version: 0.8.7
-      '@vitejs/plugin-react':
-        specifier: ^4.3.1
-        version: 4.3.1(vite@5.4.4(@types/node@20.16.5)(terser@5.32.0))
-      autoprefixer:
-        specifier: ^10.4.19
-        version: 10.4.20(postcss@8.4.45)
-      camelcase:
-        specifier: ^8.0.0
-        version: 8.0.0
-      cheerio:
-        specifier: ^1.0.0-rc.12
-        version: 1.0.0
-      nostr-wasm:
-        specifier: ^0.1.0
-        version: 0.1.0
-      postcss:
-        specifier: ^8.4.40
-        version: 8.4.45
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
       typescript:
         specifier: ^5.4.5
         version: 5.6.2
@@ -422,6 +412,9 @@ importers:
       vite-plugin-pwa:
         specifier: ^0.20.1
         version: 0.20.5(vite@5.4.4(@types/node@20.16.5)(terser@5.32.0))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0)
+      webln:
+        specifier: ^0.3.2
+        version: 0.3.2
       workbox-precaching:
         specifier: ^7.1.0
         version: 7.1.0
@@ -431,6 +424,12 @@ importers:
       workbox-window:
         specifier: ^7.1.0
         version: 7.1.0
+      yet-another-react-lightbox:
+        specifier: ^3.21.1
+        version: 3.21.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      zen-observable:
+        specifier: ^0.10.0
+        version: 0.10.0
 
   packages/core:
     dependencies:
