@@ -82,7 +82,7 @@ export default function NetworkView() {
 					)}
 				</Flex>
 			</Flex>
-			<Flex flexDirection="column" w="full" overflow="scroll">
+			<Flex flexDirection="column" w="full" overflow="hidden">
 				<Outlet />
 			</Flex>
 		</Flex>
