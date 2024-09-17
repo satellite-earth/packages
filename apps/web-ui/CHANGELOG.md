@@ -1,5 +1,12 @@
 # @satellite-earth/web-ui
 
+## 0.4.1
+
+### Patch Changes
+
+- 7433f21: Allow app to connect to insecure connections using CSP meta tag
+- ff1f5f5: Remove normal npm package dependencies
+
 ## 0.4.0
 
 ### Minor Changes

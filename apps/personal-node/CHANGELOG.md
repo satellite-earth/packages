@@ -1,5 +1,15 @@
 # @satellite-earth/personal-node
 
+## 0.4.1
+
+### Patch Changes
+
+- 4ab508a: Fix receiver not stopping on request
+- 9e00709: Fix OWNER_PUBKEY not being saved to config on startup
+- Updated dependencies [7433f21]
+- Updated dependencies [ff1f5f5]
+  - @satellite-earth/web-ui@0.4.1
+
 ## 0.4.0
 
 ### Minor Changes
