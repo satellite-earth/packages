@@ -110,7 +110,7 @@ function DirectMessageConversationPage({ pubkey }: { pubkey: string }) {
 	const callback = useTimelineCurserIntersectionCallback(timeline);
 
 	return (
-		<>
+		<Flex overflow="hidden" flex={1} direction="column">
 			<ThreadsProvider timeline={timeline}>
 				<IntersectionObserverProvider callback={callback}>
 					{/* header */}
@@ -148,7 +148,7 @@ function DirectMessageConversationPage({ pubkey }: { pubkey: string }) {
 					)}
 				</IntersectionObserverProvider>
 			</ThreadsProvider>
-		</>
+		</Flex>
 	);
 }
 

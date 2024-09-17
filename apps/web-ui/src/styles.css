@@ -12,14 +12,14 @@ body,
 	display: flex;
 	flex-direction: column;
 
-	--safe-top: env(safe-area-inset-tops, 0px);
-	--safe-bottom: env(safe-area-inset-bottoms, 0px);
+	--safe-top: env(safe-area-inset-top, 0px);
+	--safe-bottom: env(safe-area-inset-bottom, 0px);
 	--safe-right: env(safe-area-inset-right, 0px);
 	--safe-left: env(safe-area-inset-left, 0px);
 
 	/* uncomment this to emulate iphone notch and navbar */
-	/* --safe-top: env(safe-area-inset-tops, 30px);
-	--safe-bottom: env(safe-area-inset-bottoms, 30px);
+	/* --safe-top: env(safe-area-inset-top, 30px);
+	--safe-bottom: env(safe-area-inset-bottom, 30px);
 	--safe-right: env(safe-area-inset-right);
 	--safe-left: env(safe-area-inset-left); */
 }

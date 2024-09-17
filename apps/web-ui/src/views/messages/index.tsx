@@ -96,11 +96,9 @@ export default function MessagesView() {
 						</AutoSizer>
 					</Flex>
 				</Flex>
-				<Flex direction="column" flex={1}>
-					<ErrorBoundary>
-						<Outlet />
-					</ErrorBoundary>
-				</Flex>
+				<ErrorBoundary>
+					<Outlet />
+				</ErrorBoundary>
 			</Flex>
 		);
 	}
