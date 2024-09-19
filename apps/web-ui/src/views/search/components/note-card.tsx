@@ -40,7 +40,7 @@ export default function NoteCard({
 					{event.content}
 				</Text>
 			</CardBody>
-			{showFooter && (
+			{showFooter !== undefined && (
 				<CardFooter display="flex" gap="4" pt="0">
 					{reactions !== undefined && (
 						<Text>

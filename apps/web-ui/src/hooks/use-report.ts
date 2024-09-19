@@ -16,6 +16,7 @@ export default function useReport<T extends keyof ReportArguments>(type: T, id?:
 		if (args && report) {
 			// @ts-expect-error
 			report.setArgs(args);
+			report.fireThrottle();
 		}
 	}, [argsKey, report]);
 

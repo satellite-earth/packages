@@ -4,3 +4,4 @@ export * from './dms.js';
 export * from './event.js';
 export * from './kinds.js';
 export * from './profile.js';
+export * from './nip19.js';
