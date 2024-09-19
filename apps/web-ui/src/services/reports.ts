@@ -67,22 +67,12 @@ class ReportManager {
 	addDependency(id: string, report: Report<any>) {
 		const set = this.dependencies.get(report);
 		set.add(id);
-		this.fireReportsThrottle();
+		report.fireThrottle();
 	}
 	removeDependency(id: string, report: Report<any>) {
 		const set = this.dependencies.get(report);
 		set.delete(id);
 		this.closeUnusedReportsThrottle();
-	}
-
-	private fireReportsThrottle = _throttle(this.fireReports.bind(this), 10, { leading: false });
-	private fireReports() {
-		for (const [report, dependencies] of this.dependencies) {
-			if (!report.running && dependencies.size > 0) {
-				this.log(`Firing ${report.type} ${report.id}`);
-				report.fire();
-			}
-		}
 	}
 
 	private closeUnusedReportsThrottle = _throttle(this.closeUnusedReports.bind(this), 1000, { leading: false });

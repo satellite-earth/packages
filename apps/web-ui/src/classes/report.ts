@@ -1,12 +1,16 @@
 import { ReportArguments, ReportResults } from '@satellite-earth/core/types';
+import _throttle from 'lodash.throttle';
 import { nanoid } from 'nanoid';
 
 import PersonalNodeControlApi from './control-api';
+import { Debugger } from 'debug';
+import { logger } from '../helpers/debug';
 
 export default class Report<T extends keyof ReportArguments> {
 	id: string;
 	args: ReportArguments[T];
 	running = false;
+	log: Debugger;
 
 	error: string | undefined;
 
@@ -15,6 +19,7 @@ export default class Report<T extends keyof ReportArguments> {
 		this.id = id;
 		this.args = args;
 		this.control = control;
+		this.log = logger.extend(this.type + ':' + id);
 	}
 
 	// override
@@ -27,6 +32,7 @@ export default class Report<T extends keyof ReportArguments> {
 	}
 
 	// public api
+	fireThrottle = _throttle(this.fire.bind(this), 10, { leading: false });
 	fire() {
 		this.onFire(this.args);
 		// @ts-expect-error
