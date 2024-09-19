@@ -1,13 +1,9 @@
 import { WebSocket } from 'ws';
-import {
-	ReportArguments,
-	ReportErrorMessage,
-	ReportResultMessage,
-	ReportResults,
-} from '@satellite-earth/core/types/control-api/reports.js';
+import { ReportErrorMessage, ReportResultMessage } from '@satellite-earth/core/types/control-api/reports.js';
 
 import type App from '../../app/index.js';
 import { logger } from '../../logger.js';
+import { ReportArguments, ReportResults } from '@satellite-earth/core/types';
 
 type f = () => void;
 
@@ -67,6 +63,10 @@ export default class Report<T extends keyof ReportResults> {
 		} catch (error) {
 			if (error instanceof Error) this.sendError(error.message);
 			else this.sendError('Unknown server error');
+
+			if (error instanceof Error) this.log('Error: ' + error.message);
+
+			throw error;
 		}
 	}
 	close() {

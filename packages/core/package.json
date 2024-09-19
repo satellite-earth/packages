@@ -38,6 +38,10 @@
 			"import": "./dist/helpers/nostr/*",
 			"types": "./dist/helpers/nostr/*"
 		},
+		"./types": {
+			"import": "./dist/types/index.js",
+			"types": "./dist/types/index.d.ts"
+		},
 		"./types/*": {
 			"import": "./dist/types/*",
 			"types": "./dist/types/*"

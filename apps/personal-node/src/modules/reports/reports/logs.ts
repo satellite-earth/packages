@@ -1,4 +1,4 @@
-import { ReportArguments } from '@satellite-earth/core/types/control-api/reports.js';
+import { ReportArguments } from '@satellite-earth/core/types';
 
 import { LogEntry } from '../../log-store/log-store.js';
 import Report from '../report.js';

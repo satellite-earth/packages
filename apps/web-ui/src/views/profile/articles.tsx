@@ -16,6 +16,7 @@ import useSubject from '../../hooks/use-subject';
 import UserAvatar from '../../components/user/user-avatar';
 import UserName from '../../components/user/user-name';
 import Timestamp from '../../components/timestamp';
+import personalNode from '../../services/personal-node';
 
 function ArticleCard({ article, ...props }: { article: NostrEvent } & Omit<CardProps, 'children'>) {
 	const title = getArticleTitle(article);
@@ -61,9 +62,11 @@ function ArticleCard({ article, ...props }: { article: NostrEvent } & Omit<CardP
 export default function UserArticlesView() {
 	const pointer = useParamsProfilePointer();
 
-	const timeline = useTimelineLoader(`${pointer.pubkey}-articles`, [
-		{ kinds: [kinds.LongFormArticle], authors: [pointer.pubkey] },
-	]);
+	const timeline = useTimelineLoader(
+		`${pointer.pubkey}-articles`,
+		[{ kinds: [kinds.LongFormArticle], authors: [pointer.pubkey] }],
+		[personalNode!],
+	);
 
 	const callback = useTimelineCurserIntersectionCallback(timeline);
 	const articles = useSubject(timeline.timeline);

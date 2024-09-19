@@ -1,45 +1,12 @@
-import { ControlResponse } from '@satellite-earth/core/types/control-api/index.js';
-import { ReportArguments } from '@satellite-earth/core/types/control-api/reports.js';
+import { ReportArguments, ControlResponse } from '@satellite-earth/core/types';
 import _throttle from 'lodash.throttle';
 
 import PersonalNodeControlApi from '../classes/control-api';
 import { controlApi } from './personal-node';
 import Report from '../classes/report';
-import OverviewReport from '../classes/reports/overview';
 import SuperMap from '../classes/super-map';
 import { logger } from '../helpers/debug';
-import ConversationsReport from '../classes/reports/conversations';
-import LogsReport from '../classes/reports/logs';
-import ServicesReport from '../classes/reports/services';
-import { DMSearchReport } from '../classes/reports/dm-search';
-import ScrapperStatusReport from '../classes/reports/scrapper-status';
-import ReceiverStatusReport from '../classes/reports/receiver-status';
-import NetworkStatusReport from '../classes/reports/network-status';
-import NotificationChannelsReport from '../classes/reports/notification-channels';
-
-// register report handler classes here
-export type ReportTypes = {
-	OVERVIEW: OverviewReport;
-	CONVERSATIONS: ConversationsReport;
-	LOGS: LogsReport;
-	SERVICES: ServicesReport;
-	DM_SEARCH: DMSearchReport;
-	SCRAPPER_STATUS: ScrapperStatusReport;
-	RECEIVER_STATUS: ReceiverStatusReport;
-	NETWORK_STATUS: NetworkStatusReport;
-	NOTIFICATION_CHANNELS: NotificationChannelsReport;
-};
-const ReportTypes = {
-	OVERVIEW: OverviewReport,
-	CONVERSATIONS: ConversationsReport,
-	LOGS: LogsReport,
-	SERVICES: ServicesReport,
-	DM_SEARCH: DMSearchReport,
-	SCRAPPER_STATUS: ScrapperStatusReport,
-	RECEIVER_STATUS: ReceiverStatusReport,
-	NETWORK_STATUS: NetworkStatusReport,
-	NOTIFICATION_CHANNELS: NotificationChannelsReport,
-} as const;
+import { ReportClasses, ReportTypes } from '../classes/reports';
 
 class ReportManager {
 	log = logger.extend('ReportManager');
@@ -78,10 +45,11 @@ class ReportManager {
 		return report;
 	}
 	createReport<T extends keyof ReportArguments>(type: T, id: string, args: ReportArguments[T]): ReportTypes[T] {
-		const ReportClass = ReportTypes[type];
-		// @ts-expect-error
+		const ReportClass = ReportClasses[type];
+		if (!ReportClass) throw new Error(`Failed to create report ${type}`);
 		const report = new ReportClass(id, args, this.control);
 		this.reports.set(id, report);
+		// @ts-expect-error
 		return report as ReportTypes[T];
 	}
 	getReport<T extends keyof ReportArguments>(type: T, id: string) {

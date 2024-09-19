@@ -1,10 +1,10 @@
 import { Flex, FlexProps } from '@chakra-ui/react';
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
+import { ReportResults } from '@satellite-earth/core/types';
 
 import useOverviewReport from '../../../hooks/reports/use-overview-report';
 import OverviewItem from './overview-item';
-import { ReportResults } from '@satellite-earth/core/types/control-api/reports.js';
 import SimpleView from '../../../components/layout/presets/simple-view';
 
 function Row({ index, style, data }: ListChildComponentProps<ReportResults['OVERVIEW'][]>) {

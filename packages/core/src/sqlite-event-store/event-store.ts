@@ -22,6 +22,7 @@ export type EventRow = {
 	tags: string;
 	created_at: number;
 	sig: string;
+	d?: string;
 };
 
 export function parseEventRow(row: EventRow): NostrEvent {
@@ -147,6 +148,38 @@ migrations.addScript(2, async (db, log) => {
 	log(`Inserted ${changes} events into search table`);
 });
 
+// Version 3, indexed d tags
+migrations.addScript(3, async (db, log) => {
+	db.prepare(`ALTER TABLE events ADD COLUMN d TEXT`).run();
+	log('Created d column');
+
+	db.prepare('CREATE INDEX IF NOT EXISTS events_d ON events(d)').run();
+	log(`Created d index`);
+
+	log(`Adding d tags to events table`);
+	let updated = 0;
+	db.transaction(() => {
+		const events = db
+			.prepare<[], { id: string; d: string }>(
+				`
+				SELECT events.id as id, tags.v as d
+				FROM events
+				INNER JOIN tags ON tags.e = events.id AND tags.t = 'd'
+				WHERE events.kind >= 30000 AND events.kind < 40000
+			`,
+			)
+			.all();
+		const update = db.prepare<[string, string]>('UPDATE events SET d = ? WHERE id = ?');
+
+		for (const row of events) {
+			const { changes } = update.run(row.d, row.id);
+			if (changes > 0) updated++;
+		}
+	})();
+
+	log(`Updated ${updated} events`);
+});
+
 type EventMap = {
 	'event:inserted': [NostrEvent];
 	'event:removed': [string];
@@ -177,11 +210,16 @@ export class SQLiteEventStore extends EventEmitter<EventMap> implements IEventSt
 			// TODO: Check if event is replaceable and if its newer
 			// before inserting it into the database
 
+			// get event d value so it can be indexed
+			const d = kinds.isParameterizedReplaceableKind(event.kind)
+				? event.tags.find((t) => t[0] === 'd' && t[1])?.[1]
+				: undefined;
+
 			const insert = this.db
 				.prepare(
 					`
-					INSERT OR IGNORE INTO events (id, created_at, pubkey, sig, kind, content, tags)
-					VALUES (?, ?, ?, ?, ?, ?, ?)
+					INSERT OR IGNORE INTO events (id, created_at, pubkey, sig, kind, content, tags, d)
+					VALUES (?, ?, ?, ?, ?, ?, ?, ?)
 				`,
 				)
 				.run([
@@ -192,6 +230,7 @@ export class SQLiteEventStore extends EventEmitter<EventMap> implements IEventSt
 					event.kind,
 					event.content,
 					JSON.stringify(event.tags),
+					d,
 				]);
 
 			// If event inserted, index tags, insert search

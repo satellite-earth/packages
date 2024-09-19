@@ -1,4 +1,4 @@
-import { ReportArguments } from '@satellite-earth/core/types/control-api/reports.js';
+import { ReportArguments } from '@satellite-earth/core/types';
 import Report from '../report.js';
 
 export default class DMSearchReport extends Report<'DM_SEARCH'> {
