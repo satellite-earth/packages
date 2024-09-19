@@ -1,5 +1,5 @@
 import Report from '../report';
-import { ReportResults } from '@satellite-earth/core/types/control-api/reports.js';
+import { ReportResults } from '@satellite-earth/core/types';
 import { getDMRecipient, getDMSender } from '@satellite-earth/core/helpers/nostr/dms.js';
 
 import { PersistentSubject } from '../subject';
@@ -15,7 +15,7 @@ export type ConversationResult = {
 	results: ReportResults['DM_SEARCH'][];
 };
 
-export class DMSearchReport extends Report<'DM_SEARCH'> {
+export default class DMSearchReport extends Report<'DM_SEARCH'> {
 	readonly type = 'DM_SEARCH';
 
 	results = new PersistentSubject<ReportResults['DM_SEARCH'][]>([]);

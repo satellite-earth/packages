@@ -35,6 +35,7 @@ import UserArticlesView from './views/profile/articles';
 import UserSummaryView from './views/profile/summary';
 import ServiceLogsView from './views/settings/tabs/service-logs';
 import NodeNetworkSettingsView from './views/settings/tabs/node-network';
+import UserNotesView from './views/profile/notes';
 
 const router = createBrowserRouter([
 	{
@@ -115,6 +116,7 @@ const router = createBrowserRouter([
 					{ path: '', element: <UserSummaryView /> },
 					{ path: 'summary', element: <UserSummaryView /> },
 					{ path: 'messages', element: <DirectMessageConversationView /> },
+					{ path: 'notes', element: <UserNotesView /> },
 					{ path: 'articles', element: <UserArticlesView /> },
 				],
 			},

@@ -93,7 +93,7 @@ export default class ControlApi {
 					}
 				}
 			} catch (err) {
-				this.log('Failed to handle Control message', message);
+				this.log('Failed to handle Control message', message.toString('utf-8'));
 				this.log(err);
 			}
 		} catch (error) {

@@ -1,4 +1,4 @@
-import { ReportArguments, ReportResults } from '@satellite-earth/core/types/control-api/reports.js';
+import { ReportArguments, ReportResults } from '@satellite-earth/core/types';
 import { NostrEvent } from 'nostr-tools';
 import { getTagValue } from '@satellite-earth/core/helpers/nostr';
 import SuperMap from '@satellite-earth/core/helpers/super-map.js';

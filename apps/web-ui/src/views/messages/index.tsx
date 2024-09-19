@@ -3,7 +3,7 @@ import { Outlet, useMatch } from 'react-router-dom';
 import { Button, ButtonGroup, Flex } from '@chakra-ui/react';
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
-import { ReportResults } from '@satellite-earth/core/types/control-api/reports.js';
+import { ReportResults } from '@satellite-earth/core/types';
 import { getPubkeysFromList } from '@satellite-earth/core/helpers/nostr/lists.js';
 
 import useSubject from '../../hooks/use-subject';

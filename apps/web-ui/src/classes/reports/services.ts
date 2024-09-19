@@ -1,4 +1,4 @@
-import { ReportResults } from '@satellite-earth/core/types/control-api/reports.js';
+import { ReportResults } from '@satellite-earth/core/types';
 import Report from '../report';
 import { PersistentSubject } from '../subject';
 

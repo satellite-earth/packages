@@ -1,10 +1,12 @@
 import { WebSocket } from 'ws';
-import { ReportArguments, ReportsMessage } from '@satellite-earth/core/types/control-api/reports.js';
+import { ReportArguments } from '@satellite-earth/core/types';
+import { ReportsMessage } from '@satellite-earth/core/types/control-api/reports.js';
 
 import type App from '../../app/index.js';
 import { type ControlMessageHandler } from './control-api.js';
 import Report from '../reports/report.js';
 import { logger } from '../../logger.js';
+import REPORT_CLASSES from '../reports/reports/index.js';
 
 /** handles ['CONTROL', 'REPORT', ...] messages */
 export default class ReportActions implements ControlMessageHandler {
@@ -14,7 +16,7 @@ export default class ReportActions implements ControlMessageHandler {
 
 	types: {
 		[k in keyof ReportArguments]?: typeof Report<k>;
-	} = {};
+	} = REPORT_CLASSES;
 
 	private reports = new Map<WebSocket | NodeJS.Process, Map<string, Report<any>>>();
 

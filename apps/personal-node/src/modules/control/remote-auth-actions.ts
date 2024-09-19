@@ -1,9 +1,9 @@
 import { WebSocket } from 'ws';
 import { verifyEvent } from 'nostr-tools';
+import { RemoteAuthMessage, RemoteAuthResponse } from '@satellite-earth/core/types/control-api/remote-auth.js';
 
 import type App from '../../app/index.js';
 import { type ControlMessageHandler } from './control-api.js';
-import { RemoteAuthMessage, RemoteAuthResponse } from '@satellite-earth/core/types/control-api/remote-auth.js';
 
 /** handles ['CONTROL', 'REMOTE-AUTH', ...] messages */
 export default class RemoteAuthActions implements ControlMessageHandler {

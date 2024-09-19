@@ -18,16 +18,6 @@ import { AUTH, DATA_PATH, OWNER_PUBKEY, PORT } from '../env.js';
 
 import { isHex } from '../helpers/pubkey.js';
 
-import OverviewReport from '../modules/reports/reports/overview.js';
-import ConversationsReport from '../modules/reports/reports/conversations.js';
-import LogsReport from '../modules/reports/reports/logs.js';
-import ServicesReport from '../modules/reports/reports/services.js';
-import DMSearchReport from '../modules/reports/reports/dm-search.js';
-import ScrapperStatusReport from '../modules/reports/reports/scrapper-status.js';
-import ReceiverStatusReport from '../modules/reports/reports/receiver-status.js';
-import NetworkStatusReport from '../modules/reports/reports/network-status.js';
-import NotificationChannelsReport from '../modules/reports/reports/notification-channels.js';
-
 import ConfigManager from '../modules/config-manager.js';
 import { BlobDownloader } from '../modules/blob-downloader.js';
 import ControlApi from '../modules/control/control-api.js';
@@ -210,17 +200,6 @@ export default class App extends EventEmitter<EventMap> {
 
 		// reports
 		this.reports = new ReportActions(this);
-		this.reports.types = {
-			OVERVIEW: OverviewReport,
-			CONVERSATIONS: ConversationsReport,
-			LOGS: LogsReport,
-			SERVICES: ServicesReport,
-			DM_SEARCH: DMSearchReport,
-			SCRAPPER_STATUS: ScrapperStatusReport,
-			RECEIVER_STATUS: ReceiverStatusReport,
-			NETWORK_STATUS: NetworkStatusReport,
-			NOTIFICATION_CHANNELS: NotificationChannelsReport,
-		};
 		this.control.registerHandler(this.reports);
 
 		// connect control api to websocket server
