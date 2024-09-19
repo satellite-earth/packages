@@ -2,7 +2,6 @@
 import process from 'node:process';
 import path from 'node:path';
 
-import WebSocket from 'ws';
 import express, { Request } from 'express';
 import { mkdirp } from 'mkdirp';
 import dayjs from 'dayjs';
@@ -13,7 +12,7 @@ import { resolve as importMetaResolve } from 'import-meta-resolve';
 
 import OutboundProxyWebSocket from './modules/network/outbound/websocket.js';
 import App from './app/index.js';
-import { PORT, DATA_PATH, AUTH, REDIRECT_APP_URL, PUBLIC_ADDRESS } from './env.js';
+import { DATA_PATH, AUTH, REDIRECT_APP_URL, PUBLIC_ADDRESS } from './env.js';
 import { addListener, logger } from './logger.js';
 
 // add durations plugin
@@ -38,8 +37,7 @@ function getPublicRelayAddressFromRequest(req: Request) {
 	if (PUBLIC_ADDRESS) {
 		url = new URL(PUBLIC_ADDRESS);
 	} else {
-		url = new URL('/', req.protocol + '://' + req.hostname);
-		url.port = String(PORT);
+		url = new URL('/', req.protocol + '://' + req.host);
 	}
 	url.protocol = req.protocol === 'https:' ? 'wss:' : 'ws:';
 
