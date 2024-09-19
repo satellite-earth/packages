@@ -2,15 +2,18 @@ import { Alert, AlertDescription, AlertIcon, AlertTitle, Button, CloseButton } f
 import { Link as RouterLink, useMatch } from 'react-router-dom';
 import { useLocalStorage } from 'react-use';
 
-import { IS_SATELLITE_DESKTOP } from '../../env';
+import { CAP_IS_WEB, IS_SATELLITE_DESKTOP } from '../../env';
+import { serviceWorkerRegistration } from '../../services/worker';
+import useSubject from '../../hooks/use-subject';
 
 export default function NotificationsPrompt() {
 	const match = useMatch('/settings/*');
 	const [hide, setHide] = useLocalStorage('hide-request-notifications', false);
+	const serviceWorker = useSubject(serviceWorkerRegistration);
 
 	if (match) return null;
 	if (hide || IS_SATELLITE_DESKTOP) return null;
-
+	if (CAP_IS_WEB && !serviceWorker) return null;
 	return (
 		<Alert status="info" flexWrap="wrap" gap="2" overflow="visible">
 			<AlertIcon />
