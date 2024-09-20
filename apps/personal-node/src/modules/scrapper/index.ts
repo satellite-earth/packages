@@ -14,9 +14,15 @@ type EventMap = {
 	event: [NostrEvent];
 };
 
+export type ScrapperState = {
+	pubkeys: string[];
+};
+
 export default class Scrapper extends EventEmitter<EventMap> {
 	app: App;
 	log = logger.extend('scrapper:service');
+
+	state: ScrapperState = { pubkeys: [] };
 
 	// pubkey -> relay -> scrapper
 	scrappers = new SuperMap<string, PubkeyScrapper>((pubkey) => {
@@ -28,6 +34,10 @@ export default class Scrapper extends EventEmitter<EventMap> {
 	constructor(app: App) {
 		super();
 		this.app = app;
+	}
+
+	async setup() {
+		this.state = (await this.app.state.getMutableState<ScrapperState>('scrapper', { pubkeys: [] })).proxy;
 	}
 
 	async ensureData() {
@@ -85,6 +95,9 @@ export default class Scrapper extends EventEmitter<EventMap> {
 		const { contacts } = await this.ensureData();
 
 		for (const person of contacts) {
+			// check if the pubkey should be scraped
+			if (!this.state.pubkeys.includes(person.pubkey)) continue;
+
 			// await here if the task queue if full
 			if (this.tasks.size >= MAX_TASKS) await this.waitForBlock();
 
@@ -120,5 +133,13 @@ export default class Scrapper extends EventEmitter<EventMap> {
 
 	stop() {
 		this.running = false;
+	}
+
+	addPubkey(pubkey: string) {
+		this.state.pubkeys.push(pubkey);
+	}
+
+	removePubkey(pubkey: string) {
+		this.state.pubkeys = this.state.pubkeys.filter((p) => p !== pubkey);
 	}
 }

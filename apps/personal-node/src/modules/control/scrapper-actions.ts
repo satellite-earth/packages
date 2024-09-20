@@ -22,6 +22,14 @@ export default class ScrapperActions implements ControlMessageHandler {
 				this.app.scrapper.stop();
 				return true;
 
+			case 'ADD-PUBKEY':
+				this.app.scrapper.addPubkey(message[3]);
+				return true;
+
+			case 'REMOVE-PUBKEY':
+				this.app.scrapper.removePubkey(message[3]);
+				return true;
+
 			default:
 				return false;
 		}

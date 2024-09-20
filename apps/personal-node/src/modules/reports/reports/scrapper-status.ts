@@ -9,8 +9,7 @@ export default class ScrapperStatusReport extends Report<'SCRAPPER_STATUS'> {
 
 	update() {
 		const averageEventsPerSecond = this.eventsPerSecond.reduce((m, v) => m + v, 0) / this.eventsPerSecond.length;
-
-		const pubkeys = Array.from(this.app.scrapper.scrappers.keys()).length;
+		const pubkeys = this.app.scrapper.state.pubkeys;
 
 		let activeSubscriptions = 0;
 		for (const [pubkey, scrapper] of this.app.scrapper.scrappers) {

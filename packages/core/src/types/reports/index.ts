@@ -30,7 +30,7 @@ export type ReportResults = {
 	LOGS: { id: string; message: string; service: string; timestamp: number };
 	SERVICES: { id: string };
 	DM_SEARCH: { event: NostrEvent; plaintext: string };
-	SCRAPPER_STATUS: { running: boolean; eventsPerSecond: number; activeSubscriptions: number; pubkeys: number };
+	SCRAPPER_STATUS: { running: boolean; eventsPerSecond: number; activeSubscriptions: number; pubkeys: string[] };
 	RECEIVER_STATUS: {
 		status: 'starting' | 'running' | 'stopped' | 'errored';
 		startError?: string;

@@ -174,6 +174,7 @@ export default class App extends EventEmitter<EventMap> {
 		this.receiver.on('event', (event) => this.eventStore.addEvent(event));
 
 		this.scrapper = new Scrapper(this);
+		this.scrapper.setup();
 
 		// pass events from the scrapper to the event store
 		this.scrapper.on('event', (event) => this.eventStore.addEvent(event));
