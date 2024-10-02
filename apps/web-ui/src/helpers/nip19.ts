@@ -1,10 +1,7 @@
 import { getPublicKey, nip19 } from 'nostr-tools';
-import { safeRelayUrls } from './relay';
+import { isHexKey } from 'applesauce-core/helpers';
 
-export function isHexKey(str?: string) {
-	if (str?.match(/^[0-9a-f]{64}$/i)) return true;
-	return false;
-}
+import { safeRelayUrls } from './relay';
 
 export function safeDecode(str: string) {
 	try {
@@ -33,25 +30,6 @@ export function normalizeToHexPubkey(hex: string) {
 	const decode = safeDecode(hex);
 	if (!decode) return null;
 	return getPubkeyFromDecodeResult(decode) ?? null;
-}
-
-export function encodeDecodeResult(result: nip19.DecodeResult) {
-	switch (result.type) {
-		case 'naddr':
-			return nip19.naddrEncode(result.data);
-		case 'nprofile':
-			return nip19.nprofileEncode(result.data);
-		case 'nevent':
-			return nip19.neventEncode(result.data);
-		case 'nrelay':
-			return nip19.nrelayEncode(result.data);
-		case 'nsec':
-			return nip19.nsecEncode(result.data);
-		case 'npub':
-			return nip19.npubEncode(result.data);
-		case 'note':
-			return nip19.noteEncode(result.data);
-	}
 }
 
 /** get nip19.DecodeResult from a e,a, or p tag */

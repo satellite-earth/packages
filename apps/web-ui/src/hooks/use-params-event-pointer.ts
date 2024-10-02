@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { nip19 } from 'nostr-tools';
-
-import { isHexKey } from '../helpers/nip19';
+import { isHexKey } from 'applesauce-core/helpers';
 
 export default function useParamsEventPointer(key: string): nip19.EventPointer {
 	const params = useParams();

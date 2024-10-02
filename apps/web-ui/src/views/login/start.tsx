@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { decrypt } from 'nostr-tools/nip49';
 import { hexToBytes } from '@noble/hashes/utils';
 import { getPublicKey } from 'nostr-tools';
+import { isHexKey } from 'applesauce-core/helpers';
 import { Link as RouterLink } from 'react-router-dom';
 
 import { DEFAULT_NOSTR_CONNECT_RELAYS } from '../../const';
@@ -14,11 +15,11 @@ import { Account } from '../../classes/accounts/account';
 import NsecAccount from '../../classes/accounts/nsec-account';
 import PasswordAccount from '../../classes/accounts/password-account';
 import NostrConnectSigner from '../../classes/signers/nostr-connect-signer';
-import { isHexKey, safeDecode } from '../../helpers/nip19';
 import PuzzlePiece01 from '../../components/icons/components/puzzle-piece-01';
 import Diamond01 from '../../components/icons/components/diamond-01';
 import nostrConnectService from '../../services/nostr-connect';
 import Package from '../../components/icons/components/package';
+import { safeDecode } from '../../helpers/nip19';
 
 const isAndroid = navigator.userAgent.includes('Android');
 

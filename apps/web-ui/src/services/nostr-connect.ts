@@ -1,5 +1,7 @@
 import { nip19 } from 'nostr-tools';
-import { getPubkeyFromDecodeResult, isHexKey, normalizeToHexPubkey } from '../helpers/nip19';
+import { isHexKey } from 'applesauce-core/helpers';
+
+import { getPubkeyFromDecodeResult, normalizeToHexPubkey } from '../helpers/nip19';
 import { logger } from '../helpers/debug';
 import { safeRelayUrl } from '../helpers/relay';
 import NostrConnectSigner from '../classes/signers/nostr-connect-signer';

@@ -2,11 +2,11 @@ import { Button, Flex, FormControl, FormHelperText, FormLabel, Heading, Input, u
 import { getPublicKey, nip19 } from 'nostr-tools';
 import { useForm } from 'react-hook-form';
 import { Navigate } from 'react-router-dom';
+import { isHexKey } from 'applesauce-core/helpers';
 
 import personalNode, { controlApi, setPrivateNodeURL } from '../../services/personal-node';
 import useRouteSearchValue from '../../hooks/use-route-search-value';
 import QRCodeScannerButton from '../../components/qr-code/qr-code-scanner-button';
-import { isHexKey } from '../../helpers/nip19';
 import dnsIdentityService from '../../services/dns-identity';
 import useSubject from '../../hooks/use-subject';
 

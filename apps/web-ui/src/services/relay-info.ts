@@ -1,5 +1,6 @@
+import { isHexKey } from 'applesauce-core/helpers';
+
 import db from './db';
-import { isHexKey } from '../helpers/nip19';
 import { validateRelayURL } from '../helpers/relay';
 
 export type RelayInformationDocument = {
