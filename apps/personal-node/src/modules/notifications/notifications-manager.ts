@@ -135,10 +135,6 @@ export default class NotificationsManager extends EventEmitter<EventMap> {
 							Click: notification.url,
 						};
 
-						if (this.app.config.data.notificationEmail) {
-							headers['Email'] = this.app.config.data.notificationEmail;
-						}
-
 						await fetch(new URL(channel.topic, channel.server), {
 							method: 'POST',
 							body: notification.body,
