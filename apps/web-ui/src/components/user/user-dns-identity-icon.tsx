@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { IconProps, useColorMode } from '@chakra-ui/react';
 
 import useDnsIdentity from '../../hooks/use-dns-identity';
-import useUserMetadata from '../../hooks/use-user-metadata';
+import useUserMetadata from '../../hooks/use-user-profile';
 import { VerificationFailed, VerificationMissing, VerifiedIcon } from '../icons';
 
 export function useDnsIdentityColor(pubkey: string) {

@@ -4,7 +4,7 @@ import { kinds, nip19 } from 'nostr-tools';
 import { Link as RouterLink } from 'react-router-dom';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
-import useUserMetadata from '../../../hooks/use-user-metadata';
+import useUserMetadata from '../../../hooks/use-user-profile';
 import UserAvatar from '../../../components/user/user-avatar';
 import { DirectMessagesIcon } from '../../../components/icons';
 import UserName from '../../../components/user/user-name';

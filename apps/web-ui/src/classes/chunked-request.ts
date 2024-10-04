@@ -7,6 +7,7 @@ import { logger } from '../helpers/debug';
 import EventStore from './event-store';
 import { mergeFilter } from '../helpers/nostr/filter';
 import { nanoid } from 'nanoid';
+import { eventStore } from '../services/query-store';
 
 const DEFAULT_CHUNK_SIZE = 100;
 
@@ -70,6 +71,8 @@ export default class ChunkedRequest {
 
 	private handleEvent(event: NostrEvent) {
 		if (!matchFilters(this.filters, event)) return;
+
+		eventStore.add(event);
 		return this.events.addEvent(event);
 	}
 

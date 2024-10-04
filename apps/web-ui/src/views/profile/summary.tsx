@@ -1,8 +1,6 @@
-import { Flex, Heading, SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 
 import useParamsProfilePointer from '../../hooks/use-params-pubkey-pointer';
-import useUserMetadata from '../../hooks/use-user-metadata';
-import useNostrRequest from '../../hooks/use-nostr-request';
 import { kinds, nip10 } from 'nostr-tools';
 import NoteCard from '../search/components/note-card';
 import SimpleView from '../../components/layout/presets/simple-view';

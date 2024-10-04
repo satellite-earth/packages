@@ -7,6 +7,7 @@ import PersistentSubscription from './persistent-subscription';
 import createDefer, { Deferred } from './deferred';
 import SuperMap from './super-map';
 import Subject from './subject';
+import { eventStore } from '../services/query-store';
 
 /** Batches requests for events that reference another event (via #e tag) from a single relay */
 export default class BatchRelationLoader {
@@ -71,6 +72,8 @@ export default class BatchRelationLoader {
 	);
 
 	handleEvent(event: NostrEvent) {
+		eventStore.add(event);
+
 		// add event to cache
 		const updateIds = new Set<string>();
 		for (const tag of event.tags) {

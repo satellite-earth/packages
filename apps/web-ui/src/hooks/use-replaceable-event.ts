@@ -1,8 +1,9 @@
-import { useMemo } from 'react';
+import { useEffect } from 'react';
+import { Queries } from 'applesauce-core';
+import { useStoreQuery } from 'applesauce-react';
 
 import { useWithLocalRelay } from './use-client-relays';
 import replaceableEventsService, { RequestOptions } from '../services/replaceable-events';
-import useSubject from './use-subject';
 import { RelaySetFrom } from '../classes/relay-set';
 
 export default function useReplaceableEvent(
@@ -19,9 +20,10 @@ export default function useReplaceableEvent(
 ) {
 	const readRelays = useWithLocalRelay(additionalRelays);
 
-	const sub = useMemo(() => {
+	useEffect(() => {
 		if (!cord) return;
-		return replaceableEventsService.requestEvent(
+
+		replaceableEventsService.request(
 			cord.relays ? [...readRelays, ...cord.relays] : readRelays,
 			cord.kind,
 			cord.pubkey,
@@ -30,5 +32,5 @@ export default function useReplaceableEvent(
 		);
 	}, [cord, readRelays, opts?.alwaysRequest, opts?.ignoreCache]);
 
-	return useSubject(sub);
+	return useStoreQuery(Queries.ReplaceableQuery, cord ? [cord.kind, cord.pubkey, cord.identifier] : undefined);
 }

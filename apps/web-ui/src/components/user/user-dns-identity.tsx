@@ -1,6 +1,6 @@
 import { Text, Tooltip } from '@chakra-ui/react';
 
-import useUserMetadata from '../../hooks/use-user-metadata';
+import useUserMetadata from '../../hooks/use-user-profile';
 import UserDnsIdentityIcon from './user-dns-identity-icon';
 
 export default function UserDnsIdentity({ pubkey, onlyIcon }: { pubkey: string; onlyIcon?: boolean }) {

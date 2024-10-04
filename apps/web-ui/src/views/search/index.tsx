@@ -17,14 +17,13 @@ import { SearchIcon } from '@chakra-ui/icons';
 import { useSearchParams } from 'react-router-dom';
 
 import personalNode from '../../services/personal-node';
-import userMetadataService from '../../services/user-metadata';
 import ProfileCard from './components/profile-card';
 import NoteCard from './components/note-card';
 import { BackButton } from '../../components/back-button';
 import useDMSearchReport from '../../hooks/reports/use-dm-search-report';
 import ConversationCard from './components/conversation-card';
 import { useBreakpointValue } from '../../providers/global/breakpoint-provider';
-import { useThrottle } from 'react-use';
+import { eventStore } from '../../services/query-store';
 
 export default function SearchView() {
 	const shouldAutoFocusInput = useBreakpointValue({ base: false, lg: true });
@@ -70,7 +69,7 @@ export default function SearchView() {
 			],
 			{
 				onevent: (event) => {
-					userMetadataService.handleEvent(event).value;
+					eventStore.add(event);
 					setProfiles((arr) => [...arr, event]);
 				},
 				oneose: () => {

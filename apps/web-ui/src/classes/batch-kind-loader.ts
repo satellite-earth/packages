@@ -2,19 +2,16 @@ import { Filter, NostrEvent } from 'nostr-tools';
 import _throttle from 'lodash.throttle';
 import debug, { Debugger } from 'debug';
 import { AbstractRelay } from 'nostr-tools/abstract-relay';
+import { EventStore } from 'applesauce-core';
+import { getEventUID, getReplaceableUID } from 'applesauce-core/helpers';
 
-import EventStore from './event-store';
 import PersistentSubscription from './persistent-subscription';
 import createDefer, { Deferred } from './deferred';
-import { getEventUID } from 'nostr-idb';
-
-export function createCoordinate(kind: number, pubkey: string, d?: string) {
-	return `${kind}:${pubkey}${d ? ':' + d : ''}`;
-}
+import { eventStore } from '../services/query-store';
 
 /** This class is ued to batch requests by kind to a single relay */
 export default class BatchKindLoader {
-	events = new EventStore();
+	events: EventStore;
 	relay: AbstractRelay;
 	active = false;
 
@@ -28,7 +25,8 @@ export default class BatchKindLoader {
 
 	log: Debugger;
 
-	constructor(relay: AbstractRelay, log?: Debugger) {
+	constructor(store: EventStore, relay: AbstractRelay, log?: Debugger) {
+		this.events = store;
 		this.relay = relay;
 		this.log = log || debug('BatchKindLoader');
 
@@ -39,7 +37,7 @@ export default class BatchKindLoader {
 	}
 
 	requestEvent(kind: number, pubkey: string, d?: string): Promise<NostrEvent | null> {
-		const key = createCoordinate(kind, pubkey, d);
+		const key = getReplaceableUID(kind, pubkey, d);
 		const event = this.events.getEvent(key);
 
 		if (!event) {
@@ -71,6 +69,8 @@ export default class BatchKindLoader {
 	);
 
 	private handleEvent(event: NostrEvent) {
+		eventStore.add(event);
+
 		const key = getEventUID(event);
 
 		const defer = this.pending.get(key);
@@ -78,7 +78,7 @@ export default class BatchKindLoader {
 
 		const current = this.events.getEvent(key);
 		if (!current || event.created_at > current.created_at) {
-			this.events.addEvent(event);
+			this.events.add(event);
 
 			if (defer) defer.resolve(event);
 		} else if (defer) defer.resolve(null);

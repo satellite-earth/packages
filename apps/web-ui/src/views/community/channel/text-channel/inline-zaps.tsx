@@ -5,7 +5,7 @@ import { ZapIcon } from '../../../../components/icons';
 import UserAvatar from '../../../../components/user/user-avatar';
 import useEventZaps from '../../../../hooks/use-event-zaps';
 import { useSigningContext } from '../../../../providers/global/signing-provider';
-import useUserMetadata from '../../../../hooks/use-user-metadata';
+import useUserMetadata from '../../../../hooks/use-user-profile';
 import { getZapEndpoint } from '../../../../helpers/nostr/zaps';
 import { getInvoiceFromCallbackUrl } from '../../../../helpers/nostr/lnurl';
 import eventZapsService from '../../../../services/event-zaps';

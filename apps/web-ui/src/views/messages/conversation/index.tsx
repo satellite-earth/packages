@@ -23,7 +23,7 @@ import useRouterMarker from '../../../hooks/use-router-marker';
 import UserName from '../../../components/user/user-name';
 import { BackButton } from '../../../components/back-button';
 import { groupMessages } from '../../../helpers/nostr/thread';
-import useUserMetadata from '../../../hooks/use-user-metadata';
+import useUserMetadata from '../../../hooks/use-user-profile';
 import HoverLinkOverlay from '../../../components/hover-link-overlay';
 import useHideMobileNav from '../../../hooks/use-hide-mobile-nav';
 

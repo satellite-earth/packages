@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
+import { ReportArguments } from '@satellite-earth/core/types';
 import { nanoid } from 'nanoid';
 
 import reportManagerService from '../services/reports';
-import { ReportArguments } from '@satellite-earth/core/types';
 
 export default function useReport<T extends keyof ReportArguments>(type: T, id?: string, args?: ReportArguments[T]) {
 	const [hookId] = useState(() => nanoid());
