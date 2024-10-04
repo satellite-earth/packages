@@ -1,5 +1,18 @@
 # @satellite-earth/web-ui
 
+## 0.5.0
+
+### Minor Changes
+
+- 4ef5263: Cleanup core event store
+- 2d75471: Add notes view under profile
+- b1c7f50: Add sort order to profile articles view
+- bd695ea: Use signers from applesauce-signer
+
+### Patch Changes
+
+- def685a: Hide notification setup prompt if service worker is not registered
+
 ## 0.4.1
 
 ### Patch Changes
