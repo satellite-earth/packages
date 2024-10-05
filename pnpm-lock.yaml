@@ -373,6 +373,9 @@ importers:
       nostr-idb:
         specifier: ^2.1.4
         version: 2.1.6(typescript@5.6.2)
+      nostr-signer-capacitor-plugin:
+        specifier: ^0.0.2
+        version: 0.0.2(@capacitor/core@6.1.2)
       nostr-tools:
         specifier: ^2.7.2
         version: 2.7.2(typescript@5.6.2)
@@ -4470,6 +4473,11 @@ packages:
   nostr-idb@2.1.6:
     resolution: {integrity: sha512-1iWqeL1+bVWVmkYLHB6vDt36VxPCbdIzoHqUBEp+8ElXXgmLYIwq9V9y+n1BYHZTV6E95/sOs02PRb3eRMJ/jw==}
 
+  nostr-signer-capacitor-plugin@0.0.2:
+    resolution: {integrity: sha512-nQqjo0WjqVvB3Ov/kVQqNxFt5AgIaD4v7OUNAJUsVDuQnu9EWDkCQNrQIdybKqmlxpICo0RRlxim6Hxxv7kd1Q==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
   nostr-tools@2.7.2:
     resolution: {integrity: sha512-Bq3Ug0SZFtgtL1+0wCnAe8AJtI7yx/00/a2nUug9SkhfOwlKS92Tef12iCK9FdwXw+oFZWMtRnSwcLayQso+xA==}
     peerDependencies:
@@ -5682,7 +5690,7 @@ packages:
     resolution: {integrity: sha512-elOQwe6Q8gqZgDA8mrh44qRTQqpIHDcZ3hXTLjBe1i4ph8XpNJnO+aQf3NaG+lriLopI4HMx9VjQLfPQ6vhnoA==}
     engines: {node: '>=10'}
     peerDependencies:
-      '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
+      '@types/react': ^18.2.22
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
@@ -5692,7 +5700,7 @@ packages:
     resolution: {integrity: sha512-epTbsLuzZ7lPClpz2TyryBfztm7m+28DlEv2ZCQ3MDr5ssiwyOwGH/e5F9CkfWjJ1t4clvI58yF822/GUkjjhw==}
     engines: {node: '>=10'}
     peerDependencies:
-      '@types/react': ^16.9.0 || ^17.0.0 || ^18.0.0
+      '@types/react': ^18.2.22
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
@@ -10857,6 +10865,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  nostr-signer-capacitor-plugin@0.0.2(@capacitor/core@6.1.2):
+    dependencies:
+      '@capacitor/core': 6.1.2
 
   nostr-tools@2.7.2(typescript@5.6.2):
     dependencies:

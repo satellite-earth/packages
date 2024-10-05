@@ -13,6 +13,7 @@ dependencies {
     implementation project(':capacitor-mlkit-barcode-scanning')
     implementation project(':capacitor-app')
     implementation project(':capacitor-preferences')
+    implementation project(':nostr-signer-capacitor-plugin')
 
 }
 

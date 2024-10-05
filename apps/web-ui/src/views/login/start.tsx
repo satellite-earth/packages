@@ -1,59 +1,73 @@
-import { useCallback, useState } from 'react';
-import { Button, Flex, FormControl, FormLabel, Input, Text, useToast } from '@chakra-ui/react';
+import { useCallback, useEffect, useState } from 'react';
+import { Button, Flex, FormControl, FormLabel, Image, Input, Text, useToast } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import { decrypt } from 'nostr-tools/nip49';
 import { hexToBytes } from '@noble/hashes/utils';
 import { getPublicKey } from 'nostr-tools';
 import { isHexKey } from 'applesauce-core/helpers';
 import { Link as RouterLink } from 'react-router-dom';
+import { type AppInfo } from 'nostr-signer-capacitor-plugin';
+import { useAsync } from 'react-use';
 
-import { DEFAULT_NOSTR_CONNECT_RELAYS } from '../../const';
 import accountService from '../../services/account';
 import ExtensionAccount from '../../classes/accounts/extension-account';
-import NostrConnectAccount from '../../classes/accounts/nostr-connect-account';
 import { Account } from '../../classes/accounts/account';
 import NsecAccount from '../../classes/accounts/nsec-account';
 import PasswordAccount from '../../classes/accounts/password-account';
-import NostrConnectSigner from '../../classes/signers/nostr-connect-signer';
 import PuzzlePiece01 from '../../components/icons/components/puzzle-piece-01';
-import Diamond01 from '../../components/icons/components/diamond-01';
-import nostrConnectService from '../../services/nostr-connect';
 import Package from '../../components/icons/components/package';
 import { safeDecode } from '../../helpers/nip19';
+import AndroidNativeSigner from '../../classes/signers/android-native-signer';
+import { CAP_IS_ANDROID } from '../../env';
+import AndroidSignerAccount from '../../classes/accounts/android-signer-account';
+import { base64ToBlob } from '../../helpers/blob';
 
-const isAndroid = navigator.userAgent.includes('Android');
-
-function ClientSideNostrConnectButton() {
+function AndroidNativeSignerButton({ app }: { app: AppInfo }) {
+	const toast = useToast();
 	const [connecting, setConnecting] = useState(false);
-	const connect = useCallback(() => {
+	const connect = useCallback(async () => {
 		setConnecting(true);
-		const signer = new NostrConnectSigner(undefined, DEFAULT_NOSTR_CONNECT_RELAYS);
 
-		signer.listen().then(() => {
-			nostrConnectService.saveSigner(signer);
-			accountService.addAccount(new NostrConnectAccount(signer.pubkey!, signer));
-			accountService.switchAccount(signer.pubkey!);
-			setConnecting(false);
-		});
+		try {
+			const account = await AndroidSignerAccount.fromApp(app);
+			accountService.addAccount(account);
+			accountService.switchAccount(account.pubkey);
+		} catch (error) {
+			if (error instanceof Error) toast({ status: 'error', description: error.message });
+		}
 
-		const host = location.protocol + '//' + location.host;
-		const params = new URLSearchParams();
-		params.set('relay', DEFAULT_NOSTR_CONNECT_RELAYS[0]);
-		params.set('name', 'Satellite');
-		params.set('url', host);
-		params.set('image', new URL('/apple-touch-icon.png', host).toString());
-
-		const url = `nostrconnect://${signer.publicKey}?` + params.toString();
-		window.open(url);
-
-		return signer;
+		setConnecting(false);
 	}, []);
+
+	const [icon, setIcon] = useState('');
+	useEffect(() => {
+		const url = URL.createObjectURL(base64ToBlob(app.icon, 'image/png'));
+		setIcon(url);
+
+		return () => {
+			URL.revokeObjectURL(url);
+		};
+	}, [app.icon]);
 
 	return (
 		<Button flexDirection="column" h="auto" w="32" p="4" onClick={connect} variant="outline" isLoading={connecting}>
-			<Diamond01 boxSize={12} mb="1" />
-			Amber
+			{icon && <Image w={12} src={icon} />}
+			{app.name}
 		</Button>
+	);
+}
+
+function AndroidNativeSigners() {
+	const { value: apps } = useAsync(() => AndroidNativeSigner.getSignerApps());
+
+	if (!apps) return null;
+
+	return (
+		<>
+			{apps.map((app) => (
+				<AndroidNativeSignerButton key={app.packageName} app={app} />
+			))}
+		</>
 	);
 }
 
@@ -147,7 +161,6 @@ export default function LoginStartView() {
 			<Text>OR</Text>
 			<Flex gap="2" wrap="wrap" justifyContent="center">
 				{window.nostr && <ExtensionButton />}
-				{isAndroid && <ClientSideNostrConnectButton />}
 				<Button
 					as={RouterLink}
 					to="/login/nostr-connect"
@@ -160,6 +173,7 @@ export default function LoginStartView() {
 					<Package boxSize={12} mb="1" />
 					Nostr Connect
 				</Button>
+				{CAP_IS_ANDROID && <AndroidNativeSigners />}
 			</Flex>
 		</>
 	);

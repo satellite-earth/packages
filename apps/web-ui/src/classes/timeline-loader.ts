@@ -45,7 +45,6 @@ export default class TimelineLoader {
 
 		this.log = logger.extend('TimelineLoader:' + name);
 		this.events = new EventStore(name);
-		this.events.connect(replaceableEventsService.events, false);
 
 		this.subscription = new MultiSubscription(name);
 		this.subscription.onEvent.subscribe(this.handleEvent.bind(this));

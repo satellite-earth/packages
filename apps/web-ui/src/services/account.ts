@@ -1,4 +1,5 @@
 import { Account } from '../classes/accounts/account';
+import AndroidSignerAccount from '../classes/accounts/android-signer-account';
 import ExtensionAccount from '../classes/accounts/extension-account';
 import NostrConnectAccount from '../classes/accounts/nostr-connect-account';
 import NsecAccount from '../classes/accounts/nsec-account';
@@ -47,6 +48,8 @@ class AccountService {
 				return new ExtensionAccount(data.pubkey).fromJSON(data);
 			case 'nostr-connect':
 				return new NostrConnectAccount(data.pubkey).fromJSON(data);
+			case 'android-signer':
+				return new AndroidSignerAccount(data.pubkey).fromJSON(data);
 		}
 	}
 

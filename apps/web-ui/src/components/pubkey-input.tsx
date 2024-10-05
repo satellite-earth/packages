@@ -15,7 +15,7 @@ function load() {
 		const sub = personalNode.subscribe([{ kinds: [0] }], {
 			onevent: (event) => {
 				profiles.push(parseKind0Event(event));
-				replaceableEventsService.handleEvent(event, false);
+				replaceableEventsService.handleEvent(event);
 			},
 			oneose: () => {
 				sub.close();

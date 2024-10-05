@@ -13,3 +13,6 @@ project(':capacitor-app').projectDir = new File('../../../node_modules/.pnpm/@ca
 
 include ':capacitor-preferences'
 project(':capacitor-preferences').projectDir = new File('../../../node_modules/.pnpm/@capacitor+preferences@6.0.2_@capacitor+core@6.1.2/node_modules/@capacitor/preferences/android')
+
+include ':nostr-signer-capacitor-plugin'
+project(':nostr-signer-capacitor-plugin').projectDir = new File('../../../node_modules/.pnpm/nostr-signer-capacitor-plugin@0.0.2_@capacitor+core@6.1.2/node_modules/nostr-signer-capacitor-plugin/android')
