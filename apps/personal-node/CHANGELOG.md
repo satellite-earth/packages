@@ -1,5 +1,25 @@
 # @satellite-earth/personal-node
 
+## 0.5.0
+
+### Minor Changes
+
+- 2d75471: Add EVENTS_SUMMARY report
+
+### Patch Changes
+
+- f0ccb7f: Fix using wrong port during setup
+- Updated dependencies [def685a]
+- Updated dependencies [4ef5263]
+- Updated dependencies [2d75471]
+- Updated dependencies [b1c7f50]
+- Updated dependencies [2d75471]
+- Updated dependencies [b1c7f50]
+- Updated dependencies [bd695ea]
+- Updated dependencies [7baf879]
+  - @satellite-earth/web-ui@0.5.0
+  - @satellite-earth/core@0.5.0
+
 ## 0.4.1
 
 ### Patch Changes
