@@ -4,6 +4,7 @@ import {
 import { RawData, WebSocket } from 'ws';
 import { IncomingMessage } from 'http';
 import { logger } from '../../logger.js';
+import OutboundProxyWebSocket from '../network/outbound/websocket.js';
 
 export default class Switchboard {
 	private relay: NostrRelay;
@@ -25,10 +26,10 @@ export default class Switchboard {
 
 				if (!Array.isArray(data)) throw new Error('Message is not an array');
 
-				if(data[0] == 'PROXY' && data[1]) {
-					const targetUrl = "wss://relay.damus.io";
 
-					target = new WebSocket(targetUrl)
+				const targetUrl = data[1];
+				if(data[0] == 'PROXY' && targetUrl) {
+					target = new OutboundProxyWebSocket(targetUrl)
 					this.relay.disconnectSocket(ws);
 					ws.send(JSON.stringify(["PROXY", "CONNECTING"]));
 
