@@ -1,68 +1,92 @@
-import { NostrRelay } from '@satellite-earth/core';
 import { RawData, WebSocket } from 'ws';
 import { IncomingMessage } from 'http';
 import { logger } from '../../logger.js';
 import OutboundProxyWebSocket from '../network/outbound/websocket.js';
+import { isHexKey } from 'applesauce-core/helpers';
+import App from '../../app/index.js';
 
 export default class Switchboard {
-	private relay: NostrRelay;
+	private app: App;
 	private log = logger.extend('Switchboard');
 
-	constructor(relay: NostrRelay) {
-		this.relay = relay;
+	constructor(app: App) {
+		this.app = app;
 	}
 
-	public handleConnection(ws: WebSocket, req: IncomingMessage) {
-		let target: WebSocket | undefined;
+	public handleConnection(downstream: WebSocket, req: IncomingMessage) {
+		let upstream: WebSocket | undefined;
 
-		const handleMessage = (message: RawData) => {
+		const handleMessage = async (message: RawData) => {
 			try {
 				// Parse JSON from the raw buffer
 				const data = JSON.parse(typeof message === 'string' ? message : message.toString('utf-8'));
 
 				if (!Array.isArray(data)) throw new Error('Message is not an array');
 
-				const targetUrl = data[1];
-				if (data[0] == 'PROXY' && targetUrl) {
-					target = new OutboundProxyWebSocket(targetUrl);
-					this.relay.disconnectSocket(ws);
-					ws.send(JSON.stringify(['PROXY', 'CONNECTING']));
+				if (data[0] === 'PROXY' && data[1]) {
+					let addresses: string[];
+					if (isHexKey(data[1])) {
+						addresses = await this.app.gossip.lookup(data[1]);
+					} else addresses = [data[1]];
 
-					target.on('open', () => {
-						// Forward from client to target relay
-						ws.on('message', (message, isBinary) => {
-							target?.send(message, { binary: isBinary });
-						});
+					if (addresses.length === 0) {
+						downstream.send(JSON.stringify(['PROXY', 'ERROR', 'Lookup failed']));
+						return;
+					}
 
-						// Forward back from target relay to client
-						target?.on('message', (message, isBinary) => {
-							ws.send(message, { binary: isBinary });
-						});
+					this.app.relay.disconnectSocket(downstream);
+					downstream.send(JSON.stringify(['PROXY', 'CONNECTING']));
 
-						// Step away from the connection
-						ws.off('message', handleMessage);
-						ws.send(JSON.stringify(['PROXY', 'CONNECTED']));
-					});
+					let error: Error | undefined = undefined;
+					for (const address of addresses) {
+						try {
+							upstream = new OutboundProxyWebSocket(address);
 
-					target.on('close', () => {
-						ws.close();
-					});
+							// wait for connection
+							await new Promise<void>((res, rej) => {
+								upstream?.once('open', () => res());
+								upstream?.once('error', (error) => rej(error));
+							});
 
-					target.on('error', (err) => {
-						this.log(`Connection error to ${targetUrl}`, err);
-						ws.send(JSON.stringify(['PROXY', 'ERROR', err.message]));
-					});
+							this.log(`Proxy connection to ${address}`);
 
-					ws.on('close', () => {
-						target?.close();
-					});
+							// clear last error
+							error = undefined;
+
+							// Forward from client to target relay
+							downstream.on('message', (message, isBinary) => {
+								upstream?.send(message, { binary: isBinary });
+							});
+
+							// Forward back from target relay to client
+							upstream.on('message', (message, isBinary) => {
+								downstream.send(message, { binary: isBinary });
+							});
+
+							// connect the close events
+							upstream.on('close', () => downstream.close());
+							downstream.on('close', () => upstream?.close());
+
+							// tell downstream its connected
+							downstream.send(JSON.stringify(['PROXY', 'CONNECTED']));
+
+							// Step away from the connection
+							downstream.off('message', handleMessage);
+						} catch (err) {
+							upstream = undefined;
+							if (err instanceof Error) error = err;
+						}
+					}
+
+					// send the error back if we failed to connect to any address
+					if (error) downstream.send(JSON.stringify(['PROXY', 'ERROR', error.message]));
 				}
 			} catch (err) {
 				this.log('Failed to handle message', err);
 			}
 		};
-		ws.on('message', handleMessage);
+		downstream.on('message', handleMessage);
 
-		this.relay.handleConnection(ws, req);
+		this.app.relay.handleConnection(downstream, req);
 	}
 }

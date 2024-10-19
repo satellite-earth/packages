@@ -27,12 +27,19 @@ export class OutboundNetworkManager {
 		this.i2p = new I2POutbound();
 
 		this.agent = new PacProxyAgent(this.buildPacURI(), { fallbackToDirect: true });
+
+		this.hyper.on('started', this.updateAgentThrottle);
+		this.hyper.on('stopped', this.updateAgentThrottle);
+		this.tor.on('started', this.updateAgentThrottle);
+		this.tor.on('stopped', this.updateAgentThrottle);
+		this.i2p.on('started', this.updateAgentThrottle);
+		this.i2p.on('stopped', this.updateAgentThrottle);
 	}
 
 	private buildPacURI() {
 		const statements: string[] = [];
 
-		if (this.i2p.available && this.enableI2PConnections) {
+		if (this.i2p.available && this.i2p.address && this.enableI2PConnections) {
 			statements.push(
 				`
 if (shExpMatch(host, "*.i2p"))
@@ -43,7 +50,7 @@ if (shExpMatch(host, "*.i2p"))
 			);
 		}
 
-		if (this.tor.available && this.enableTorConnections) {
+		if (this.tor.available && this.tor.address && this.enableTorConnections) {
 			statements.push(
 				`
 if (shExpMatch(host, "*.onion"))
@@ -54,7 +61,7 @@ if (shExpMatch(host, "*.onion"))
 			);
 		}
 
-		if (this.hyper.available && this.enableHyperConnections) {
+		if (this.hyper.available && this.hyper.address && this.enableHyperConnections) {
 			statements.push(
 				`
 if (shExpMatch(host, "*.hyper"))
@@ -118,8 +125,6 @@ function FindProxyForURL(url, host)
 				if (this.enableI2PConnections) this.i2p.start();
 				else this.i2p.stop();
 			}
-
-			this.updateAgentThrottle();
 		});
 	}
 

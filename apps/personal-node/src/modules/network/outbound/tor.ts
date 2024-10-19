@@ -1,9 +1,16 @@
+import EventEmitter from 'events';
+
 import { logger } from '../../../logger.js';
 import { OutboundInterface } from '../interfaces.js';
 import { TOR_PROXY, TOR_PROXY_TYPE } from '../../../env.js';
 import { testTCPConnection } from '../../../helpers/network.js';
 
-export default class TorOutbound implements OutboundInterface {
+type EventMap = {
+	started: [];
+	stopped: [];
+};
+
+export default class TorOutbound extends EventEmitter<EventMap> implements OutboundInterface {
 	log = logger.extend('Network:Outbound:Tor');
 
 	running = false;
@@ -21,11 +28,14 @@ export default class TorOutbound implements OutboundInterface {
 			const [host, port] = this.address?.split(':') ?? [];
 			if (!host || !port) throw new Error('Malformed proxy address');
 			await testTCPConnection(host, parseInt(port), 3000);
+			this.emit('started');
 		} catch (error) {
 			this.running = false;
 			if (error instanceof Error) this.error = error;
 		}
 	}
 
-	async stop() {}
+	async stop() {
+		this.emit('stopped');
+	}
 }
