@@ -1,7 +1,7 @@
 import EventEmitter from 'events';
 import crypto, { randomUUID } from 'crypto';
 import { IncomingMessage } from 'http';
-import { type WebSocketServer, type WebSocket } from 'ws';
+import { type WebSocket, RawData } from 'ws';
 import { Filter, NostrEvent, verifyEvent, matchFilters } from 'nostr-tools';
 
 import { IEventStore } from '../sqlite-event-store/interface.js';
@@ -81,10 +81,6 @@ export class NostrRelay extends EventEmitter<EventMap> {
 		});
 	}
 
-	attachToServer(wss: WebSocketServer) {
-		wss.on('connection', this.handleConnection.bind(this));
-	}
-
 	async handleMessage(message: Buffer | string, ws: WebSocket) {
 		let data;
 
@@ -119,6 +115,8 @@ export class NostrRelay extends EventEmitter<EventMap> {
 		return data;
 	}
 
+
+	private socketCleanup = new Map<WebSocket, () => void>;
 	handleConnection(ws: WebSocket, req: IncomingMessage) {
 		let ip;
 
@@ -130,11 +128,13 @@ export class NostrRelay extends EventEmitter<EventMap> {
 		}
 
 		// listen for messages
-		ws.on('message', (data, isBinary) => {
+		const messageListener = (data: RawData, isBinary: boolean) => {
 			if (data instanceof Buffer) this.handleMessage(data, ws);
-		});
+		}
+		ws.on('message', messageListener);
 
-		ws.on('close', () => this.handleDisconnect(ws));
+		const closeListener = () => this.handleDisconnect(ws)
+		ws.on('close', closeListener);
 
 		if (this.sendChallenge) {
 			const challenge = randomUUID();
@@ -149,6 +149,19 @@ export class NostrRelay extends EventEmitter<EventMap> {
 
 		this.connectionId.set(ws, id);
 		this.connections[id] = ws;
+
+		this.socketCleanup.set(ws, () => {
+			delete this.connections[id]
+			ws.off('message', messageListener);
+			ws.off('close', closeListener);
+			this.connectionId.delete(ws);
+			this.auth.delete(ws);
+			this.emit('socket:disconnect', ws)
+		})
+	}
+
+	disconnectSocket(ws: WebSocket){
+		this.socketCleanup.get(ws)?.()
 	}
 
 	handleDisconnect(ws: WebSocket) {
