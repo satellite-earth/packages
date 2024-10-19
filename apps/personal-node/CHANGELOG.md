@@ -1,5 +1,31 @@
 # @satellite-earth/personal-node
 
+## 0.5.0
+
+### Minor Changes
+
+- 2d75471: Add EVENTS_SUMMARY report
+- 39c144a: Add NIP-66 gossip manager
+- 5a60b82: Support relay pubkey lookup
+- 611a999: Added support for PROXY command
+
+### Patch Changes
+
+- f0ccb7f: Fix using wrong port during setup
+- Updated dependencies [01c2f3f]
+- Updated dependencies [def685a]
+- Updated dependencies [4ef5263]
+- Updated dependencies [2d75471]
+- Updated dependencies [b1c7f50]
+- Updated dependencies [611a999]
+- Updated dependencies [2d75471]
+- Updated dependencies [b1c7f50]
+- Updated dependencies [39c144a]
+- Updated dependencies [bd695ea]
+- Updated dependencies [7baf879]
+  - @satellite-earth/web-ui@0.5.0
+  - @satellite-earth/core@0.5.0
+
 ## 0.4.1
 
 ### Patch Changes
