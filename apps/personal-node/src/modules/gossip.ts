@@ -28,6 +28,8 @@ export default class Gossip {
 	relay: NostrRelay;
 
 	running = false;
+	// default every 10 minute
+	interval = 10 * 60_000;
 	broadcastRelays: string[] = [];
 
 	constructor(network: InboundNetworkManager, signer: SimpleSigner, pool: SimplePool, relay: NostrRelay) {
@@ -71,14 +73,15 @@ export default class Gossip {
 		if (!this.running) return;
 		await this.gossip();
 
-		setTimeout(this.update.bind(this), 30_000);
+		setTimeout(this.update.bind(this), this.interval);
 	}
 
 	start() {
+		if (this.running) return;
 		this.running = true;
 
 		this.log(`Starting gossip on ${this.broadcastRelays.join(', ')}`);
-		setTimeout(this.update.bind(this), 1000);
+		setTimeout(this.update.bind(this), 5000);
 	}
 
 	stop() {

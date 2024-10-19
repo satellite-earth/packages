@@ -60,7 +60,7 @@ export default class PersonalNodeControlApi extends EventEmitter<EventMap> {
 		if (this.node.connected) this.node.send(JSON.stringify(message));
 	}
 
-	async setConfigField(field: keyof PrivateNodeConfig, value: any) {
+	async setConfigField<T extends keyof PrivateNodeConfig>(field: T, value: PrivateNodeConfig[T]) {
 		if (this.config.value === undefined) throw new Error('Config not synced');
 
 		await this.send(['CONTROL', 'CONFIG', 'SET', field, value]);

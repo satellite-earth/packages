@@ -45,5 +45,7 @@ export type PrivateNodeConfig = {
 	notificationEmail?: string;
 
 	// NIP-66 Gossip
+	gossipEnabled: boolean;
+	gossipInterval: number;
 	gossipBroadcastRelays: string[];
 };

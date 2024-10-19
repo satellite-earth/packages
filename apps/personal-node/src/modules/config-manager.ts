@@ -26,6 +26,8 @@ export const defaultConfig: PrivateNodeConfig = {
 	enableHyperConnections: false,
 	routeAllTrafficThroughTor: false,
 
+	gossipEnabled: false,
+	gossipInterval: 10 * 60_000,
 	gossipBroadcastRelays: [],
 };
 

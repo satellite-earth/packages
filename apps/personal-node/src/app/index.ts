@@ -232,8 +232,12 @@ export default class App extends EventEmitter<EventMap> {
 		// NIP-66 gossip
 		this.gossip = new Gossip(this.inboundNetwork, this.signer, this.pool, this.relay);
 
-		this.config.on('updated', () => {
-			this.gossip.broadcastRelays = this.config.data.gossipBroadcastRelays;
+		this.config.on('updated', (config) => {
+			this.gossip.interval = config.gossipInterval
+			this.gossip.broadcastRelays = config.gossipBroadcastRelays;
+
+			if (config.gossipEnabled) this.gossip.start();
+			else this.gossip.stop();
 		});
 
 		// setup PROXY switchboard
@@ -388,7 +392,6 @@ export default class App extends EventEmitter<EventMap> {
 		this.emit('listening');
 
 		await this.inboundNetwork.start();
-		this.gossip.start();
 	}
 
 	tick() {

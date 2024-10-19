@@ -36,17 +36,17 @@ export default function I2POutboundStatus() {
 
 	return (
 		<>
-			<FormControl>
-				<Switch
-					isChecked={config?.enableI2PConnections}
-					onChange={(e) =>
-						controlApi?.send(['CONTROL', 'CONFIG', 'SET', 'enableI2PConnections', e.currentTarget.checked])
-					}
-				>
-					Connect to i2p relays
-				</Switch>
-				<FormHelperText>Allows the node to connect to .i2p domains</FormHelperText>
-			</FormControl>
+			{status?.i2p.outbound.available && (
+				<FormControl>
+					<Switch
+						isChecked={config?.enableI2PConnections}
+						onChange={(e) => controlApi?.setConfigField('enableI2PConnections', e.currentTarget.checked)}
+					>
+						Connect to i2p relays
+					</Switch>
+					<FormHelperText>Allows the node to connect to .i2p domains</FormHelperText>
+				</FormControl>
+			)}
 			{content}
 		</>
 	);
