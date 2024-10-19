@@ -45,6 +45,7 @@ import ScrapperActions from '../modules/control/scrapper-actions.js';
 import InboundNetworkManager from '../modules/network/inbound/index.js';
 import SecretsManager from '../modules/secrets-manager.js';
 import outboundNetwork, { OutboundNetworkManager } from '../modules/network/outbound/index.js';
+import Switchboard from '../modules/switchboard/switchboard.js';
 
 type EventMap = {
 	listening: [];
@@ -81,6 +82,7 @@ export default class App extends EventEmitter<EventMap> {
 	blobStorage: LocalStorage;
 	blobDownloader: BlobDownloader;
 	decryptionCache: DecryptionCache;
+	switchboard: Switchboard;
 
 	constructor(dataPath: string) {
 		super();
@@ -217,8 +219,12 @@ export default class App extends EventEmitter<EventMap> {
 		this.relay.sendChallenge = true;
 		this.relay.requireRelayInAuth = false;
 
-		// attach relay to websocket server
-		this.relay.attachToServer(this.wss);
+		this.switchboard = new Switchboard(this.relay);
+
+		// attach switchboard to websocket server
+		this.wss.on('connection', (ws, request) => {
+			this.switchboard.handleConnection(ws, request);
+		})
 
 		// update profiles when conversations are opened
 		this.directMessageManager.on('open', (a, b) => {
