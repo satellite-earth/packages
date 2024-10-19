@@ -15,6 +15,7 @@ function buildGossipTemplate(self: string, address: string, network: string): Ev
 			['n', network],
 			['p', self],
 			['T', 'PrivateInbox'],
+			...NostrRelay.SUPPORTED_NIPS.map((nip) => ['N', String(nip)]),
 		],
 		created_at: dayjs().unix(),
 	};
