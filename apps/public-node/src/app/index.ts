@@ -59,7 +59,7 @@ terminateConnectionsInterval(wss, 30000);
 
 // setup relay
 const relay = new NostrRelay(eventStore);
-relay.attachToServer(wss);
+wss.on('connection', (ws, req) => relay.handleConnection(ws, req));
 
 // outbound relay pool
 const relayPool = new SimplePool();
