@@ -115,8 +115,7 @@ export class NostrRelay extends EventEmitter<EventMap> {
 		return data;
 	}
 
-
-	private socketCleanup = new Map<WebSocket, () => void>;
+	private socketCleanup = new Map<WebSocket, () => void>();
 	handleConnection(ws: WebSocket, req: IncomingMessage) {
 		let ip;
 
@@ -130,10 +129,10 @@ export class NostrRelay extends EventEmitter<EventMap> {
 		// listen for messages
 		const messageListener = (data: RawData, isBinary: boolean) => {
 			if (data instanceof Buffer) this.handleMessage(data, ws);
-		}
+		};
 		ws.on('message', messageListener);
 
-		const closeListener = () => this.handleDisconnect(ws)
+		const closeListener = () => this.handleDisconnect(ws);
 		ws.on('close', closeListener);
 
 		if (this.sendChallenge) {
@@ -151,17 +150,17 @@ export class NostrRelay extends EventEmitter<EventMap> {
 		this.connections[id] = ws;
 
 		this.socketCleanup.set(ws, () => {
-			delete this.connections[id]
+			delete this.connections[id];
 			ws.off('message', messageListener);
 			ws.off('close', closeListener);
 			this.connectionId.delete(ws);
 			this.auth.delete(ws);
-			this.emit('socket:disconnect', ws)
-		})
+			this.emit('socket:disconnect', ws);
+		});
 	}
 
-	disconnectSocket(ws: WebSocket){
-		this.socketCleanup.get(ws)?.()
+	disconnectSocket(ws: WebSocket) {
+		this.socketCleanup.get(ws)?.();
 	}
 
 	handleDisconnect(ws: WebSocket) {

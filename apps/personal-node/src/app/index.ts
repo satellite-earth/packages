@@ -8,6 +8,7 @@ import { kinds } from 'nostr-tools';
 import { AbstractRelay } from 'nostr-tools/abstract-relay';
 import express, { Express } from 'express';
 import { EventEmitter } from 'events';
+import { SimpleSigner } from 'applesauce-signer/signers/simple-signer';
 import cors from 'cors';
 
 import { logger } from '../logger.js';
@@ -46,6 +47,7 @@ import InboundNetworkManager from '../modules/network/inbound/index.js';
 import SecretsManager from '../modules/secrets-manager.js';
 import outboundNetwork, { OutboundNetworkManager } from '../modules/network/outbound/index.js';
 import Switchboard from '../modules/switchboard/switchboard.js';
+import Gossip from '../modules/gossip.js';
 
 type EventMap = {
 	listening: [];
@@ -56,6 +58,7 @@ export default class App extends EventEmitter<EventMap> {
 	config: ConfigManager;
 	secrets: SecretsManager;
 	state: ApplicationStateManager;
+	signer: SimpleSigner;
 
 	server: Server;
 	wss: WebSocketServer;
@@ -83,6 +86,7 @@ export default class App extends EventEmitter<EventMap> {
 	blobDownloader: BlobDownloader;
 	decryptionCache: DecryptionCache;
 	switchboard: Switchboard;
+	gossip: Gossip;
 
 	constructor(dataPath: string) {
 		super();
@@ -93,10 +97,16 @@ export default class App extends EventEmitter<EventMap> {
 		this.secrets = new SecretsManager(path.join(dataPath, 'secrets.json'));
 		this.secrets.read();
 
+		this.signer = new SimpleSigner(this.secrets.get('nostrKey'));
+
 		// copy the vapid public key over to config so the web ui can access it
 		// TODO: this should be moved to another place
 		this.secrets.on('updated', () => {
 			this.config.data.vapidPublicKey = this.secrets.get('vapidPublicKey');
+
+			if (this.signer.key !== this.secrets.get('nostrKey')) {
+				this.signer = new SimpleSigner(this.secrets.get('nostrKey'));
+			}
 		});
 
 		// set owner pubkey from env variable
@@ -219,12 +229,20 @@ export default class App extends EventEmitter<EventMap> {
 		this.relay.sendChallenge = true;
 		this.relay.requireRelayInAuth = false;
 
+		// NIP-66 gossip
+		this.gossip = new Gossip(this.inboundNetwork, this.signer, this.pool, this.relay);
+
+		this.config.on('updated', () => {
+			this.gossip.broadcastRelays = this.config.data.gossipBroadcastRelays;
+		});
+
+		// setup PROXY switchboard
 		this.switchboard = new Switchboard(this.relay);
 
 		// attach switchboard to websocket server
 		this.wss.on('connection', (ws, request) => {
 			this.switchboard.handleConnection(ws, request);
-		})
+		});
 
 		// update profiles when conversations are opened
 		this.directMessageManager.on('open', (a, b) => {
@@ -352,7 +370,7 @@ export default class App extends EventEmitter<EventMap> {
 
 	async start() {
 		this.running = true;
-		this.config.read();
+		await this.config.read();
 
 		if (this.config.data.runReceiverOnBoot) this.receiver.start();
 		if (this.config.data.runScrapperOnBoot) this.scrapper.start();
@@ -370,6 +388,7 @@ export default class App extends EventEmitter<EventMap> {
 		this.emit('listening');
 
 		await this.inboundNetwork.start();
+		this.gossip.start();
 	}
 
 	tick() {
@@ -391,6 +410,8 @@ export default class App extends EventEmitter<EventMap> {
 
 		await this.inboundNetwork.stop();
 		await this.outboundNetwork.stop();
+
+		this.gossip.stop();
 
 		// wait for server to close
 		await new Promise<void>((res) => this.server.close(() => res()));

@@ -1,5 +1,5 @@
 import { generateSecretKey, getPublicKey, nip19 } from 'nostr-tools';
-import { SimpleSigner } from 'applesauce-signer';
+import { SimpleSigner } from 'applesauce-signer/signers/simple-signer';
 
 import { Account } from './account';
 

@@ -43,4 +43,7 @@ export type PrivateNodeConfig = {
 
 	// fallback notification email, this is only used for ntfy notifications
 	notificationEmail?: string;
+
+	// NIP-66 Gossip
+	gossipBroadcastRelays: string[];
 };

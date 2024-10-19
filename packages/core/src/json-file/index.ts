@@ -42,13 +42,13 @@ export class ReactiveJsonFile<T extends object> extends EventEmitter<EventMap<T>
 
 	async read() {
 		await this.db.read();
-		this.emit('loaded', this.data);
-		this.emit('updated', this.data);
+		this.emit('loaded', this.db.data);
+		this.emit('updated', this.db.data);
 		this.createProxy();
 	}
 	async write() {
 		await this.db.write();
-		this.emit('saved', this.data);
+		this.emit('saved', this.db.data);
 	}
 	update(fn: (data: T) => unknown) {
 		return this.db.update(fn);
@@ -86,13 +86,13 @@ export class ReactiveJsonFileSync<T extends object> extends EventEmitter<EventMa
 
 	read() {
 		this.db.read();
-		this.emit('loaded', this.data);
-		this.emit('updated', this.data);
+		this.emit('loaded', this.db.data);
+		this.emit('updated', this.db.data);
 		this.createProxy();
 	}
 	write() {
 		this.db.write();
-		this.emit('saved', this.data);
+		this.emit('saved', this.db.data);
 	}
 	update(fn: (data: T) => unknown) {
 		return this.db.update(fn);

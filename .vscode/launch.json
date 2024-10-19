@@ -1,0 +1,28 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Attach",
+			"port": 9229,
+			"request": "attach",
+			"skipFiles": ["<node_internals>/**"],
+			"type": "node"
+		},
+		{
+			"name": "personal-node",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceRoot}/apps/personal-node",
+			"runtimeArgs": ["--loader @swc-node/register/esm"],
+			"program": "src/index.ts",
+			"protocol": "inspector",
+			"outputCapture": "std",
+			"internalConsoleOptions": "openOnSessionStart",
+			"env": {
+				"DEBUG": "satellite,satellite:*",
+				"DEBUG_COLORS": "1",
+				"NODE_ENV": "development"
+			}
+		}
+	]
+}

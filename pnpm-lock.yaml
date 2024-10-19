@@ -29,6 +29,9 @@ importers:
       '@satellite-earth/web-ui':
         specifier: ^0.4.1
         version: link:../web-ui
+      applesauce-signer:
+        specifier: ^0.6.0
+        version: 0.6.0(typescript@5.6.2)
       better-sqlite3:
         specifier: ^11.3.0
         version: 11.3.0
@@ -63,8 +66,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.3
       hyper-socks5-proxy:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       hyperdht:
         specifier: ^6.15.4
         version: 6.16.5
@@ -3792,8 +3795,8 @@ packages:
   hyper-cmd-lib-keys@0.0.2:
     resolution: {integrity: sha512-/KUs6yDoBzYFSlx2PnFoCDZaiNwMqc+iDsMqaXM0Wd+Ntu2nkxJxFSlxKCZUThHOmjJF3DH1SPD/5kgENpbwug==}
 
-  hyper-socks5-proxy@0.1.1:
-    resolution: {integrity: sha512-jFgqwGyjNuBF3duQjrhvpJISkM0CdRzhvT6MQJIZeEwS/AWzWkpd7ljzfHikFX/AEQyROBpGyDgDiXKgIU+gzQ==}
+  hyper-socks5-proxy@0.1.2:
+    resolution: {integrity: sha512-PkzrB4I61g04qgwu7tyKH2ULh/+QCQqftZkk6VDeo5hUEV7dichmAtx+LW31x8z8MpkBZF+gLBNewlyz1ypXsA==}
     hasBin: true
 
   hypercore-crypto@3.4.2:
@@ -5690,7 +5693,7 @@ packages:
     resolution: {integrity: sha512-elOQwe6Q8gqZgDA8mrh44qRTQqpIHDcZ3hXTLjBe1i4ph8XpNJnO+aQf3NaG+lriLopI4HMx9VjQLfPQ6vhnoA==}
     engines: {node: '>=10'}
     peerDependencies:
-      '@types/react': ^18.2.22
+      '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
@@ -5700,7 +5703,7 @@ packages:
     resolution: {integrity: sha512-epTbsLuzZ7lPClpz2TyryBfztm7m+28DlEv2ZCQ3MDr5ssiwyOwGH/e5F9CkfWjJ1t4clvI58yF822/GUkjjhw==}
     engines: {node: '>=10'}
     peerDependencies:
-      '@types/react': ^18.2.22
+      '@types/react': ^16.9.0 || ^17.0.0 || ^18.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
@@ -10188,10 +10191,10 @@ snapshots:
 
   hyper-cmd-lib-keys@0.0.2: {}
 
-  hyper-socks5-proxy@0.1.1:
+  hyper-socks5-proxy@0.1.2:
     dependencies:
       '@pondwader/socks5-server': 1.0.10
-      '@scure/base': 1.1.8
+      '@scure/base': 1.1.9
       commander: 12.1.0
       debug: 4.3.7(supports-color@5.5.0)
       hyper-address: 0.1.3

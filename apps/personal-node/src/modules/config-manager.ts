@@ -1,10 +1,10 @@
 import { JSONFileSync } from 'lowdb/node';
 import _throttle from 'lodash.throttle';
 import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator';
-
-import { logger } from '../logger.js';
 import { PrivateNodeConfig } from '@satellite-earth/core/types/private-node-config.js';
 import { ReactiveJsonFileSync } from '@satellite-earth/core';
+
+import { logger } from '../logger.js';
 
 export const defaultConfig: PrivateNodeConfig = {
 	name: uniqueNamesGenerator({
@@ -25,6 +25,8 @@ export const defaultConfig: PrivateNodeConfig = {
 	enableI2PConnections: true,
 	enableHyperConnections: false,
 	routeAllTrafficThroughTor: false,
+
+	gossipBroadcastRelays: [],
 };
 
 export default class ConfigManager extends ReactiveJsonFileSync<PrivateNodeConfig> {
@@ -33,13 +35,13 @@ export default class ConfigManager extends ReactiveJsonFileSync<PrivateNodeConfi
 	constructor(path: string) {
 		super(new JSONFileSync(path), defaultConfig);
 
-		this.on('loaded', () => {
+		this.on('loaded', (config) => {
 			// explicitly set default values if fields are not set
 			for (const [key, value] of Object.entries(defaultConfig)) {
 				// @ts-expect-error
-				if (this.db[key] === undefined) {
+				if (config[key] === undefined) {
 					// @ts-expect-error
-					this.db[key] = value;
+					config[key] = value;
 				}
 			}
 
