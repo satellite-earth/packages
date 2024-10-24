@@ -1,6 +1,6 @@
 {
 	"name": "@satellite-earth/personal-node",
-	"version": "0.4.1",
+	"version": "0.5.0",
 	"description": "node is a project that runs as a node application anywhere, i.e. it's just a nodejs app that can run on your laptop or on a VPS in a datacenter, it doesn't matter",
 	"license": "MIT",
 	"author": {
@@ -43,8 +43,8 @@
 	"dependencies": {
 		"@diva.exchange/i2p-sam": "^5.4.1",
 		"@noble/hashes": "^1.4.0",
-		"@satellite-earth/core": "^0.4.0",
-		"@satellite-earth/web-ui": "^0.4.1",
+		"@satellite-earth/core": "^0.5.0",
+		"@satellite-earth/web-ui": "^0.5.0",
 		"applesauce-core": "^0.6.0",
 		"applesauce-signer": "^0.6.0",
 		"better-sqlite3": "^11.3.0",
