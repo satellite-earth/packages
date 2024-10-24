@@ -31,8 +31,8 @@ export default class Gossip {
 	eventStore: IEventStore;
 
 	running = false;
-	// default every 10 minute
-	interval = 10 * 60_000;
+	// default every 30 minutes
+	interval = 30 * 60_000;
 	broadcastRelays: string[] = [];
 
 	constructor(
